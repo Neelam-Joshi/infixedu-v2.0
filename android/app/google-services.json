@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "621533032630",
+    "project_id": "tabschool-70e30",
+    "storage_bucket": "tabschool-70e30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621533032630:android:19b71c94e9cf0c2878f617",
+        "android_client_info": {
+          "package_name": "com.aistabschool.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3Tcb_AeVP4qMoBu6c0cfLWVA_-GNQKhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621533032630:android:b40e11712e71935478f617",
+        "android_client_info": {
+          "package_name": "com.aistabschool.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3Tcb_AeVP4qMoBu6c0cfLWVA_-GNQKhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
