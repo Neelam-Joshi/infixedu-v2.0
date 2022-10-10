@@ -87,7 +87,7 @@ class _HomeState extends State<DashboardTeacherAttendance> {
                   onPressed: () {
                     Get.dialog(LogoutService().logoutDialog());
                   },
-                  icon: Image.asset("assets/icons/logout.png",width:25.w,height:25.h),
+                  icon: Image.asset("assets/icons/logout.png",width:20.w,height:20.h),
                 ),
               ],
             ),

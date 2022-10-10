@@ -19,6 +19,7 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/exception/DioException.dart';
 import 'package:infixedu/utils/model/Route.dart';
 import 'package:infixedu/utils/model/Vehicle.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // 📦 Package imports
 
@@ -97,7 +98,10 @@ class _AssignVehicleState extends State<AssignVehicle> {
               child: Text(
                 'Select Route'.tr,
                 textAlign: TextAlign.start,
-                style: Theme.of(context).textTheme.subtitle1.copyWith(),
+                style: Theme.of(context).textTheme.subtitle1.copyWith(
+                  color: Colors.black,
+                    fontFamily: sansRegular
+                ),
               ),
             ),
             FutureBuilder<VehicleRouteList>(
@@ -121,7 +125,10 @@ class _AssignVehicleState extends State<AssignVehicle> {
               child: Text(
                 'Select Vehicle'.tr,
                 textAlign: TextAlign.start,
-                style: Theme.of(context).textTheme.subtitle1.copyWith(),
+                style: Theme.of(context).textTheme.subtitle1.copyWith(
+                    color: Colors.black,
+                    fontFamily: sansRegular
+                ),
               ),
             ),
             FutureBuilder<AssignVehicleList>(
@@ -151,7 +158,9 @@ class _AssignVehicleState extends State<AssignVehicle> {
                   style: Theme.of(context)
                       .textTheme
                       .headline5
-                      .copyWith(color: Colors.white),
+                      .copyWith(color: Colors.white,
+                      fontFamily: sansRegular
+                  ),
                 ),
               ),
               onTap: assignVehicle,
@@ -183,12 +192,16 @@ class _AssignVehicleState extends State<AssignVehicle> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.title,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedRoute = value;
@@ -213,12 +226,16 @@ class _AssignVehicleState extends State<AssignVehicle> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.vehicleNo,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedVehicle = value;

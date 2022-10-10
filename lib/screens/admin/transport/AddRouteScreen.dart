@@ -18,6 +18,8 @@ import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/exception/DioException.dart';
 import 'package:infixedu/utils/model/Route.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class AddRoute extends StatefulWidget {
@@ -92,10 +94,12 @@ class _AddRouteState extends State<AddRoute> {
                   title: TabBar(
                     labelColor: Colors.black,
                     labelPadding: EdgeInsets.zero,
-                    indicatorColor: Colors.purple,
+                    indicatorColor: Color(0xffff3465),
                     tabs: tabs,
                     indicatorPadding: EdgeInsets.zero,
-                    labelStyle: Theme.of(context).textTheme.headline4,
+                    labelStyle: Theme.of(context).textTheme.headline4.copyWith(
+                      fontFamily: sansRegular
+                    ),
                   ),
                 ),
                 body: Padding(
@@ -142,7 +146,9 @@ class _AddRouteState extends State<AddRoute> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.w500),
+                                        .copyWith(fontWeight: FontWeight.w500,
+                                        fontFamily: sansRegular
+                                    ),
                                   ),
                                   SizedBox(
                                     height: 10.0,
@@ -151,7 +157,10 @@ class _AddRouteState extends State<AddRoute> {
                                     snapshot.data.routes[index].title,
                                     maxLines: 1,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
+
                                   ),
                                 ],
                               ),
@@ -165,7 +174,9 @@ class _AddRouteState extends State<AddRoute> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.w500),
+                                        .copyWith(fontWeight: FontWeight.w500,
+                                        fontFamily: sansRegular
+                                    ),
                                   ),
                                   SizedBox(
                                     height: 10.0,
@@ -173,7 +184,9 @@ class _AddRouteState extends State<AddRoute> {
                                   Text(
                                     snapshot.data.routes[index].far.toString(),
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                   ),
                                 ],
                               ),
@@ -199,12 +212,16 @@ class _AddRouteState extends State<AddRoute> {
         children: [
           TextField(
             controller: titleController,
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headline4.copyWith(
+                fontFamily: sansRegular
+            ),
             decoration: InputDecoration(hintText: 'Route title here'.tr),
           ),
           TextField(
             controller: fareController,
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headline4.copyWith(
+                fontFamily: sansRegular
+            ),
             decoration: InputDecoration(hintText: 'Enter fare here'.tr),
           ),
           Container(
@@ -212,7 +229,7 @@ class _AddRouteState extends State<AddRoute> {
             width: double.infinity,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepPurpleAccent,
+                primary: Color(0xffff3465),
               ),
               onPressed: () {
                 addRouteData(titleController.text, fareController.text, id)

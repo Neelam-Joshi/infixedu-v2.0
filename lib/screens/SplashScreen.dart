@@ -4,6 +4,7 @@ import 'dart:async';
 // Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:infixedu/controller/system_controller.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
@@ -72,11 +73,10 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color:Color(0xffFFF3F3)
-                  // image: DecorationImage(
-                  //   image: AssetImage(AppConfig.splashScreenBackground),
-                  //   fit: BoxFit.cover,
-                  // ),
+                  image: DecorationImage(
+                    image: AssetImage(AppConfig.splashScreenBackground),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -92,8 +92,10 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                       child: Text(
                         'Welcome to'.tr,
                         style: Get.textTheme.subtitle1.copyWith(
-                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 24,
                           color: Colors.grey,
+                          fontFamily:sansBold
                         ),
                       ),
                     ),
@@ -116,8 +118,10 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                       child: Text(
                         '${AppConfig.appName}',
                         style: Get.textTheme.subtitle1.copyWith(
-                          fontSize: 18,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
                           color: Color(0xffff3465),
+                          fontFamily:sansBold
                         ),
                       ),
                     ),
@@ -133,6 +137,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                 child: Container(
                   alignment: Alignment.bottomCenter,
                   child: LinearProgressIndicator(
+                    color: Color(0xffff3465),
                     backgroundColor: Colors.transparent,
                   ),
                 ),

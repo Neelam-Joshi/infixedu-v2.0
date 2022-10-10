@@ -19,6 +19,8 @@ import 'package:infixedu/utils/model/Classes.dart';
 import 'package:infixedu/utils/model/Section.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'attendance/AttendanceStudentList.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class StudentAttendanceHome extends StatefulWidget {
   @override
@@ -141,9 +143,15 @@ class _StudentAttendanceHomeState extends State<StudentAttendanceHome> {
                           context,
                           pickerTheme: DateTimePickerTheme(
                             confirm: Text('Done',
-                                style: TextStyle(color: Colors.red)),
+                                style: TextStyle(
+                                    color: Colors.red,
+                                  fontFamily: sansRegular
+                                )
+                            ),
                             cancel: Text('cancel',
-                                style: TextStyle(color: Colors.cyan)),
+                                style: TextStyle(color: Colors.cyan,
+                                    fontFamily: sansRegular
+                                )),
                           ),
                           minDateTime: DateTime.parse(minDateTime),
                           maxDateTime: DateTime.parse(maxDateTime),
@@ -184,7 +192,9 @@ class _StudentAttendanceHomeState extends State<StudentAttendanceHome> {
                                       .textTheme
                                       .headline4
                                       .copyWith(
-                                          fontSize: ScreenUtil().setSp(12)),
+                                          fontSize: ScreenUtil().setSp(12),
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ),
                             ),
@@ -228,7 +238,9 @@ class _StudentAttendanceHomeState extends State<StudentAttendanceHome> {
             child: Text(
               "Search".tr,
               style: Theme.of(context).textTheme.headline4.copyWith(
-                  color: Colors.white, fontSize: ScreenUtil().setSp(14)),
+                  color: Colors.white, fontSize: ScreenUtil().setSp(14),
+                  fontFamily: sansRegular
+              ),
             ),
           ),
         ),
@@ -264,14 +276,19 @@ class _StudentAttendanceHomeState extends State<StudentAttendanceHome> {
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child:
-                  Text(item.name, style: Theme.of(context).textTheme.headline4),
+                  Text(item.name, style: Theme.of(context).textTheme.headline4.copyWith(
+                      fontFamily: sansRegular
+                  )
+                  ),
             ),
           );
         }).toList(),
         style: Theme.of(context)
             .textTheme
             .headline4
-            .copyWith(fontSize: ScreenUtil().setSp(15)),
+            .copyWith(fontSize: ScreenUtil().setSp(15),
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             _selectedClass = value;
@@ -304,14 +321,18 @@ class _StudentAttendanceHomeState extends State<StudentAttendanceHome> {
             child: Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child:
-                  Text(item.name, style: Theme.of(context).textTheme.headline4),
+                  Text(item.name, style: Theme.of(context).textTheme.headline4.copyWith(
+                      fontFamily: sansRegular
+                  )),
             ),
           );
         }).toList(),
         style: Theme.of(context)
             .textTheme
             .headline4
-            .copyWith(fontSize: ScreenUtil().setSp(15)),
+            .copyWith(fontSize: ScreenUtil().setSp(15),
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             _selectedSection = value;

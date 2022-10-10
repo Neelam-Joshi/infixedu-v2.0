@@ -18,6 +18,8 @@ import 'package:infixedu/utils/model/Classes.dart';
 import 'package:infixedu/utils/model/Section.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
 import 'StudentListScreen.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class StudentSearch extends StatefulWidget {
@@ -91,7 +93,7 @@ class _StudentSearchState extends State<StudentSearch> {
           child: FutureBuilder(
             future: classes,
             builder: (context, snapshot) {
-              if (snapshot.hasData) {
+              if(snapshot.hasData) {
                 return ListView(
                   children: <Widget>[
                     getClassDropdown(snapshot.data.classes),
@@ -112,13 +114,15 @@ class _StudentSearchState extends State<StudentSearch> {
                       padding: const EdgeInsets.all(10.0),
                       child: TextFormField(
                         keyboardType: TextInputType.text,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                        ),
                         controller: nameController,
                         decoration: InputDecoration(
                             hintText: "Search by name".tr,
                             labelText: "Name".tr,
                             labelStyle: Theme.of(context).textTheme.headline4.copyWith(
-                              color: Colors.black
+                              color: Colors.black,fontFamily: sansRegular
                             ),
                             errorStyle: TextStyle(
                                 color: Colors.pinkAccent, fontSize: 15.0),
@@ -131,16 +135,21 @@ class _StudentSearchState extends State<StudentSearch> {
                       padding: const EdgeInsets.all(10.0),
                       child: TextFormField(
                         keyboardType: TextInputType.text,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                        ),
                         controller: rollController,
                         decoration: InputDecoration(
                             hintText: "Search by roll".tr,
                             labelText: "Roll".tr,
                             labelStyle: Theme.of(context).textTheme.headline4.copyWith(
-                              color:Colors.black
+                              color:Colors.black,
+                                fontFamily: sansRegular
                             ),
                             errorStyle: TextStyle(
-                                color: Colors.pinkAccent, fontSize: 15.0),
+                                color: Colors.pinkAccent, fontSize: 15.0,
+                                fontFamily: sansRegular
+                            ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0),
                             )),
@@ -165,8 +174,10 @@ class _StudentSearchState extends State<StudentSearch> {
             decoration: Utils.gradientBtnDecoration,
             child: Text(
               "Search".tr,
-              style: Theme.of(context).textTheme.headline4.copyWith(
-                  color: Colors.white, fontSize: ScreenUtil().setSp(14)),
+              style: Theme.of(context).textTheme.headline5.copyWith(
+                  color: Colors.white, fontSize: ScreenUtil().setSp(14),
+                  fontFamily: sansBold
+              ),
             ),
           ),
         ),
@@ -260,7 +271,7 @@ class _StudentSearchState extends State<StudentSearch> {
               child: Text(
                 item.name,
                 style: Theme.of(context).textTheme.headline4.copyWith(
-                  color: Colors.black
+                  color: Colors.black,fontFamily: sansRegular
                 ),
               ),
             ),
@@ -269,7 +280,10 @@ class _StudentSearchState extends State<StudentSearch> {
         style: Theme.of(context)
             .textTheme
             .headline4
-            .copyWith(fontSize: ScreenUtil().setSp(15)),
+            .copyWith(
+            fontSize: ScreenUtil().setSp(15),
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             _selectedClass = value;
@@ -304,7 +318,7 @@ class _StudentSearchState extends State<StudentSearch> {
               child: Text(
                 item.name,
                 style: Theme.of(context).textTheme.headline4.copyWith(
-                  color:Colors.black,
+                  color:Colors.black, fontFamily: sansRegular
                 ),
               ),
             ),
@@ -313,7 +327,9 @@ class _StudentSearchState extends State<StudentSearch> {
         style: Theme.of(context)
             .textTheme
             .headline4
-            .copyWith(fontSize: ScreenUtil().setSp(15)),
+            .copyWith(fontSize: ScreenUtil().setSp(15),
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             _selectedSection = value;
@@ -345,8 +361,8 @@ class _StudentSearchState extends State<StudentSearch> {
     print(rule);
     final response = await http.get(Uri.parse(InfixApi.getClassById(id)),
         headers: Utils.setHeader(_token.toString()));
-    print(InfixApi.getClassById(id));
-    print(response.body);
+    print('InfixApi class id${InfixApi.getClassById(id)}');
+    print('body${response.body}');
     if (response.statusCode == 200) {
       var jsonData = jsonDecode(response.body);
       if (rule == "1" || rule == "5") {
@@ -364,7 +380,8 @@ class _StudentSearchState extends State<StudentSearch> {
         Uri.parse(InfixApi.getSectionById(id, classId)),
         headers: Utils.setHeader(_token.toString()));
 
-    print(InfixApi.getSectionById(id, classId));
+    print('InfixApi get ${InfixApi.getSectionById(id, classId)}');
+    print('response ${response.body}');
 
     if (response.statusCode == 200) {
       var jsonData = jsonDecode(response.body);

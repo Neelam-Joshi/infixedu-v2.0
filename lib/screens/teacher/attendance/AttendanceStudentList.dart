@@ -20,6 +20,8 @@ import 'package:infixedu/utils/model/GlobalClass.dart';
 import 'package:infixedu/utils/model/Student.dart';
 import 'package:infixedu/utils/widget/ShimmerListWidget.dart';
 import 'package:infixedu/utils/widget/StudentAttendanceRow.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 import 'attendance_controller.dart';
 
@@ -127,14 +129,18 @@ class _StudentListAttendanceState extends State<StudentListAttendance> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontSize: 14),
+                                  .copyWith(fontSize: 14,
+                                  fontFamily: sansRegular
+                              ),
                             ),
                             Text(
                               "Select Present/Late/Absent/Halfday".tr,
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontSize: 14),
+                                  .copyWith(fontSize: 14,
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),
@@ -152,7 +158,9 @@ class _StudentListAttendanceState extends State<StudentListAttendance> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontSize: 14),
+                              .copyWith(fontSize: 14,
+                              fontFamily: sansRegular
+                          ),
                         ),
                       ),
                     ),
@@ -194,6 +202,7 @@ class _StudentListAttendanceState extends State<StudentListAttendance> {
                   _isHoliday ? "Unmark Holiday" : "Mark Holiday",
                   style: Theme.of(context).textTheme.bodySmall.copyWith(
                         color: Colors.white,
+                      fontFamily: sansRegular
                       ),
                 ),
               ),

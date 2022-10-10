@@ -14,6 +14,7 @@ import 'package:http/http.dart' as http;
 import 'package:infixedu/config/app_config.dart';
 import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/utils/apis/Apis.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 import 'package:infixedu/utils/server/LoginService.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -31,6 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
   String password = '123456';
   bool isResponse = false;
   bool obscurePass = true;
+  int selectIndex = 0;
 
   @override
   void initState() {
@@ -43,9 +45,15 @@ class _LoginScreenState extends State<LoginScreen> {
    // TextStyle textStyle = Theme.of(context).textTheme.headline6;
     TextStyle textStyle = TextStyle(
         color:Color(0xff000000),
-      fontSize: 16,
-      fontWeight:FontWeight.w400
-
+        fontSize: 14,
+       fontWeight:FontWeight.w500,
+       fontFamily: sansRegular
+    );
+    TextStyle hintStyle = TextStyle(
+        color:Colors.grey,
+        fontSize: 14,
+        fontWeight:FontWeight.w500,
+        fontFamily: sansRegular
     );
 
     return WillPopScope(
@@ -216,7 +224,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: EdgeInsets.fromLTRB(10.h, 0, 10.h, 0),
                   child: TextFormField(
                     keyboardType: TextInputType.text,
-                    //style: textStyle,
+                    style: textStyle,
                     controller: emailController,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     validator: (String value) {
@@ -229,6 +237,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       isDense: true,
                       contentPadding: EdgeInsets.only(left:16,right:12,top:12,bottom:12),
                       hintText: "Email".tr,
+                      hintStyle: hintStyle,
                       labelText: "Email".tr,
                       labelStyle: textStyle,
                       filled: true,
@@ -256,7 +265,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: TextFormField(
                     obscureText: obscurePass,
                     keyboardType: TextInputType.visiblePassword,
-                    //style: textStyle,
+                    style: textStyle,
                     controller: passwordController,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     validator: (String value) {
@@ -269,6 +278,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       isDense: true,
                       contentPadding: EdgeInsets.only(left:16,right:12,top:12,bottom:12),
                       hintText: "Password".tr,
+                      hintStyle: hintStyle,
                       labelText: "Password".tr,
                       labelStyle: textStyle,
                       filled:true,
@@ -325,7 +335,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: Theme.of(context)
                         .textTheme
                         .headline5
-                        .copyWith(color: Colors.white),
+                        .copyWith(
+                        color: Colors.white,
+                        fontFamily: sansBold,
+                    ),
                   ),
                 ),
                 onTap: () {
@@ -356,6 +369,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.all(8.0),
                 child: isResponse == true
                     ? LinearProgressIndicator(
+                        color: Color(0xffff3465),
                         backgroundColor: Colors.transparent,
                       )
                     : Text(''),
@@ -392,24 +406,48 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Flexible(
-              child:Text(
-                  'STUDENT',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 16.0),
-                ),
+              child:InkWell(
+                onTap: (){
+                  selectIndex = 0;
+                  setState(() {
+                    Utils.showToast("Login as a student");
+                  });
+                },
+                child: Text(
+                    'STUDENT',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      fontFamily: sansBold,
+                      fontWeight: FontWeight.w500
+
+                    ),
+                  ),
+              ),
                 ),
             const VerticalDivider(
               thickness: 0.5,
               color:Colors.black,
             ),
             Flexible(
-              child:Text(
-                  'TEACHER',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 16.0),
-                ),
+              child:InkWell(
+                onTap: (){
+                  selectIndex = 1;
+                  setState(() {
+                    Utils.showToast("Login as a teacher");
+                  });
+                },
+                child: Text(
+                    'TEACHER',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white, fontSize: 16.0,
+                        fontFamily: sansBold,
+                        fontWeight: FontWeight.w500
+                    ),
+                  ),
+              ),
             ),
             const VerticalDivider(
               thickness: 0.5,
@@ -417,11 +455,22 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Flexible(
 
-                child:Text(
-                  'PARENT',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 16.0),
+                child:InkWell(
+                  onTap: (){
+                    selectIndex = 2;
+                    setState(() {
+                      Utils.showToast("Login as a Parent");
+                    });
+                  },
+                  child: Text(
+                    'PARENT',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white, fontSize: 16.0,
+                        fontFamily: sansBold,
+                        fontWeight: FontWeight.w500
+                    ),
+                  ),
                 ),
             )
           ],

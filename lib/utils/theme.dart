@@ -12,7 +12,7 @@ ThemeData basicTheme() {
         textStyle: base.headline5.copyWith(
           fontSize: 16.sp,
           fontWeight: FontWeight.w600,
-          color: Color(0xFF415094),
+          color: Colors.black,
         ),
       ),
       subtitle1: GoogleFonts.poppins(
@@ -33,7 +33,8 @@ ThemeData basicTheme() {
         textStyle: base.headline6.copyWith(
           fontSize: 14.sp,
           fontWeight: FontWeight.w500,
-          color: Color(0xFF415094),
+          //color: Color(0xFF415094),
+          color: Colors.black,
         ),
       ),
       headline4: GoogleFonts.poppins(

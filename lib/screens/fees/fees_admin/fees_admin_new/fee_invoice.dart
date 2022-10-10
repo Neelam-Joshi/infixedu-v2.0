@@ -12,6 +12,8 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/screens/fees/model/FeesRecord.dart';
 import 'package:http/http.dart' as http;
 import 'package:infixedu/utils/widget/custom_search_delegate.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class FeesInvoiceScreen extends StatefulWidget {
   @override
@@ -64,11 +66,11 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
             height: 110.h,
             padding: EdgeInsets.only(top: 20),
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(AppConfig.appToolbarBackground),
-                fit: BoxFit.fill,
-              ),
-              color: Colors.deepPurple,
+              // image: DecorationImage(
+              //   image: AssetImage(AppConfig.appToolbarBackground),
+              //   fit: BoxFit.fill,
+              // ),
+              color: Color(0xfffff3f3),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -85,7 +87,7 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                         icon: Icon(
                           Icons.arrow_back,
                           size: ScreenUtil().setSp(20),
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                         onPressed: () {
                           Navigator.pop(context);
@@ -100,7 +102,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                       style: Theme.of(context)
                           .textTheme
                           .subtitle1
-                          .copyWith(fontSize: 18.sp, color: Colors.white),
+                          .copyWith(fontSize: 18.sp, color: Colors.black,
+                          fontFamily: sansRegular
+                      ),
                     ),
                   ),
                 ),
@@ -118,6 +122,7 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                       ),
                       searchStyle: Get.textTheme.subtitle1.copyWith(
                         color: Colors.black,
+                          fontFamily: sansRegular
                       ),
                       barTheme: Theme.of(context).copyWith(
                         textTheme: Theme.of(context).textTheme.copyWith(
@@ -133,7 +138,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                               .color, //change your color here
                         ),
                         inputDecorationTheme: InputDecorationTheme(
-                          hintStyle: Theme.of(context).textTheme.headline6,
+                          hintStyle: Theme.of(context).textTheme.headline6.copyWith(
+                              fontFamily: sansRegular
+                          ),
                           focusedErrorBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
                           focusedBorder: InputBorder.none,
@@ -164,7 +171,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                           style: Theme.of(context)
                               .textTheme
                               .headline6
-                              .copyWith(fontSize: 14),
+                              .copyWith(fontSize: 14,
+                              fontFamily: sansRegular
+                          ),
                         ),
                         subtitle: Column(
                           children: <Widget>[
@@ -176,7 +185,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline6
-                                        .copyWith(fontSize: 14),
+                                        .copyWith(fontSize: 14,
+                                        fontFamily: sansRegular
+                                    ),
                                     maxLines: 1,
                                   ),
                                 ),
@@ -273,7 +284,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -283,7 +296,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                               .toStringAsFixed(2),
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -300,7 +315,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -312,7 +329,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -329,7 +348,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -341,7 +362,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -358,7 +381,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -378,6 +403,7 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                   icon: Icon(
                     Icons.search,
                     size: 25.sp,
+                    color:Colors.black
                   ),
                 ),
               ],
@@ -413,7 +439,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                         style: Theme.of(context)
                             .textTheme
                             .subtitle1
-                            .copyWith(fontSize: 14),
+                            .copyWith(fontSize: 14,
+                            fontFamily: sansRegular
+                        ),
                       ),
                       subtitle: Column(
                         children: <Widget>[
@@ -425,7 +453,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline6
-                                      .copyWith(fontSize: 12),
+                                      .copyWith(fontSize: 12,
+                                      fontFamily: sansRegular
+                                  ),
                                   maxLines: 1,
                                 ),
                               ),
@@ -526,7 +556,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 10.0,
@@ -537,7 +569,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                             .toStringAsFixed(2),
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -554,7 +588,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 10.0,
@@ -566,7 +602,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -583,7 +621,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 10.0,
@@ -595,7 +635,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -612,7 +654,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 10.0,
@@ -653,7 +697,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );
@@ -673,7 +719,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );
@@ -690,7 +738,9 @@ class _FeesInvoiceScreenState extends State<FeesInvoiceScreen> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );

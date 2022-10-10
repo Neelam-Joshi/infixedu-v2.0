@@ -16,6 +16,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:infixedu/controller/system_controller.dart';
 import 'package:infixedu/screens/chat/views/ChatPageMain.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
@@ -329,7 +330,9 @@ class _HomeState extends State<Home> {
                           style: Theme.of(context)
                               .textTheme
                               .subtitle1
-                              .copyWith(color: Colors.black, fontSize: 18),
+                              .copyWith(color: Colors.black, fontSize: 18,
+                              fontFamily: sansRegular
+                          ),
                         ),
                         SizedBox(
                           height: 20,
@@ -385,8 +388,8 @@ class _HomeState extends State<Home> {
                           currentSelectedIndex = index;
                           if (_rule == '2') {
                             AppFunction.getDashboardPage(
-                                context, _titles[index],
-                                id: _id, token: _token);
+                              context, _titles[index],
+                              id: _id, token: _token);
                           } else if (_rule == '4') {
                             AppFunction.getTeacherDashboardPage(
                                 context, _titles[index], _id);
@@ -421,17 +424,13 @@ class _HomeState extends State<Home> {
                     );
                   },
                 ),
-                SizedBox(
-                  height: 50.h,
-                ),
-              ],
-            ),
+                SizedBox(height: 50.h,),
+              ]),
           );
         }
       }),
     );
   }
-
   buildNotificationDialog(context, String id) {
     showDialog<void>(
       barrierDismissible: true,
@@ -701,7 +700,9 @@ class _HomeState extends State<Home> {
         style: Theme.of(context).textTheme.headline5.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.green,
-            ),
+              fontFamily: sansRegular
+
+        ),
       ),
       onPressed: () async {
         Utils.clearAllValue();
@@ -714,6 +715,7 @@ class _HomeState extends State<Home> {
         if (response.statusCode == 200) {
         } else {
           Utils.showToast('Unable to logout');
+          
         }
       },
     );

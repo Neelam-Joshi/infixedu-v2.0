@@ -8,6 +8,8 @@ import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/screens/fees/model/FeesGroup.dart';
 import 'package:http/http.dart' as http;
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class FeesGroupScreen extends StatefulWidget {
   @override
@@ -69,11 +71,15 @@ class _FeesGroupScreenState extends State<FeesGroupScreen> {
                   return ListTile(
                     title: Text(
                       feeGroup.name ?? 'NA',
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.headline6.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                     subtitle: Text(
                       "${feeGroup.description ?? 'NA'}",
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -161,13 +167,17 @@ class _FeesGroupScreenState extends State<FeesGroupScreen> {
                         children: <Widget>[
                           TextField(
                             controller: titleController,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(
+                                fontFamily: sansRegular
+                            ),
                             decoration:
                                 InputDecoration(hintText: 'Enter title here'),
                           ),
                           TextField(
                             controller: descripController,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(
+                                fontFamily: sansRegular
+                            ),
                             decoration: InputDecoration(
                                 hintText: 'Enter discription here'),
                           ),
@@ -177,7 +187,7 @@ class _FeesGroupScreenState extends State<FeesGroupScreen> {
                             width: double.infinity,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.deepPurpleAccent,
+                                primary: Color(0xffff3465),
                               ),
                               onPressed: () async {
                                 final response = await http.post(
@@ -255,13 +265,17 @@ class _FeesGroupScreenState extends State<FeesGroupScreen> {
                         children: <Widget>[
                           TextField(
                             controller: titleController,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(
+                                fontFamily: sansRegular
+                            ),
                             decoration:
                                 InputDecoration(hintText: 'Enter title here'),
                           ),
                           TextField(
                             controller: descripController,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(
+                                fontFamily: sansRegular
+                            ),
                             decoration: InputDecoration(
                                 hintText: 'Enter discription here'),
                           ),
@@ -271,7 +285,7 @@ class _FeesGroupScreenState extends State<FeesGroupScreen> {
                             width: double.infinity,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.deepPurpleAccent,
+                                primary: Color(0xffff3465),
                               ),
                               onPressed: () async {
                                 final response = await http.post(

@@ -14,6 +14,7 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/exception/DioException.dart';
 import 'package:infixedu/utils/model/AdminDormitory.dart';
 import 'package:infixedu/utils/model/RoomType.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class AddDormitory extends StatefulWidget {
   @override
@@ -62,7 +63,9 @@ class _AddDormitoryState extends State<AddDormitory> {
               padding: EdgeInsets.only(left: 10),
               child: TextField(
                 controller: nameController,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular
+                ),
                 decoration: InputDecoration(hintText: 'Dormitory name'.tr),
               ),
             ),
@@ -70,7 +73,9 @@ class _AddDormitoryState extends State<AddDormitory> {
               padding: EdgeInsets.only(left: 10),
               child: TextField(
                 controller: intakeController,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
                 decoration: InputDecoration(hintText: 'Intake'.tr),
               ),
             ),
@@ -90,7 +95,9 @@ class _AddDormitoryState extends State<AddDormitory> {
               padding: EdgeInsets.only(left: 10),
               child: TextField(
                 controller: noteController,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
                 decoration: InputDecoration(hintText: 'Note'.tr),
               ),
             ),
@@ -99,7 +106,7 @@ class _AddDormitoryState extends State<AddDormitory> {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.deepPurpleAccent,
+                  primary: Color(0xffff3465),
                 ),
                 onPressed: () {
                   addDormitoryData(
@@ -139,12 +146,16 @@ class _AddDormitoryState extends State<AddDormitory> {
               padding: const EdgeInsets.only(bottom: 10.0),
               child: Text(
                 item,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedType = value;

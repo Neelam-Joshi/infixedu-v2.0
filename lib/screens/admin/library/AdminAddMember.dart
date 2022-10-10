@@ -19,6 +19,8 @@ import 'package:infixedu/utils/model/LibraryCategoryMember.dart';
 import 'package:infixedu/utils/model/Section.dart';
 import 'package:infixedu/utils/model/Staff.dart';
 import 'package:infixedu/utils/model/Student.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class AddMember extends StatefulWidget {
   @override
@@ -115,7 +117,9 @@ class _AddMemberState extends State<AddMember> {
               padding: EdgeInsets.only(left: 10.0),
               child: TextField(
                 controller: idController,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
                 autofocus: false,
                 decoration: InputDecoration(
                   hintText: 'Enter ID Here'.tr,
@@ -186,7 +190,7 @@ class _AddMemberState extends State<AddMember> {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.deepPurpleAccent,
+                  primary: Color(0xffff3465),
                 ),
                 onPressed: () {
                   if (selectedCategoryId == 2) {
@@ -249,12 +253,16 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedCategory = value;
@@ -301,12 +309,16 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedClass = value;
@@ -339,12 +351,16 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedSection = value;
@@ -378,12 +394,16 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedStaff = value;
@@ -419,12 +439,16 @@ class _AddMemberState extends State<AddMember> {
               padding: const EdgeInsets.only(left: 8.0, bottom: 10.0),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedStudent = value;

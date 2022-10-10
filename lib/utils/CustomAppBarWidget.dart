@@ -11,6 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:infixedu/utils/fontconstant/constant.dart';
 import 'package:infixedu/utils/server/LogoutService.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
@@ -94,7 +95,10 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                                     "No new notifications",
                                     textAlign: TextAlign.end,
                                     style:
-                                        Theme.of(context).textTheme.headline5,
+                                        Theme.of(context).textTheme.headline5.copyWith(
+                                          fontFamily: sansRegular,
+                                          fontSize: 18.sp,
+                                        ),
                                   ),
                                 );
                               } else {
@@ -213,14 +217,10 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                                                           textAlign:
                                                               TextAlign.end,
                                                           style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .headline5
-                                                                  .copyWith(
-                                                                    fontSize: ScreenUtil()
-                                                                        .setSp(
-                                                                            13),
-                                                                  ),
+                                                              Theme.of(context).textTheme.headline5.copyWith(
+                                                                fontSize: ScreenUtil().setSp(13),
+                                                                fontFamily: sansRegular,
+                                                              ),
                                                         ),
                                                         Text(
                                                           timeago.format(
@@ -228,13 +228,9 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                                                           textAlign:
                                                               TextAlign.end,
                                                           style:
-                                                              Theme.of(context)
-                                                                  .textTheme
-                                                                  .headline5
-                                                                  .copyWith(
-                                                                    fontSize: ScreenUtil()
-                                                                        .setSp(
-                                                                            12),
+                                                          Theme.of(context).textTheme.headline5.copyWith(
+                                                                    fontSize: ScreenUtil().setSp(12),
+                                                                   fontFamily: sansRegular
                                                                   ),
                                                         ),
                                                         SizedBox(
@@ -291,6 +287,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                                             .copyWith(
                                               fontSize: ScreenUtil().setSp(12),
                                               color: Colors.white,
+                                              fontFamily: sansRegular
                                             ),
                                       ),
                                       style: ElevatedButton.styleFrom(
@@ -324,6 +321,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
         style: Theme.of(context).textTheme.headline5.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.red,
+              fontFamily: sansRegular
             ),
       ),
       onPressed: () {
@@ -335,7 +333,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
         "Yes",
         style: Theme.of(context).textTheme.headline5.copyWith(
               fontSize: ScreenUtil().setSp(12),
-              color: Colors.green,
+              color: Colors.green,fontFamily: sansRegular
             ),
       ),
       onPressed: () async {
@@ -357,9 +355,16 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
     AlertDialog alert = AlertDialog(
       title: Text(
         "Logout",
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headline5.copyWith(
+            fontFamily: sansRegular
+        ),
+
       ),
-      content: Text("Would you like to logout?"),
+      content: Text("Would you like to logout?",
+        style: Theme.of(context).textTheme.headline5.copyWith(
+            fontFamily: sansRegular
+        ),
+      ),
       actions: [
         cancelButton,
         yesButton,
@@ -417,7 +422,9 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                                 child: Text(
                                   "Profile",
                                   textAlign: TextAlign.end,
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style: Theme.of(context).textTheme.headline5.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ),
                               onTap: () {
@@ -440,7 +447,9 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                                 child: Text(
                                   "Change Password",
                                   textAlign: TextAlign.end,
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style: Theme.of(context).textTheme.headline5.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ),
                             ),
@@ -449,7 +458,9 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                                 child: Text(
                                   "Logout",
                                   textAlign: TextAlign.end,
-                                  style: Theme.of(context).textTheme.headline5,
+                                  style: Theme.of(context).textTheme.headline5.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ),
                               onTap: () {
@@ -713,6 +724,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
         style: Theme.of(context).textTheme.headline5.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.red,
+              fontFamily: sansRegular
             ),
       ),
       onPressed: () {
@@ -725,6 +737,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
         style: Theme.of(context).textTheme.headline5.copyWith(
               fontSize: ScreenUtil().setSp(12),
               color: Colors.green,
+               fontFamily: sansRegular
             ),
       ),
       onPressed: () async {
@@ -849,7 +862,7 @@ class _CustomAppBarWidgetState extends State<CustomAppBarWidget> {
                     onPressed: () {
                       Get.dialog(LogoutService().logoutDialog());
                     },
-                    icon: Image.asset("assets/icons/logout.png",width:25.w,height:25.h),
+                    icon: Image.asset("assets/icons/logout.png",width:20.w,height:20.h),
                   ),
                 ],
               ),

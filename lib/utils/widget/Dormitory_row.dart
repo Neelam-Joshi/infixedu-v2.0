@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Project imports:
 import 'package:infixedu/utils/model/Dormitory.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class DormitoryRow extends StatefulWidget {
@@ -36,7 +38,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
               style: Theme.of(context)
                   .textTheme
                   .headline6
-                  .copyWith(fontSize: ScreenUtil().setSp(15.0)),
+                  .copyWith(fontSize: ScreenUtil().setSp(15.0),
+                  fontFamily: sansRegular
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
@@ -52,7 +56,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontWeight: FontWeight.w500,
+                              fontFamily: sansRegular
+                          ),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -60,7 +66,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
                         Text(
                           dormitory.roomNumber.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(
+                              fontFamily: sansRegular
+                          ),
                         ),
                       ],
                     ),
@@ -75,7 +83,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontWeight: FontWeight.w500,
+                              fontFamily: sansRegular
+                          ),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -83,7 +93,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
                         Text(
                           dormitory.numberOfBed.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(
+                              fontFamily: sansRegular
+                          ),
                         ),
                       ],
                     ),
@@ -98,7 +110,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontWeight: FontWeight.w500,
+                              fontFamily: sansRegular
+                          ),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -106,7 +120,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
                         Text(
                           dormitory.costPerBed.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(
+                              fontFamily: sansRegular
+                          ),
                         ),
                       ],
                     ),
@@ -121,7 +137,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontWeight: FontWeight.w500,
+                              fontFamily: sansRegular
+                          ),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -163,7 +181,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white),
+                .copyWith(color: Colors.white,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );
@@ -180,7 +200,9 @@ class _DormitoryScreenState extends State<DormitoryRow> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white),
+                .copyWith(color: Colors.white,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );

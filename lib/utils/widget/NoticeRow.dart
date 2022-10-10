@@ -8,6 +8,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:infixedu/screens/student/notice/NoticeDetails.dart';
 import 'package:infixedu/utils/model/Notice.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class NoticRowLayout extends StatefulWidget {
@@ -40,7 +42,9 @@ class _NoticRowLayoutState extends State<NoticRowLayout> {
           style: Theme.of(context)
               .textTheme
               .headline5
-              .copyWith(fontWeight: FontWeight.w500, fontSize: ScreenUtil().setSp(15.0)),
+              .copyWith(fontWeight: FontWeight.w500, fontSize: ScreenUtil().setSp(15.0),
+              fontFamily: sansRegular
+          ),
         ),
         subtitle: Text(
           notice.date,
@@ -48,7 +52,9 @@ class _NoticRowLayoutState extends State<NoticRowLayout> {
           style: Theme.of(context)
               .textTheme
               .headline4
-              .copyWith(fontWeight: FontWeight.w300, fontSize: ScreenUtil().setSp(13.0)),
+              .copyWith(fontWeight: FontWeight.w300, fontSize: ScreenUtil().setSp(13.0),
+              fontFamily: sansRegular
+          ),
         ),
       ),
     );

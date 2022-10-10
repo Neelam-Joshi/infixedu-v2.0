@@ -116,16 +116,17 @@ flutter:
    - assets/locale/
    - assets/icons/
 
-fonts:
-  - family: popins
-    fonts:
-      - asset: fonts/poppins_medium.ttf
-        weight: 100
-      - asset: fonts/poppins_bold.ttf
-        weight: 200
-      - asset: fonts/poppins_light.ttf
-        weight: 300
-      - asset: fonts/poppins_regular.ttf
-        weight: 400
-      - asset: fonts/poppins_semibold.ttf
-        weight: 500
+  fonts:
+    - family: sansRegular
+      fonts:
+        - asset: assets/fonts/PRODUCT_SANS_REGULAR.TTF
+    - family: sansBoldItalic
+      fonts:
+        - asset: assets/fonts/PRODUCT_SANS _BOLD _ITALIC.TTF
+    - family: sansItalic
+      fonts:
+        - asset: assets/fonts/PRODUCT_SANS _ITALIC.TTF
+    - family: sansBold
+      fonts:
+        - asset: assets/fonts/PRODUCT_SANS_BOLD.TTF
+

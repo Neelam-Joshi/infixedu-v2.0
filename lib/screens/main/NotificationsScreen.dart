@@ -92,7 +92,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     onPressed: () {
                       Get.dialog(LogoutService().logoutDialog());
                     },
-                    icon:  Image.asset("assets/icons/logout.png",width:25.w,height:25.h),
+                    icon:  Image.asset("assets/icons/logout.png",width:20.w,height:20.h),
                   ),
                 ],
               ),
@@ -152,7 +152,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                             "No new notifications".tr,
                             textAlign: TextAlign.end,
                             style: Theme.of(context).textTheme.headline5.copyWith(
-                              color: Color(0xffff3465)
+                              color: Colors.deepPurple
                             ),
                           ),
                         ),

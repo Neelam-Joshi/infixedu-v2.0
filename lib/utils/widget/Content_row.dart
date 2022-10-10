@@ -23,6 +23,7 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/Content.dart';
 import 'package:infixedu/utils/permission_check.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class ContentRow extends StatefulWidget {
@@ -82,7 +83,9 @@ class _ContentRowState extends State<ContentRow> {
                                         widget.content.contentTitle,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline5,
+                                            .headline5.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -105,7 +108,9 @@ class _ContentRowState extends State<ContentRow> {
                                               .headline4
                                               .copyWith(
                                                   fontSize:
-                                                      ScreenUtil().setSp(12)),
+                                                      ScreenUtil().setSp(12),
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -134,7 +139,9 @@ class _ContentRowState extends State<ContentRow> {
                         style: Theme.of(context)
                             .textTheme
                             .headline6
-                            .copyWith(fontSize: ScreenUtil().setSp(12)),
+                            .copyWith(fontSize: ScreenUtil().setSp(12),
+                            fontFamily: sansRegular
+                        ),
                         maxLines: 1,
                       ),
                     ),
@@ -183,7 +190,9 @@ class _ContentRowState extends State<ContentRow> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith(fontWeight: FontWeight.w500,
+                                  fontFamily: sansRegular
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
@@ -192,7 +201,9 @@ class _ContentRowState extends State<ContentRow> {
                               widget.content.contentType ?? "N/A",
                               // : AppFunction.getContentType(content.type),
                               maxLines: 1,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),
@@ -207,7 +218,9 @@ class _ContentRowState extends State<ContentRow> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith(fontWeight: FontWeight.w500,
+                                  fontFamily: sansRegular
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
@@ -217,7 +230,9 @@ class _ContentRowState extends State<ContentRow> {
                                   ? 'N/A'
                                   : widget.content.uploadDate,
                               maxLines: 1,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),
@@ -232,14 +247,17 @@ class _ContentRowState extends State<ContentRow> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
                             ),
                             Text(
                               widget.content.availableFor,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),

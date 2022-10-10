@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Project imports:
 import 'package:infixedu/utils/model/Transport.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class TransportRow extends StatelessWidget {
@@ -35,7 +36,9 @@ class TransportRow extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(fontWeight: FontWeight.w500, fontSize: ScreenUtil().setSp(14.0)),
+                          .copyWith(fontWeight: FontWeight.w500, fontSize: ScreenUtil().setSp(14.0),
+                           fontFamily: sansRegular
+                      ),
                     ),
                   ),
                   Text(
@@ -44,7 +47,9 @@ class TransportRow extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .headline6
-                        .copyWith(decoration: TextDecoration.underline),
+                        .copyWith(decoration: TextDecoration.underline,
+                        fontFamily: sansRegular
+                    ),
                   ),
                 ],
               ),
@@ -55,7 +60,9 @@ class TransportRow extends StatelessWidget {
             Text(
               transport.no,
               maxLines: 1,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular
+              ),
             ),
             Container(
               height: 0.5,
@@ -98,7 +105,9 @@ class TransportRow extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .headline6
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith(fontWeight: FontWeight.w500,
+                            fontFamily: sansRegular
+                        ),
                       ),
                       SizedBox(
                         height: 15.0,
@@ -115,7 +124,9 @@ class TransportRow extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.w500),
+                                      .copyWith(fontWeight: FontWeight.w500,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 5.0,
@@ -123,7 +134,9 @@ class TransportRow extends StatelessWidget {
                                 Text(
                                   transport.no,
                                   maxLines: 1,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ],
                             ),
@@ -138,7 +151,9 @@ class TransportRow extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.w500),
+                                      .copyWith(fontWeight: FontWeight.w500,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 10.0,
@@ -146,7 +161,9 @@ class TransportRow extends StatelessWidget {
                                 Text(
                                   transport.model,
                                   maxLines: 1,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ],
                             ),
@@ -168,7 +185,9 @@ class TransportRow extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.w500),
+                                      .copyWith(fontWeight: FontWeight.w500,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 5.0,
@@ -176,7 +195,9 @@ class TransportRow extends StatelessWidget {
                                 Text(
                                   transport.madeYear.toString(),
                                   maxLines: 1,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ],
                             ),
@@ -191,7 +212,9 @@ class TransportRow extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.w500),
+                                      .copyWith(fontWeight: FontWeight.w500,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 5.0,
@@ -199,7 +222,9 @@ class TransportRow extends StatelessWidget {
                                 Text(
                                   transport.driverName,
                                   maxLines: 1,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ],
                             ),
@@ -221,7 +246,9 @@ class TransportRow extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.w500),
+                                      .copyWith(fontWeight: FontWeight.w500,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 5.0,
@@ -229,7 +256,9 @@ class TransportRow extends StatelessWidget {
                                 Text(
                                   transport.license ?? "",
                                   maxLines: 1,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ],
                             ),
@@ -244,7 +273,9 @@ class TransportRow extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.w500),
+                                      .copyWith(fontWeight: FontWeight.w500,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 5.0,
@@ -252,7 +283,9 @@ class TransportRow extends StatelessWidget {
                                 Text(
                                   transport.mobile ?? "",
                                   maxLines: 1,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ],
                             ),

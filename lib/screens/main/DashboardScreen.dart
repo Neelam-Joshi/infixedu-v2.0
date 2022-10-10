@@ -213,7 +213,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           child: Icon(
                             Themify.bell,
                             size: 22.sp,
-                            color: Colors.grey.withOpacity(0.9),
+                            color: Colors.black,
                           ),
                         );
                       }
@@ -275,7 +275,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   PersistentBottomNavBarItem(
                     inactiveIcon: widget.role == "4"
                         ? Image.asset(
-                            "assets/images/classattendance.png",
+                            "assets/images/attendancelogo.png",
                             width: 25.w,
                             height: 25.h,
                             color: Colors.white,
@@ -288,7 +288,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ),
                     icon: widget.role == "4"
                         ? Image.asset(
-                            "assets/images/classattendance.png",
+                            "assets/images/attendancelogo.png",
                             width: 25.w,
                             height: 25.h,
                             color: Colors.white,
@@ -308,7 +308,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   PersistentBottomNavBarItem(
                     inactiveIcon: widget.role == "4"
                         ? Image.asset(
-                            "assets/images/academics.png",
+                            "assets/images/academicslogo.png",
                             width: 30.w,
                             height: 30.h,
                             color: Colors.grey.withOpacity(0.9),
@@ -321,7 +321,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           ),
                     icon: widget.role == "4"
                         ? Image.asset(
-                            "assets/images/academics.png",
+                            "assets/images/academicslogo.png",
                             width: 30.w,
                             height: 30.h,
                             color:  Color(0xffff3465),

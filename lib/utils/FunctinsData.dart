@@ -104,7 +104,7 @@ class AppFunction {
     'Settings',
   ];
   static var studentIcons = [
-    'assets/images/homeworkstudents.png',
+    'assets/images/homeworkstudent.png',
     'assets/images/downloads.png',
     'assets/images/timeline.png',
     'assets/images/attendance.png',
@@ -143,7 +143,7 @@ class AppFunction {
     'assets/images/contents.png',
     'assets/images/notice.png',
     'assets/images/library.png',
-    'assets/images/homeworkstudents.png',
+    'assets/images/homeworkstudent.png',
     'assets/images/about.png',
     'assets/images/addhw.png',
   ];
@@ -164,7 +164,7 @@ class AppFunction {
   static var adminIcons = [
     'assets/images/students.png',
     'assets/images/leave.png',
-    'assets/images/staff.png',
+    'assets/images/teacher.png',
     'assets/images/dormitory.png',
     'assets/images/attendance.png',
     'assets/images/fees_icon.png',
@@ -207,7 +207,7 @@ class AppFunction {
   static var adminTransportIcons = [
     'assets/images/transport.png',
     'assets/images/transport.png',
-    'assets/images/addhw.png',
+    'assets/icons/add.png',
     'assets/images/transport.png',
   ];
 
@@ -217,8 +217,8 @@ class AppFunction {
     'Room List',
   ];
   static var adminDormitoryIcons = [
-    'assets/images/addhw.png',
-    'assets/images/addhw.png',
+    'assets/icons/add.png',
+    'assets/icons/add.png',
     'assets/images/dormitory.png',
   ];
 
@@ -271,7 +271,7 @@ class AppFunction {
     'Content List',
   ];
   static var contentsIcons = [
-    'assets/images/addhw.png',
+    'assets/icons/add.png',
     'assets/images/hwlist.png',
   ];
 
@@ -290,9 +290,9 @@ class AppFunction {
     'Add Member',
   ];
   static var adminLibraryIcons = [
-    'assets/images/addhw.png',
+    'assets/icons/add.png',
     'assets/images/hwlist.png',
-    'assets/images/addhw.png',
+    'assets/icons/add.png',
   ];
 
   static var academics = [

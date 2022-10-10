@@ -12,6 +12,7 @@ import 'package:infixedu/screens/fees/model/FeesBankPaymet.dart';
 import 'package:http/http.dart' as http;
 import 'package:infixedu/utils/model/Section.dart';
 import 'package:intl/intl.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class FeeBankPaymentSearch extends StatefulWidget {
   @override
@@ -190,13 +191,17 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                               child: TextFormField(
                                 controller: datePickerController,
                                 enabled: false,
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                                ),
                                 decoration: InputDecoration(
                                   contentPadding:
                                       EdgeInsets.symmetric(horizontal: 10),
                                   hintText: "Select Date",
                                   hintStyle:
-                                      Theme.of(context).textTheme.headline4,
+                                      Theme.of(context).textTheme.headline4.copyWith(
+                                          fontFamily: sansRegular
+                                      ),
                                 ),
                               ),
                             ),
@@ -241,7 +246,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                       .textTheme
                                       .headline4
                                       .copyWith(
-                                          color: Colors.white, fontSize: 14),
+                                          color: Colors.white, fontSize: 14,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                               ),
                               onTap: () {
@@ -293,7 +300,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .subtitle1
-                                      .copyWith(fontSize: 14),
+                                      .copyWith(fontSize: 14,
+                                      fontFamily: sansRegular
+                                  ),
                                 ),
                                 subtitle: Column(
                                   children: <Widget>[
@@ -305,7 +314,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .headline6
-                                                .copyWith(fontSize: 12),
+                                                .copyWith(fontSize: 12,
+                                                fontFamily: sansRegular
+                                            ),
                                             maxLines: 1,
                                           ),
                                         ),
@@ -401,7 +412,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                       .headline4
                                                       .copyWith(
                                                           fontWeight:
-                                                              FontWeight.w500),
+                                                              FontWeight.w500,
+                                                      fontFamily: sansRegular
+                                                  ),
                                                 ),
                                                 SizedBox(
                                                   height: 10.0,
@@ -411,7 +424,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                       .toString(),
                                                   style: Theme.of(context)
                                                       .textTheme
-                                                      .headline4,
+                                                      .headline4.copyWith(
+                                                      fontFamily: sansRegular
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -470,7 +485,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                                               .tr,
                                                                           style: Theme.of(context)
                                                                               .textTheme
-                                                                              .headline5,
+                                                                              .headline5.copyWith(
+                                                                              fontFamily: sansRegular
+                                                                          ),
                                                                         ),
                                                                       ),
                                                                     ),
@@ -531,7 +548,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                         .copyWith(
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w500,
+                                                        fontFamily: sansRegular
+                                                    ),
                                                   ),
                                                   SizedBox(
                                                     height: 10.0,
@@ -541,7 +560,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                     maxLines: 1,
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .headline4,
+                                                        .headline4.copyWith(
+                                                        fontFamily: sansRegular
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -560,7 +581,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                       .headline4
                                                       .copyWith(
                                                           fontWeight:
-                                                              FontWeight.w500),
+                                                              FontWeight.w500,
+                                                      fontFamily: sansRegular
+                                                  ),
                                                 ),
                                                 SizedBox(
                                                   height: 10.0,
@@ -570,7 +593,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                   maxLines: 1,
                                                   style: Theme.of(context)
                                                       .textTheme
-                                                      .headline4,
+                                                      .headline4.copyWith(
+                                                      fontFamily: sansRegular
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -588,7 +613,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                                                       .headline4
                                                       .copyWith(
                                                           fontWeight:
-                                                              FontWeight.w500),
+                                                              FontWeight.w500,
+                                                      fontFamily: sansRegular
+                                                  ),
                                                 ),
                                                 SizedBox(
                                                   height: 10.0,
@@ -651,7 +678,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );
@@ -668,7 +697,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );
@@ -685,7 +716,9 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );
@@ -719,12 +752,16 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                   const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
               child: Text(
                 item.capitalizeFirst,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             _selectedStatus = value;
@@ -751,12 +788,16 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                   const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             _selectedClass = value;
@@ -791,12 +832,16 @@ class _FeeBankPaymentSearchState extends State<FeeBankPaymentSearch> {
                   const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             _selectedSection = value;
@@ -888,11 +933,15 @@ class _FeesBankPaymentResultScreenState
                   return ListTile(
                     title: Text(
                       feesPayment.feeStudentInfo.fullName ?? 'NA',
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.headline6.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                     subtitle: Text(
                       "${feesPayment.createdAt ?? 'NA'}",
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                   );
                 },

@@ -22,6 +22,8 @@ import 'package:infixedu/utils/model/LeaveAdmin.dart';
 import 'package:infixedu/utils/widget/Line.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
 import '../permission_check.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class LeaveRowLayout extends StatefulWidget {
@@ -66,7 +68,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
               Expanded(
                 child: Text(
                   widget.leave.type,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headline5.copyWith(
+                    fontFamily: sansRegular
+                  ),
                   maxLines: 1,
                 ),
               ),
@@ -80,7 +84,8 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                     'View',
                     textAlign: TextAlign.end,
                     style: Theme.of(context).textTheme.headline5.copyWith(
-                        color: Colors.deepPurpleAccent,
+                        color: Colors.black,
+                        fontFamily: sansRegular,
                         decoration: TextDecoration.underline),
                   ),
                 ),
@@ -101,7 +106,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith(fontWeight: FontWeight.w500,
+                            fontFamily: sansRegular
+                        ),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -109,7 +116,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                       Text(
                         widget.leave.applyDate,
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                        ),
                       ),
                     ],
                   ),
@@ -124,7 +133,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith(fontWeight: FontWeight.w500,
+                            fontFamily: sansRegular
+                        ),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -132,7 +143,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                       Text(
                         widget.leave.leaveTo,
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                        ),
                       ),
                     ],
                   ),
@@ -147,7 +160,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith(fontWeight: FontWeight.w500,
+                            fontFamily: sansRegular
+                        ),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -155,7 +170,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                       Text(
                         widget.leave.leaveFrom,
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                        ),
                       ),
                     ],
                   ),
@@ -170,7 +187,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith(fontWeight: FontWeight.w500,
+                            fontFamily: sansRegular
+                        ),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -189,7 +208,7 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
               gradient: LinearGradient(
                   begin: Alignment.centerRight,
                   end: Alignment.centerLeft,
-                  colors: [Colors.purple, Colors.deepPurple]),
+                  colors: [Colors.pinkAccent,Color(0xffff3465)]),
             ),
           ),
         ],
@@ -225,7 +244,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                     child: Text(
                                       'Reason: ' + widget.leave.reason,
                                       style:
-                                          Theme.of(context).textTheme.headline5,
+                                          Theme.of(context).textTheme.headline5.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                     ),
                                   ),
                                 ],
@@ -236,7 +257,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                     child: Text(
                                       'Applied by: ' + widget.leave.fullName,
                                       style:
-                                          Theme.of(context).textTheme.headline5,
+                                          Theme.of(context).textTheme.headline5.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                     ),
                                   ),
                                 ],
@@ -259,7 +282,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                                 .headline4
                                                 .copyWith(
                                                     fontWeight:
-                                                        FontWeight.w500),
+                                                        FontWeight.w500,
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                           SizedBox(
                                             height: 10.0,
@@ -269,7 +294,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                             maxLines: 1,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4,
+                                                .headline4.copyWith(
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -287,7 +314,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                                 .headline4
                                                 .copyWith(
                                                     fontWeight:
-                                                        FontWeight.w500),
+                                                        FontWeight.w500,
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                           SizedBox(
                                             height: 10.0,
@@ -297,7 +326,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                             maxLines: 1,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4,
+                                                .headline4.copyWith(
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -322,7 +353,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                                 .headline4
                                                 .copyWith(
                                                     fontWeight:
-                                                        FontWeight.w500),
+                                                        FontWeight.w500,
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                           SizedBox(
                                             height: 10.0,
@@ -332,7 +365,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                             maxLines: 1,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4,
+                                                .headline4.copyWith(
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -350,7 +385,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                                 .headline4
                                                 .copyWith(
                                                     fontWeight:
-                                                        FontWeight.w500),
+                                                        FontWeight.w500,
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                           SizedBox(
                                             height: 10.0,
@@ -360,7 +397,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                             maxLines: 1,
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4,
+                                                .headline4.copyWith(
+                                                fontFamily: sansRegular
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -389,7 +428,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                                   .headline4
                                                   .copyWith(
                                                       fontSize: ScreenUtil()
-                                                          .setSp(16)),
+                                                          .setSp(16),
+                                                  fontFamily: sansRegular
+                                              ),
                                             ),
                                             SizedBox(
                                               width: 5,
@@ -403,7 +444,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                                       decoration: TextDecoration
                                                           .underline,
                                                       fontSize: ScreenUtil()
-                                                          .setSp(16)),
+                                                          .setSp(16),
+                                                  fontFamily: sansRegular
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -418,7 +461,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                       .textTheme
                                       .headline4
                                       .copyWith(
-                                          fontSize: ScreenUtil().setSp(14)),
+                                          fontSize: ScreenUtil().setSp(14),
+                                      fontFamily: sansRegular
+                                  ),
                                   maxLines: 1,
                                 ),
                               ),
@@ -429,7 +474,11 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                         .textTheme
                                         .headline4
                                         .copyWith(
-                                            fontSize: ScreenUtil().setSp(14))),
+                                            fontSize: ScreenUtil().setSp(14,),
+                                        fontFamily: sansRegular
+                                    ),
+
+                                ),
                                 value: 'Pending',
                                 onChanged: (val) {
                                   setState(() {
@@ -447,7 +496,11 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                         .textTheme
                                         .headline4
                                         .copyWith(
-                                            fontSize: ScreenUtil().setSp(14))),
+                                            fontSize: ScreenUtil().setSp(14),
+                                        fontFamily: sansRegular
+                                    ),
+
+                                ),
                                 value: 'Approve',
                                 onChanged: (val) {
                                   setState(() {
@@ -465,7 +518,11 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                         .textTheme
                                         .headline4
                                         .copyWith(
-                                            fontSize: ScreenUtil().setSp(14))),
+                                            fontSize: ScreenUtil().setSp(14),
+                                        fontFamily: sansRegular
+                                    ),
+
+                                ),
                                 value: 'Cancel',
                                 onChanged: (val) {
                                   setState(() {
@@ -494,7 +551,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
                                           .headline4
                                           .copyWith(
                                               color: Colors.white,
-                                              fontSize: ScreenUtil().setSp(14)),
+                                              fontSize: ScreenUtil().setSp(14),
+                                          fontFamily: sansRegular
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -560,7 +619,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
     AlertDialog alert = AlertDialog(
       title: Text(
         "Download",
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headline5.copyWith(
+            fontFamily: sansRegular
+        ),
       ),
       content: Text("Would you like to download the file?"),
       actions: [
@@ -667,7 +728,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );
@@ -685,7 +748,10 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
+
           ),
         ),
       );
@@ -703,7 +769,9 @@ class _LeaveRowLayoutState extends State<LeaveRowLayout> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.white, fontWeight: FontWeight.w500,
+                fontFamily: sansRegular
+            ),
           ),
         ),
       );

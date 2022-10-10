@@ -12,6 +12,7 @@ import 'package:infixedu/utils/CustomAppBarWidget.dart';
 import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/exception/DioException.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class AddFeeType extends StatefulWidget {
@@ -51,12 +52,16 @@ class _AddFeeTypeState extends State<AddFeeType> {
           children: <Widget>[
             TextField(
               controller: titleController,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular
+              ),
               decoration: InputDecoration(hintText: 'Enter title here'.tr),
             ),
             TextField(
               controller: descripController,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular
+              ),
               decoration:
                   InputDecoration(hintText: 'Enter description here'.tr),
             ),

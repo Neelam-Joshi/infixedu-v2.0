@@ -13,6 +13,7 @@ import 'package:infixedu/screens/chat/views/Group/GroupChatOpenPage.dart';
 import 'package:infixedu/screens/chat/models/ChatActiveStatus.dart';
 import 'package:infixedu/screens/chat/models/ChatGroup.dart';
 import 'package:infixedu/screens/chat/models/ChatUser.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 import 'package:shimmer/shimmer.dart';
 
 EdgeInsetsGeometry customPadding =
@@ -108,7 +109,9 @@ class _ChatPageMainState extends State<ChatPageMain>
                         style: Theme.of(context)
                             .textTheme
                             .subtitle1
-                            .copyWith(fontSize: 18.sp, color: Colors.black),
+                            .copyWith(fontSize: 18.sp, color: Colors.black,
+                           fontFamily: sansBold
+                        ),
                       ),
                     ),
                   ),
@@ -153,6 +156,7 @@ class _ChatPageMainState extends State<ChatPageMain>
                                         style: Get.textTheme.subtitle1.copyWith(
                                           color: Colors.black,
                                           fontSize: 14.sp,
+                                          fontFamily: sansRegular
                                         ),
                                       ),
                                     ],
@@ -188,12 +192,14 @@ class _ChatPageMainState extends State<ChatPageMain>
                         Get.to(() => BlockedUsersPage());
                       }
                     },
-                    icon: Icon(Icons.menu,color:Colors.black),
+                    icon: Icon(Icons.more_vert,color:Colors.black),
                     itemBuilder: (context) => [
                       PopupMenuItem(
                         child: Text("Blocked Users"),
                         textStyle: Get.theme.textTheme.headline4.copyWith(
-                          color:Colors.black
+                          color:Colors.black,
+                          fontSize: 16,
+                          fontFamily: sansRegular
                         ),
                         value: 1,
                       ),
@@ -224,9 +230,13 @@ class _ChatPageMainState extends State<ChatPageMain>
                     indicator: Get.theme.tabBarTheme.indicator,
                     automaticIndicatorColorAdjustment: true,
                     isScrollable: false,
-                    labelStyle: Get.textTheme.subtitle1.copyWith(fontSize: 12),
+                    labelStyle: Get.textTheme.subtitle1.copyWith(fontSize: 12,
+                      fontFamily: sansRegular,
+                    ),
                     unselectedLabelStyle:
-                        Get.textTheme.subtitle1.copyWith(fontSize: 12),
+                        Get.textTheme.subtitle1.copyWith(fontSize: 12,
+                            fontFamily: sansRegular
+                        ),
                   ),
                   Expanded(
                     child: TabBarView(
@@ -254,9 +264,13 @@ class _ChatPageMainState extends State<ChatPageMain>
                     indicator: Get.theme.tabBarTheme.indicator,
                     automaticIndicatorColorAdjustment: true,
                     isScrollable: false,
-                    labelStyle: Get.textTheme.subtitle1.copyWith(fontSize: 12),
+                    labelStyle: Get.textTheme.subtitle1.copyWith(fontSize: 12,
+                      fontFamily: sansRegular
+                    ),
                     unselectedLabelStyle:
-                        Get.textTheme.subtitle1.copyWith(fontSize: 12),
+                        Get.textTheme.subtitle1.copyWith(fontSize: 12,
+                            fontFamily: sansRegular
+                        ),
                   ),
                   Expanded(
                     child: TabBarView(
@@ -326,7 +340,8 @@ class _ChatListPageState extends State<ChatListPage> {
                     child: Text(
                       "No users found",
                       style: Get.textTheme.subtitle1.copyWith(
-                        color:Colors.black
+                        fontFamily: sansRegular,
+                        fontSize: 18.sp,
                       ),
                     ),
                   );
@@ -418,7 +433,8 @@ class _ChatListPageState extends State<ChatListPage> {
                               maxLines: 1,
                               overflow: TextOverflow.clip,
                               style: Get.textTheme.subtitle1.copyWith(
-                                color:Colors.black
+                                color:Colors.black,
+                                  fontFamily: sansRegular
                               ),
                             ),
                             SizedBox(width: 5),
@@ -439,7 +455,8 @@ class _ChatListPageState extends State<ChatListPage> {
                               ? "${chatUser.lastMessage?.characters?.take(20)} ..."
                               : "",
                           style: Get.textTheme.subtitle2.copyWith(
-                            color:Colors.black
+                              color:Colors.black,
+                              fontFamily: sansRegular
                           ),
                         ),
                       );
@@ -487,7 +504,8 @@ class _GroupListPageState extends State<GroupListPage> {
                 Text(
                   "Groups",
                   style: Get.textTheme.subtitle1.copyWith(
-                    color:Colors.black
+                    color:Colors.black,
+                    fontFamily: sansRegular
                   ),
                 ),
                 Expanded(child: Container()),
@@ -551,7 +569,8 @@ class _GroupListPageState extends State<GroupListPage> {
                       title: Text(
                         "${chatGroup.name}",
                         style: Get.textTheme.subtitle1.copyWith(
-                          color:Colors.black
+                          color:Colors.black,
+                            fontFamily: sansRegular
                         ),
                       ),
                     );

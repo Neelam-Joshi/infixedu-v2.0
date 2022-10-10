@@ -9,6 +9,8 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class Utils extends GetxController {
   static Future<bool> saveBooleanValue(String key, bool value) async {
@@ -102,6 +104,7 @@ class Utils extends GetxController {
         style: Get.textTheme.subtitle1.copyWith(
           fontSize: 16,
           fontWeight: FontWeight.normal,
+          fontFamily: sansRegular
         ),
       ),
     );

@@ -18,6 +18,7 @@ import 'package:infixedu/utils/exception/DioException.dart';
 import 'package:infixedu/utils/model/Staff.dart';
 import 'package:infixedu/utils/model/Vehicle.dart';
 import 'package:infixedu/utils/widget/Line.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class AddVehicle extends StatefulWidget {
   @override
@@ -102,7 +103,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   title: TabBar(
                     labelColor: Colors.black,
                     labelPadding: EdgeInsets.zero,
-                    indicatorColor: Colors.purple,
+                    indicatorColor: Color(0xffff3465),
                     tabs: tabs,
                     indicatorPadding: EdgeInsets.zero,
                   ),
@@ -155,7 +156,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 5.0,
@@ -166,7 +169,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -182,7 +187,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 5.0,
@@ -193,7 +200,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                             .toString(),
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -209,7 +218,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 5.0,
@@ -220,7 +231,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                             .toString(),
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -244,7 +257,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                             .textTheme
                                             .headline4
                                             .copyWith(
-                                                fontWeight: FontWeight.w500),
+                                                fontWeight: FontWeight.w500,
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                       SizedBox(
                                         height: 5.0,
@@ -253,7 +268,9 @@ class _AddVehicleState extends State<AddVehicle> {
                                         snapshot.data.assignVehicle[index].note,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -283,7 +300,9 @@ class _AddVehicleState extends State<AddVehicle> {
             padding: EdgeInsets.only(left: 10),
             child: TextField(
               controller: vehicleNoController,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular
+              ),
               decoration: InputDecoration(hintText: 'Vehicle No'.tr),
             ),
           ),
@@ -299,7 +318,9 @@ class _AddVehicleState extends State<AddVehicle> {
             padding: EdgeInsets.only(left: 10),
             child: TextField(
               controller: yearMadeModelController,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular
+              ),
               decoration: InputDecoration(hintText: 'Year Made'.tr),
             ),
           ),
@@ -320,7 +341,9 @@ class _AddVehicleState extends State<AddVehicle> {
             padding: EdgeInsets.only(left: 10),
             child: TextField(
               controller: noteController,
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular
+              ),
               decoration: InputDecoration(hintText: 'Note'.tr),
             ),
           ),
@@ -331,7 +354,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.deepPurpleAccent,
+                      primary: Color(0xffff3465),
                     ),
                     onPressed: () {
                       addVehicleData(
@@ -356,7 +379,9 @@ class _AddVehicleState extends State<AddVehicle> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     '',
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: Theme.of(context).textTheme.subtitle1.copyWith(
+                        fontFamily: sansRegular
+                    ),
                   ),
                 )
         ],
@@ -377,12 +402,16 @@ class _AddVehicleState extends State<AddVehicle> {
               padding: const EdgeInsets.only(bottom: 10.0),
               child: Text(
                 item.name,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 13.0,
+            fontFamily: sansRegular
+        ),
         onChanged: (value) {
           setState(() {
             selectedDriver = value;

@@ -7,7 +7,7 @@
          additional functionality it is fine to subclass or reimplement
          FlutterApplication and put your custom class here. -->
     <application
-        android:label="InfixEdu"
+        android:label="Tabschool"
         tools:replace="android:label"
         android:icon="@mipmap/launcher_icon"
         android:usesCleartextTraffic="true"

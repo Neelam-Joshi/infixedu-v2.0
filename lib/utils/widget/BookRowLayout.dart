@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Project imports:
 import 'package:infixedu/utils/model/Book.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class BookListRow extends StatefulWidget {
@@ -71,13 +73,17 @@ class _BookListRowState extends State<BookListRow>
                           children: <Widget>[
                             Text(
                               book.title,
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headline5.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                             Text(
                               book.price == null
                                   ? " "
                                   : "\$" + book.price.toString(),
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headline5.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),
@@ -88,7 +94,9 @@ class _BookListRowState extends State<BookListRow>
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontSize: ScreenUtil().setSp(15.0)),
+                              .copyWith(fontSize: ScreenUtil().setSp(15.0),
+                              fontFamily: sansRegular
+                          ),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -100,7 +108,9 @@ class _BookListRowState extends State<BookListRow>
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(fontWeight: FontWeight.w500),
+                                    .copyWith(fontWeight: FontWeight.w500,
+                                    fontFamily: sansRegular
+                                ),
                               ),
                         SizedBox(
                           height: 10.0,
@@ -110,6 +120,7 @@ class _BookListRowState extends State<BookListRow>
                             text: 'Author:',
                             style: Theme.of(context).textTheme.headline4.copyWith(
                                 fontSize: ScreenUtil().setSp(14.0),
+                                fontFamily: sansRegular,
                                 decoration: TextDecoration.underline),
                             children: <TextSpan>[
                               TextSpan(
@@ -117,7 +128,9 @@ class _BookListRowState extends State<BookListRow>
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(fontSize: ScreenUtil().setSp(14.0)),
+                                    .copyWith(fontSize: ScreenUtil().setSp(14.0),
+                                    fontFamily: sansRegular
+                                ),
                               ),
                             ],
                           ),
@@ -130,14 +143,18 @@ class _BookListRowState extends State<BookListRow>
                             text: 'Published by:',
                             style: Theme.of(context).textTheme.headline4.copyWith(
                                 fontSize: ScreenUtil().setSp(14.0),
-                                decoration: TextDecoration.underline),
+                                decoration: TextDecoration.underline,
+                                fontFamily: sansRegular
+                            ),
                             children: <TextSpan>[
                               TextSpan(
                                 text: "  ${book.publication}",
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(fontSize: ScreenUtil().setSp(14.0)),
+                                    .copyWith(fontSize: ScreenUtil().setSp(14.0),
+                                    fontFamily: sansRegular
+                                ),
                               ),
                             ],
                           ),
@@ -147,7 +164,9 @@ class _BookListRowState extends State<BookListRow>
                         ),
                         Text(
                           book.details == null ? '' : book.details,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(
+                              fontFamily: sansRegular
+                          ),
                         ),
                       ],
                     ),
@@ -184,7 +203,9 @@ class _BookListRowState extends State<BookListRow>
                   style: Theme.of(context)
                       .textTheme
                       .headline6
-                      .copyWith(fontSize: ScreenUtil().setSp(15.0)),
+                      .copyWith(fontSize: ScreenUtil().setSp(15.0),
+                      fontFamily: sansRegular
+                  ),
                   maxLines: 1,
                 ),
               );
@@ -203,6 +224,7 @@ class _BookListRowState extends State<BookListRow>
                         : '${book.author}',
                     style: Theme.of(context).textTheme.headline4.copyWith(
                           fontSize: ScreenUtil().setSp(13.0),
+                        fontFamily: sansRegular
                         ),
                     children: <TextSpan>[
                       TextSpan(
@@ -212,7 +234,9 @@ class _BookListRowState extends State<BookListRow>
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontSize: ScreenUtil().setSp(13.0)),
+                            .copyWith(fontSize: ScreenUtil().setSp(13.0),
+                            fontFamily: sansRegular
+                        ),
                       ),
                       TextSpan(
                         text: book.publication == null || book.publication == ""
@@ -221,7 +245,9 @@ class _BookListRowState extends State<BookListRow>
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontSize: ScreenUtil().setSp(13.0)),
+                            .copyWith(fontSize: ScreenUtil().setSp(13.0),
+                            fontFamily: sansRegular
+                        ),
                       ),
                     ],
                   ),
@@ -262,7 +288,10 @@ class _BookListRowState extends State<BookListRow>
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(fontWeight: FontWeight.w500),
+                                    .copyWith(fontWeight: FontWeight.w500,
+                                    fontFamily: sansRegular
+                                ),
+
                               ),
                               SizedBox(
                                 height: 10.0,
@@ -272,7 +301,9 @@ class _BookListRowState extends State<BookListRow>
                                         book.subjectName == ""
                                     ? 'N/A'
                                     : book.subjectName,
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(
+                                    fontFamily: sansRegular
+                                ),
                               ),
                             ],
                           ),
@@ -288,7 +319,9 @@ class _BookListRowState extends State<BookListRow>
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith(fontWeight: FontWeight.w500,
+                                  fontFamily: sansRegular
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
@@ -298,7 +331,9 @@ class _BookListRowState extends State<BookListRow>
                                   ? 'N/A'
                                   : book.bookNo,
                               maxLines: 1,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),
@@ -313,7 +348,9 @@ class _BookListRowState extends State<BookListRow>
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith(fontWeight: FontWeight.w500,
+                                  fontFamily: sansRegular
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
@@ -323,7 +360,9 @@ class _BookListRowState extends State<BookListRow>
                                   ? 'N/A'
                                   : book.quantity.toString(),
                               maxLines: 1,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),
@@ -338,7 +377,9 @@ class _BookListRowState extends State<BookListRow>
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith(fontWeight: FontWeight.w500,
+                                   fontFamily: sansRegular
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
@@ -348,7 +389,9 @@ class _BookListRowState extends State<BookListRow>
                                   ? 'N/A'
                                   : "\$${book.price.toString()}",
                               maxLines: 1,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),
@@ -363,7 +406,9 @@ class _BookListRowState extends State<BookListRow>
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith(fontWeight: FontWeight.w500,
+                                  fontFamily: sansRegular
+                              ),
                             ),
                             SizedBox(
                               height: 10.0,
@@ -373,7 +418,9 @@ class _BookListRowState extends State<BookListRow>
                                   ? 'not assigned'
                                   : book.reckNo,
                               maxLines: 1,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                             ),
                           ],
                         ),

@@ -16,6 +16,7 @@ import 'package:infixedu/utils/CustomSnackBars.dart';
 import 'package:infixedu/utils/LoadMoreIndicator.dart';
 import 'package:infixedu/utils/MediaUtils.dart';
 import 'package:infixedu/utils/Utils.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 import 'package:let_log/let_log.dart';
 import 'package:loading_more_list/loading_more_list.dart';
 import 'package:pusher_channels_flutter/pusher_channels_flutter.dart';
@@ -220,6 +221,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
               style: Get.textTheme.subtitle1.copyWith(
                 fontSize: 12.sp,
                 fontWeight: FontWeight.normal,
+                fontFamily: sansRegular,
               ),
             ),
             SizedBox(
@@ -256,6 +258,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
               style: Get.textTheme.subtitle1.copyWith(
                 fontSize: 12.sp,
                 fontWeight: FontWeight.normal,
+                fontFamily: sansRegular,
               ),
             ),
             SizedBox(
@@ -292,6 +295,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
               style: Get.textTheme.subtitle1.copyWith(
                 fontSize: 12.sp,
                 fontWeight: FontWeight.normal,
+                fontFamily: sansRegular,
               ),
             ),
             SizedBox(
@@ -486,8 +490,8 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                                         .textTheme.subtitle1
                                                         .copyWith(
                                                       fontSize: 10,
-                                                      fontWeight:
-                                                          FontWeight.bold,
+                                                      fontWeight: FontWeight.bold,
+                                                      fontFamily: sansRegular,
                                                     ),
                                                   ),
                                                   Text(
@@ -501,6 +505,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                                       overflow:
                                                           TextOverflow.clip,
                                                       fontSize: 10,
+                                                      fontFamily: sansRegular,
                                                     ),
                                                   ),
                                                 ],
@@ -632,6 +637,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                         scrollPhysics: BouncingScrollPhysics(),
                                         style: Get.textTheme.subtitle1.copyWith(
                                           fontSize: 13,
+                                          fontFamily: sansRegular,
                                         ),
                                         decoration: InputDecoration(
                                           contentPadding:
@@ -639,6 +645,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                           hintText: "Type message...",
                                           hintStyle: TextStyle(
                                             color: Colors.black54,
+                                            fontFamily: sansRegular,
                                           ),
                                           border: InputBorder.none,
                                         ),
@@ -791,6 +798,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                           fontSize: 20,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
+                          fontFamily: sansBold,
                         ),
                       ),
                     ),
@@ -837,6 +845,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                             hintText: "Type a message here (optional)",
                             hintStyle: Get.textTheme.subtitle1.copyWith(
                               fontSize: 12.sp,
+                              fontFamily: sansRegular,
                             ),
                           ),
                         ),
@@ -863,7 +872,9 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                 title: Text(
                                   "${chatUser.fullName ?? ""}",
                                   style: Get.textTheme.subtitle1
-                                      .copyWith(fontSize: 14),
+                                      .copyWith(fontSize: 14,
+                                    fontFamily: sansRegular,
+                                  ),
                                 ),
                                 leading: CachedNetworkImage(
                                   imageUrl:
@@ -932,7 +943,9 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                 title: Text(
                                   "${chatGroup.name ?? ""}",
                                   style: Get.textTheme.subtitle1
-                                      .copyWith(fontSize: 14),
+                                      .copyWith(fontSize: 14,
+                                    fontFamily: sansRegular,
+                                  ),
                                 ),
                                 leading: CachedNetworkImage(
                                   imageUrl:
@@ -1067,6 +1080,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                 style: Get.textTheme.subtitle1.copyWith(
                   color: Colors.grey.shade200,
                   fontSize: 8.sp,
+                  fontFamily: sansRegular,
                 ),
               ),
             ),
@@ -1110,7 +1124,9 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                           const SizedBox(width: 16),
                           Text(
                             "Quote",
-                            style: Get.textTheme.subtitle2,
+                            style: Get.textTheme.subtitle2.copyWith(
+                              fontFamily: sansRegular,
+                            ),
                           ),
                         ],
                       ),
@@ -1138,7 +1154,9 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                           const SizedBox(width: 16),
                           Text(
                             "Forward",
-                            style: Get.textTheme.subtitle2,
+                            style: Get.textTheme.subtitle2.copyWith(
+                              fontFamily: sansRegular,
+                            ),
                           ),
                         ],
                       ),
@@ -1167,7 +1185,9 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                 const SizedBox(width: 16),
                                 Text(
                                   "Delete",
-                                  style: Get.textTheme.subtitle2,
+                                  style: Get.textTheme.subtitle2.copyWith(
+                                    fontFamily: sansRegular,
+                                  ),
                                 ),
                               ],
                             ),
@@ -1231,11 +1251,11 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
             background: Container(
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(AppConfig.appToolbarBackground),
-                  fit: BoxFit.fill,
-                ),
-                color: Colors.deepPurple,
+                // image: DecorationImage(
+                //   image: AssetImage(AppConfig.appToolbarBackground),
+                //   fit: BoxFit.fill,
+                // ),
+                color: Color(0xfffff3f3),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1252,7 +1272,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                         icon: Icon(
                           Icons.arrow_back,
                           size: ScreenUtil().setSp(20),
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                         onPressed: () {
                           Get.back();
@@ -1311,7 +1331,8 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                       .subtitle1
                                       .copyWith(
                                         fontSize: 15,
-                                        color: Colors.white,
+                                        color: Colors.black,
+                                       fontFamily: sansBold
                                       ),
                                 )
                               : Text(
@@ -1322,7 +1343,8 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                       .subtitle1
                                       .copyWith(
                                         fontSize: 15,
-                                        color: Colors.white,
+                                      color: Colors.black,
+                                      fontFamily: sansRegular
                                       ),
                                 );
                         }),
@@ -1346,8 +1368,9 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                                   Text(
                                     getStatusTitle(widget.onlineStatus),
                                     style: Get.textTheme.subtitle1.copyWith(
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 10,
+                                      fontFamily: sansRegular
                                     ),
                                   ),
                                 ],
@@ -1393,6 +1416,7 @@ class _ChatOpenPageState extends State<ChatOpenPage> {
                               await _chatOpenController.blockUser("block");
                             }
                           },
+                          icon: Icon(Icons.more_vert,color:Colors.black),
                           itemBuilder: (context) => [
                             PopupMenuItem(
                               child: Text("Files"),

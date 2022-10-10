@@ -10,6 +10,8 @@ import 'package:infixedu/language/language_selection.dart';
 import 'package:infixedu/language/translation.dart';
 import 'package:infixedu/utils/widget/cc.dart';
 import 'package:infixedu/screens/SplashScreen.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 import '../../main.dart';
 import '../Utils.dart';
@@ -50,6 +52,9 @@ class _MainPageState extends State<MainPage> {
                 return MaterialApp(
                     builder: EasyLoading.init(),
                     debugShowCheckedModeBanner: false,
+                    theme:ThemeData(
+                      fontFamily: sansRegular
+                    ),
                     home: Scaffold(
                         body: Center(child: CupertinoActivityIndicator())));
               } else {

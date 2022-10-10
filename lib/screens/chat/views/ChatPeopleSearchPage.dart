@@ -11,6 +11,7 @@ import 'package:infixedu/screens/chat/models/ChatActiveStatus.dart';
 import 'package:infixedu/screens/chat/models/ChatUser.dart';
 import 'package:infixedu/screens/chat/views/Single/ChatOpenPage.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class ChatPeopleSearchPage extends StatefulWidget {
   @override
@@ -82,7 +83,9 @@ class _ChatPeopleSearchPageState extends State<ChatPeopleSearchPage> {
               decoration: InputDecoration(
                 hintText: "Search by name or email",
                 labelText: "Search by name or email",
-                labelStyle: Theme.of(context).textTheme.headline6,
+                labelStyle: Theme.of(context).textTheme.headline6.copyWith(
+                    fontFamily: sansRegular
+                ),
                 errorStyle: TextStyle(color: Colors.pinkAccent, fontSize: 15.0),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5.0),
@@ -106,7 +109,9 @@ class _ChatPeopleSearchPageState extends State<ChatPeopleSearchPage> {
                       return Center(
                         child: Text(
                           "Search for users",
-                          style: Get.textTheme.subtitle1,
+                          style: Get.textTheme.subtitle1.copyWith(
+                              fontFamily: sansRegular
+                          ),
                         ),
                       );
                     } else {
@@ -190,7 +195,9 @@ class _ChatPeopleSearchPageState extends State<ChatPeopleSearchPage> {
                                 children: [
                                   Text(
                                     "${chatUser.fullName ?? "${chatUser.email}" ?? ""}",
-                                    style: Get.textTheme.subtitle1,
+                                    style: Get.textTheme.subtitle1.copyWith(
+                                        fontFamily: sansRegular
+                                    ),
                                   ),
                                   SizedBox(
                                     width: 5,
@@ -213,7 +220,10 @@ class _ChatPeopleSearchPageState extends State<ChatPeopleSearchPage> {
                         return Center(
                           child: Text(
                             "No user found",
-                            style: Get.textTheme.subtitle1,
+                            style: Get.textTheme.subtitle1.copyWith(
+                                fontFamily: sansRegular,
+                                fontSize: 18.sp,
+                            ),
                           ),
                         );
                       }
@@ -223,7 +233,9 @@ class _ChatPeopleSearchPageState extends State<ChatPeopleSearchPage> {
                   return Center(
                     child: Text(
                       "Search for users",
-                      style: Get.textTheme.subtitle1,
+                      style: Get.textTheme.subtitle1.copyWith(
+                        fontFamily: sansRegular,
+                      ),
                     ),
                   );
                 }

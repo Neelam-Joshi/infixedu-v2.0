@@ -15,6 +15,7 @@ import 'package:infixedu/utils/widget/ScaleRoute.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../main.dart';
 import 'ChangePassword.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class SettingScreen extends StatefulWidget {
   @override
@@ -76,7 +77,8 @@ class _SettingScreenState extends State<SettingScreen> {
             title: Text(
               'Change Language'.tr,
               style: Theme.of(context).textTheme.headline6.copyWith(
-                color:Colors.black
+                color:Colors.black,
+                  fontFamily: sansRegular
               ),
             ),
             trailing: GetBuilder<LanguageController>(
@@ -93,7 +95,9 @@ class _SettingScreenState extends State<SettingScreen> {
                           style: Theme.of(context)
                               .textTheme
                               .headline6
-                              .copyWith(color: Colors.white),
+                              .copyWith(color: Colors.white,
+                              fontFamily: sansRegular
+                          ),
                         ),
                       ));
                 }),
@@ -115,7 +119,8 @@ class _SettingScreenState extends State<SettingScreen> {
             title: Text(
               'Change Password'.tr,
               style: Theme.of(context).textTheme.headline6.copyWith(
-                color:Colors.black
+                color:Colors.black,
+                  fontFamily: sansRegular
               ),
             ),
             dense: true,
@@ -135,7 +140,9 @@ class _SettingScreenState extends State<SettingScreen> {
             padding: const EdgeInsets.all(5.0),
             child: Text(
               'System Locale',
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headline5.copyWith(
+                  fontFamily: sansRegular
+              ),
             ),
           ),
           ToggleButtons(
@@ -152,7 +159,8 @@ class _SettingScreenState extends State<SettingScreen> {
                   'RTL',
                   style: TextStyle(
                     fontSize: 16,
-                    fontFamily: 'popins',
+                    fontFamily: sansRegular,
+
                   ),
                 ),
               ),
@@ -162,7 +170,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   'LTL',
                   style: TextStyle(
                     fontSize: 16,
-                    fontFamily: 'popins',
+                      fontFamily: sansRegular,
                   ),
                 ),
               ),
@@ -255,7 +263,9 @@ class _SettingScreenState extends State<SettingScreen> {
                             },
                             child: Text(
                               languages[index].languageText,
-                              style: Get.textTheme.subtitle1,
+                              style: Get.textTheme.subtitle1.copyWith(
+                                fontFamily: sansRegular,
+                              ),
                             ),
                           ),
                         ],

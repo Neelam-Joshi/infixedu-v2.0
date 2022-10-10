@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class CustomWidget extends StatefulWidget {
   final int index;
@@ -50,6 +51,7 @@ class _CustomWidgetState extends State<CustomWidget> {
             ],
           ),
           child: Container(
+            padding: const EdgeInsets.only(left:5,right: 5),
             decoration: BoxDecoration(
               color:widget.isSelected?Color(0xffFdffbb):Colors.white,
               borderRadius: BorderRadius.circular(10.0),
@@ -67,8 +69,9 @@ class _CustomWidgetState extends State<CustomWidget> {
                   widget.headline.tr,
                   style: TextStyle(
                     color: widget.isSelected ? Colors.black : Colors.black,
-                    fontSize: ScreenUtil().setSp(14),
-                    fontWeight: FontWeight.w500,
+                    fontSize: ScreenUtil().setSp(16),
+                    fontWeight: FontWeight.w400,
+                    fontFamily: sansRegular
                   ),
                   // maxLines: 1,
                   textAlign: TextAlign.center,

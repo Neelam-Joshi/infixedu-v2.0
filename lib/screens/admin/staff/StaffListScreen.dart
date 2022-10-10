@@ -9,6 +9,7 @@ import 'package:infixedu/utils/model/Staff.dart';
 import 'package:infixedu/utils/widget/Line.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
 import 'AdminStaffDetails.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class StaffListScreen extends StatefulWidget {
@@ -95,15 +96,21 @@ class _StaffListScreenState extends State<StaffListScreen> {
                 ),
                 title: Text(
                   data.staffs[index].name,
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                    fontFamily: sansRegular
+                  ),
                 ),
                 subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Phone' + ' : ${data.staffs[index].phone}',
-                        style: Theme.of(context).textTheme.headline4),
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                        )),
                     Text('Address' + ' : ${data.staffs[index].currentAddress}',
-                        style: Theme.of(context).textTheme.headline4),
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                        )),
                   ],
                 ),
                 isThreeLine: true,

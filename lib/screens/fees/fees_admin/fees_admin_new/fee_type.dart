@@ -9,6 +9,8 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/screens/fees/model/FeesGroup.dart';
 import 'package:infixedu/screens/fees/model/FeesType.dart';
 import 'package:http/http.dart' as http;
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class FeesTypeScreen extends StatefulWidget {
   @override
@@ -90,11 +92,15 @@ class _FeesTypeScreenState extends State<FeesTypeScreen> {
                   return ListTile(
                     title: Text(
                       feeType.name ?? 'NA',
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.headline6.copyWith(
+                         fontFamily: sansRegular
+                      ),
                     ),
                     subtitle: Text(
                       "${feeType.description ?? 'NA'}",
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -185,7 +191,9 @@ class _FeesTypeScreenState extends State<FeesTypeScreen> {
                           children: <Widget>[
                             TextField(
                               controller: titleController,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                               decoration:
                                   InputDecoration(hintText: 'Enter title here'),
                             ),
@@ -201,13 +209,17 @@ class _FeesTypeScreenState extends State<FeesTypeScreen> {
                                   child: Text(
                                     item.name,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                        ),
                                   ),
                                 );
                               }).toList(),
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline4
+                                  .headline4.copyWith(
+                                  fontFamily: sansRegular
+                              )
                                   .copyWith(fontSize: 13.0),
                               onChanged: (value) {
                                 state(() {
@@ -222,7 +234,9 @@ class _FeesTypeScreenState extends State<FeesTypeScreen> {
                             ),
                             TextField(
                               controller: descripController,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                              ),
                               decoration: InputDecoration(
                                   hintText: 'Enter discription here'),
                             ),
@@ -232,7 +246,7 @@ class _FeesTypeScreenState extends State<FeesTypeScreen> {
                               width: double.infinity,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.deepPurpleAccent,
+                                  primary: Color(0xffff3465),
                                 ),
                                 onPressed: () async {
                                   final response = await http.post(
@@ -312,13 +326,17 @@ class _FeesTypeScreenState extends State<FeesTypeScreen> {
                         children: <Widget>[
                           TextField(
                             controller: titleController,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(
+                                fontFamily: sansRegular
+                            ),
                             decoration:
                                 InputDecoration(hintText: 'Enter title here'),
                           ),
                           TextField(
                             controller: descripController,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(
+                                fontFamily: sansRegular
+                            ),
                             decoration: InputDecoration(
                                 hintText: 'Enter discription here'),
                           ),
@@ -328,7 +346,7 @@ class _FeesTypeScreenState extends State<FeesTypeScreen> {
                             width: double.infinity,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.deepPurpleAccent,
+                                primary: Color(0xffff3465),
                               ),
                               onPressed: () async {
                                 final response = await http.post(

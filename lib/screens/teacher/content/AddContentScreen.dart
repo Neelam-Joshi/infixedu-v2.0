@@ -23,6 +23,8 @@ import 'package:infixedu/utils/model/Classes.dart';
 import 'package:infixedu/utils/model/Section.dart';
 import 'package:infixedu/utils/model/TeacherSubject.dart';
 import 'package:infixedu/utils/permission_check.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class AddContentScreeen extends StatefulWidget {
   @override
@@ -137,7 +139,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                   style: Theme.of(context)
                       .textTheme
                       .headline4
-                      .copyWith(color: Colors.white),
+                      .copyWith(color: Colors.white,
+                      fontFamily: sansRegular
+                  ),
                 ),
               ),
               onTap: () {
@@ -179,23 +183,31 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                     SizedBox(height: 20),
                     Text(
                       'Content Type'.tr,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                     SizedBox(height: 5),
                     getContentTypeDropdown(),
                     SizedBox(height: 20),
                     Text(
                       'Title'.tr,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                     SizedBox(height: 5),
                     TextFormField(
                       keyboardType: TextInputType.text,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                       controller: titleController,
                       textAlign: TextAlign.start,
                       decoration: InputDecoration(
-                        labelStyle: Theme.of(context).textTheme.headline4,
+                        labelStyle: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                        ),
                         errorStyle:
                             TextStyle(color: Colors.pinkAccent, fontSize: 12),
                         enabledBorder: OutlineInputBorder(
@@ -216,7 +228,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                       height: 20,
                     ),
                     Text('Available for'.tr,
-                        style: Theme.of(context).textTheme.headline4),
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                        )),
                     SizedBox(
                       height: 5,
                     ),
@@ -227,9 +241,11 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontSize: ScreenUtil().setSp(12))),
+                              .copyWith(fontSize: ScreenUtil().setSp(12),
+                              fontFamily: sansRegular
+                          )),
                       value: 'admin',
-                      activeColor: Colors.purple,
+                      activeColor: Color(0xffff3465),
                       selected: radioStr == 'admin' ? true : false,
                       enableFeedback: false,
                       dense: true,
@@ -249,9 +265,11 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontSize: ScreenUtil().setSp(12))),
+                              .copyWith(fontSize: ScreenUtil().setSp(12),
+                              fontFamily: sansRegular
+                          )),
                       value: 'student',
-                      activeColor: Colors.purple,
+                      activeColor: Color(0xffff3465),
                       enableFeedback: false,
                       selected: radioStr == 'student' ? true : false,
                       dense: true,
@@ -284,9 +302,17 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                             context,
                             pickerTheme: DateTimePickerTheme(
                               confirm: Text('Done',
-                                  style: TextStyle(color: Colors.red)),
+                                  style: TextStyle(color: Colors.red,
+                                      fontFamily: sansRegular
+                                  ),
+
+                              ),
                               cancel: Text('cancel',
-                                  style: TextStyle(color: Colors.cyan)),
+                                  style: TextStyle(color: Colors.cyan,
+                                      fontFamily: sansRegular
+                                  ),
+
+                              ),
                             ),
                             minDateTime: DateTime.parse(initDateTime),
                             maxDateTime: DateTime.parse(maxDateTime),
@@ -321,7 +347,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(fontSize: ScreenUtil().setSp(12)),
+                                    .copyWith(fontSize: ScreenUtil().setSp(12),
+                                    fontFamily: sansRegular
+                                ),
                               ),
                             ),
                             Icon(
@@ -360,7 +388,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(fontSize: ScreenUtil().setSp(12)),
+                                    .copyWith(fontSize: ScreenUtil().setSp(12),
+                                    fontFamily: sansRegular
+                                ),
                                 maxLines: 2,
                               ),
                             ),
@@ -369,7 +399,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                                     .textTheme
                                     .headline4
                                     .copyWith(
-                                        decoration: TextDecoration.underline)),
+                                        decoration: TextDecoration.underline,
+                                    fontFamily: sansRegular
+                                )),
                           ],
                         ),
                       ),
@@ -379,14 +411,21 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                     ),
                     TextFormField(
                       keyboardType: TextInputType.text,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                       controller: descriptionController,
                       decoration: InputDecoration(
                         hintText: "Description".tr,
                         labelText: "Description".tr,
-                        labelStyle: Theme.of(context).textTheme.headline4,
+                        labelStyle: Theme.of(context).textTheme.headline4.copyWith(
+
+                            fontFamily: sansRegular
+                        ),
                         errorStyle:
-                            TextStyle(color: Colors.pinkAccent, fontSize: 15.0),
+                            TextStyle(color: Colors.pinkAccent, fontSize: 15.0,
+                                fontFamily: sansRegular
+                            ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           borderSide: BorderSide(
@@ -432,11 +471,15 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
               value: item,
               child: Text(
                 item,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                    fontFamily: sansRegular
+                ),
               ),
             );
           }).toList(),
-          style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15.0),
+          style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15.0,
+              fontFamily: sansRegular
+          ),
           onChanged: (value) {
             setState(() {
               _selectedContentType = value;
@@ -559,7 +602,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                   title: Text("All Student".tr,
                       style: Theme.of(context)
                           .textTheme
-                          .headline4
+                          .headline4.copyWith(
+                          fontFamily: sansRegular
+                      )
                           .copyWith(fontSize: 15.0)),
                   onChanged: (bool value) {
                     setState(() {
@@ -576,7 +621,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                       "Class",
                       style: Theme.of(context)
                           .textTheme
-                          .headline4
+                          .headline4.copyWith(
+                          fontFamily: sansRegular
+                      )
                           .copyWith(fontSize: 15.0),
                     ),
                     SizedBox(
@@ -606,7 +653,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                           }).toList(),
                           style: Theme.of(context)
                               .textTheme
-                              .headline4
+                              .headline4.copyWith(
+                              fontFamily: sansRegular
+                          )
                               .copyWith(fontSize: 15.0),
                           onChanged: (value) {
                             setState(() {
@@ -645,7 +694,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontSize: 15.0),
+                                .copyWith(fontSize: 15.0,
+                                fontFamily: sansRegular
+                            ),
                           ),
                           SizedBox(
                             height: 5,
@@ -674,7 +725,9 @@ class _AddContentScreeenState extends State<AddContentScreeen> {
                                 }).toList(),
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline4
+                                    .headline4.copyWith(
+                                    fontFamily: sansRegular
+                                )
                                     .copyWith(fontSize: 15.0),
                                 onChanged: (value) {
                                   setState(() {
