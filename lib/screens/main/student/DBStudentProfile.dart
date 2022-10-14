@@ -120,12 +120,20 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
           automaticallyImplyLeading: false,
           flexibleSpace: Container(
             padding: EdgeInsets.only(top: 20.h),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(AppConfig.appToolbarBackground),
-                fit: BoxFit.fill,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight:Radius.circular(20),
               ),
-              color: Colors.deepPurple,
+              color: Color(0xfffff3f3),
+              boxShadow: [
+                BoxShadow(
+                  color:
+                  Color(0x1f000000),
+                  blurRadius: 10.0,
+                  offset: Offset(2, 4),
+                ),
+              ],
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -143,7 +151,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                       style: Theme.of(context)
                           .textTheme
                           .subtitle1
-                          .copyWith(fontSize: 18.sp, color: Colors.white),
+                          .copyWith(fontSize: 18.sp, color: Colors.black),
                     ),
                   ),
                 ),
@@ -162,7 +170,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                       )),
                     );
                   },
-                  icon: Icon(Icons.edit),
+                  icon: Icon(Icons.edit,color:Colors.black),
                 ),
               ],
             ),

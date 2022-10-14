@@ -210,10 +210,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           badgeColor: Color(0xffff3465),
                           animationType: BadgeAnimationType.fade,
                           toAnimate: false,
-                          child: Icon(
-                            Themify.bell,
-                            size: 22.sp,
-                            color: Colors.black,
+                          child: Image.asset(
+                            "assets/icons/bell.png",
+                            width: 25.w,
+                            height: 25.h,
+                            color: Colors.grey,
                           ),
                         );
                       }
@@ -246,7 +247,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             "assets/icons/bell.png",
                             width: 25.w,
                             height: 25.h,
-                            color: Colors.grey,
+                            color: Colors.black,
                           ),
                         );
                       }
@@ -281,7 +282,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             color: Colors.white,
                           )
                         : Image.asset(
-                            "assets/images/fees_icon.png",
+                            "assets/icons/fees_bottomlogo.png",
                             width: 25.w,
                             height: 25.h,
                             color: Colors.white,
@@ -294,7 +295,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             color: Colors.white,
                           )
                         : Image.asset(
-                            "assets/images/fees_icon.png",
+                            "assets/icons/fees_bottomlogo.png",
                             width: 25.w,
                             height: 25.h,
                             color: Colors.white,
@@ -314,7 +315,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             color: Colors.grey.withOpacity(0.9),
                           )
                         : Image.asset(
-                            "assets/images/routine.png",
+                            "assets/icons/routine_one.png",
                             width: 30.w,
                             height: 30.h,
                             color: Colors.grey.withOpacity(0.9),
@@ -327,7 +328,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             color:  Color(0xffff3465),
                           )
                         : Image.asset(
-                            "assets/images/routine.png",
+                            "assets/icons/routine_one.png",
                             width: 30.w,
                             height: 30.h,
                             color: Colors.deepPurple.withOpacity(0.9),
@@ -345,7 +346,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             color: Colors.grey.withOpacity(0.9),
                           )
                         : Image.asset(
-                            "assets/images/profile.png",
+                            "assets/icons/user.png",
                             width: 25.w,
                             height: 25.h,
                             color: Colors.grey.withOpacity(0.9),
@@ -358,10 +359,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             color: Color(0xffff3465),
                           )
                         : Image.asset(
-                            "assets/images/homework.png",
+                            "assets/icons/user.png",
                             width: 25.w,
                             height: 25.h,
-                            color: Colors.deepPurple.withOpacity(0.9),
+                            color: Color(0xffff3465),
                           ),
                     title: widget.role == "4" ? "Homework".tr : "Profile".tr,
                     activeColorPrimary: Color(0xffff3465),

@@ -25,7 +25,7 @@ void main() async {
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
-    statusBarColor: Color(0xff280073), //or set color with: Color(0xFF0000FF)
+    statusBarColor: Color(0xffff3465), //or set color with: Color(0xFF0000FF)
   ));
   HttpOverrides.global = new MyHttpOverrides();
   final sharedPref = await SharedPreferences.getInstance();

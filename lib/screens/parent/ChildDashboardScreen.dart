@@ -141,6 +141,8 @@ class _ChildHomeState extends State<ChildHome> {
                       id: widget.id.toString(),
                       image: widget.profileImage,
                       token: _token);
+                  debugPrint('id ${widget.id.toString()}');
+                  debugPrint('is clicked');
                 });
               },
               headline: _titles[index],
