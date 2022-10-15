@@ -253,7 +253,7 @@ class AppFunction {
     'HW List',
   ];
   static var homeworkIcons = [
-    'assets/images/addhw.png',
+    'assets/icons/add.png',
     'assets/images/hwlist.png',
   ];
 
@@ -262,7 +262,7 @@ class AppFunction {
     'meeting',
   ];
   static var zoomMeetingIcons = [
-    'assets/images/addhw.png',
+    'assets/icons/add.png',
     'assets/images/hwlist.png',
   ];
 
@@ -280,7 +280,7 @@ class AppFunction {
     'Leave List',
   ];
   static var leavesIcons = [
-    'assets/images/hwlist.png',
+    'assets/icons/apply.png',
     'assets/images/addhw.png',
   ];
 
@@ -332,8 +332,8 @@ class AppFunction {
   ];
 
   static var studentLeavesIcons = [
+    'assets/icons/apply.png',
     'assets/images/hwlist.png',
-    'assets/images/addhw.png',
   ];
 
   static var studentLessonPlan = [
@@ -352,7 +352,7 @@ class AppFunction {
   ];
   static var adminFeeIcons = [
     'assets/images/fees_icon.png',
-    'assets/images/addhw.png',
+    'assets/images/hwlist.png',
   ];
   static var adminFeesNew = [
     'Fee Group',
