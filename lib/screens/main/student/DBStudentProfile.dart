@@ -27,6 +27,8 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/server/ProfileService.dart';
 import 'package:infixedu/utils/widget/ProfileListRow.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class DBStudentProfile extends StatefulWidget {
@@ -151,7 +153,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                       style: Theme.of(context)
                           .textTheme
                           .subtitle1
-                          .copyWith(fontSize: 18.sp, color: Colors.black),
+                          .copyWith(fontFamily: sansRegular,fontSize: 18.sp, color: Colors.black),
                     ),
                   ),
                 ),
@@ -207,7 +209,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                             alignment: Alignment.center,
                             child: CircleAvatar(
                               radius: 25,
-                              backgroundColor: Colors.deepPurpleAccent,
+                              backgroundColor: Colors.pinkAccent,
                               child: CachedNetworkImage(
                                 imageUrl:
                                     "${InfixApi.root}/${_studentDetails.studentData.user.studentPhoto}",
@@ -279,7 +281,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                                   elevation: 0,
                                   title: TabBar(
                                     labelColor: Color(0xff415094),
-                                    indicatorColor: Colors.purple,
+                                    indicatorColor: Colors.pinkAccent,
                                     indicatorWeight: 3,
                                     tabs: tabs,
                                     isScrollable: true,
@@ -287,15 +289,16 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                                     labelStyle: Theme.of(context)
                                         .textTheme
                                         .headline6
-                                        .copyWith(
-                                            color: Color(0xff415094),
+                                        .copyWith(fontFamily: sansRegular,
+                                            color: Color(0xff000000),
                                             fontSize: ScreenUtil().setSp(11),
                                             fontWeight: FontWeight.bold),
                                     unselectedLabelStyle: Theme.of(context)
                                         .textTheme
                                         .headline6
-                                        .copyWith(
-                                            color: Color(0xff415094),
+                                        .copyWith(fontFamily: sansRegular,
+                                            //color: Color(0xff415094),
+                                            color: Color(0xff000000),
                                             fontSize: ScreenUtil().setSp(11),
                                             fontWeight: FontWeight.bold),
                                     unselectedLabelColor: Color(0xff415094),
@@ -362,7 +365,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
               style: Theme.of(context)
                   .textTheme
                   .subtitle2
-                  .copyWith(color: Color(0xff727fc8)),
+                  .copyWith(fontFamily: sansRegular,color: Color(0xff000000)),
             ),
           ),
           Row(
@@ -447,7 +450,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
               style: Theme.of(context)
                   .textTheme
                   .subtitle2
-                  .copyWith(color: Color(0xff727fc8)),
+                  .copyWith(fontFamily: sansRegular,color: Color(0xff000000)),
             ),
           ),
           Row(
@@ -532,7 +535,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
               style: Theme.of(context)
                   .textTheme
                   .subtitle2
-                  .copyWith(color: Color(0xff727fc8)),
+                  .copyWith(fontFamily: sansRegular,color: Color(0xff000000)),
             ),
           ),
           Row(
@@ -793,7 +796,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                       Icon(
                         Icons.file_present,
                         size: 20,
-                        color: Colors.deepPurple,
+                        color: Color(0xffff3465),
                       ),
                       SizedBox(
                         width: 10,
@@ -803,8 +806,8 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                                 _studentDetails.studentData.user.documentTitle1)
                             ? ""
                             : _studentDetails.studentData.user.documentTitle1,
-                        style: Theme.of(context).textTheme.subtitle2.copyWith(
-                              color: Color(0xff727fc8),
+                        style: Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
+                              color: Color(0xff000000),
                               fontWeight: FontWeight.normal,
                               fontSize: 12,
                             ),
@@ -831,7 +834,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                       Icon(
                         Icons.file_present,
                         size: 20,
-                        color: Colors.deepPurple,
+                        color: Color(0xffff3465),
                       ),
                       SizedBox(
                         width: 10,
@@ -841,8 +844,8 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                                 _studentDetails.studentData.user.documentTitle2)
                             ? ""
                             : _studentDetails.studentData.user.documentTitle2,
-                        style: Theme.of(context).textTheme.subtitle2.copyWith(
-                              color: Color(0xff727fc8),
+                        style: Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
+                              color: Color(0xff000000),
                               fontWeight: FontWeight.normal,
                               fontSize: 12,
                             ),
@@ -869,7 +872,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                       Icon(
                         Icons.file_present,
                         size: 20,
-                        color: Colors.deepPurple,
+                        color: Color(0xffff3465),
                       ),
                       SizedBox(
                         width: 10,
@@ -879,8 +882,8 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                                 _studentDetails.studentData.user.documentTitle3)
                             ? ""
                             : _studentDetails.studentData.user.documentTitle3,
-                        style: Theme.of(context).textTheme.subtitle2.copyWith(
-                              color: Color(0xff727fc8),
+                        style: Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
+                              color: Color(0xff000000),
                               fontWeight: FontWeight.normal,
                               fontSize: 12,
                             ),
@@ -907,7 +910,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                       Icon(
                         Icons.file_present,
                         size: 20,
-                        color: Colors.deepPurple,
+                        color: Color(0xffff3465),
                       ),
                       SizedBox(
                         width: 10,
@@ -917,8 +920,8 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
                                 _studentDetails.studentData.user.documentTitle4)
                             ? ""
                             : _studentDetails.studentData.user.documentTitle4,
-                        style: Theme.of(context).textTheme.subtitle2.copyWith(
-                              color: Color(0xff727fc8),
+                        style: Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
+                              color: Color(0xff000000),
                               fontWeight: FontWeight.normal,
                               fontSize: 12,
                             ),
@@ -937,7 +940,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
       children: <Widget>[
         Text(
           _studentDetails.studentData.userDetails.fullName,
-          style: Theme.of(context).textTheme.headline5.copyWith(
+          style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular,
                 fontWeight: FontWeight.bold,
                 fontSize: ScreenUtil().setSp(14),
               ),
@@ -952,8 +955,8 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
               _studentDetails.studentData.userDetails.classSection[index]
                   .toString()
                   .replaceAll(',', ''),
-              style: Theme.of(context).textTheme.headline6.copyWith(
-                    color: Color(0xFF727FC8),
+              style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular,
+                    color: Color(0xFF000000),
                     fontWeight: FontWeight.normal,
                     fontSize: 12,
                   ),
@@ -967,8 +970,8 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
           'Admission'.tr +
               ' : ' +
               _studentDetails.studentData.userDetails.admissionNo.toString(),
-          style: Theme.of(context).textTheme.headline6.copyWith(
-                color: Color(0xFF727FC8),
+          style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular,
+                color: Color(0xFF000000),
                 fontWeight: FontWeight.normal,
                 fontSize: 12,
               ),
@@ -1001,7 +1004,7 @@ class _DBStudentProfileState extends State<DBStudentProfile> {
     AlertDialog alert = AlertDialog(
       title: Text(
         "Download".tr,
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular),
       ),
       content: Text("Would you like to download the file?".tr),
       actions: [
@@ -1094,8 +1097,8 @@ class ParentsDetailsRow extends StatelessWidget {
                 Text(
                   title ?? "",
                   textAlign: TextAlign.start,
-                  style: Theme.of(context).textTheme.subtitle2.copyWith(
-                        color: Color(0xff727fc8),
+                  style: Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
+                        color: Color(0xff000000),
                         fontWeight: FontWeight.normal,
                         fontSize: ScreenUtil().setSp(12),
                       ),
@@ -1124,8 +1127,8 @@ class ParentsDetailsRow extends StatelessWidget {
                 Text(
                   isNullOrEmpty(value) ? "" : value,
                   textAlign: TextAlign.start,
-                  style: Theme.of(context).textTheme.subtitle2.copyWith(
-                        color: Color(0xff727fc8),
+                  style: Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
+                        color: Color(0xff000000),
                         fontWeight: FontWeight.normal,
                         fontSize: ScreenUtil().setSp(12),
                       ),

@@ -1,8 +1,8 @@
 class AppConfig {
   //static String domainName = 'https://spondan.com/spn23/chat'; //** Replace with your domain name
-  static String domainName = 'https://ais.tabschool.in';
+  static String domainName = 'https://vidyasthalischool.tabschool.in/';
 
-  static String appName = "TabSchool";
+  static String appName = "Vidyasthali";
 
   static String appLogo = 'assets/config/app_logo.png';
 

@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'dart:developer';
 
 // Package imports:
 import 'package:dio/dio.dart' as DIO;
@@ -42,7 +43,7 @@ class Login {
         print('DIO ERROR: $message');
       });
       if (response.statusCode == 200) {
-        print(response.data);
+        log('login res${response.data}');
         var user = response.data;
         isSuccess = user['success'];
         message = user['message'];
@@ -57,9 +58,7 @@ class Login {
           studentId = user['data']['userDetails']['s_id'];
           print("Student => $studentId");
         }
-
         zoom = "0";
-
         if (rule == 1 || rule == 4 || rule == 5) {
           image = isNullOrEmpty(user['data']['userDetails']['staff_photo'])
               ? 'public/uploads/staff/demo/staff.jpg'

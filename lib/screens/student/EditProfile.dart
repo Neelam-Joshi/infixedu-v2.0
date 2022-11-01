@@ -19,6 +19,8 @@ import 'package:infixedu/utils/CustomAppBarWidget.dart';
 import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/StudentDetailsModel.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class EditProfile extends StatefulWidget {
   final String id;
@@ -156,7 +158,7 @@ class _EditProfileState extends State<EditProfile> {
                 return Center(
                   child: Text(
                     'Error: ${snapshot.error}',
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle( fontFamily: sansRegular,fontSize: 18),
                   ),
                 );
                 // if we got our data
@@ -178,7 +180,7 @@ class _EditProfileState extends State<EditProfile> {
                             horizontal: 20.0.w, vertical: 15.0.h),
                         child: Text(
                           "Profile Photo".tr,
-                          style: Get.textTheme.headline6,
+                          style: Get.textTheme.headline6.copyWith(fontFamily: sansRegular),
                         ),
                       ),
                       Padding(
@@ -189,13 +191,13 @@ class _EditProfileState extends State<EditProfile> {
                           child: TextFormField(
                             enabled: false,
                             keyboardType: TextInputType.text,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular),
                             autovalidateMode: AutovalidateMode.disabled,
                             decoration: InputDecoration(
                               labelText: _file == null
                                   ? 'Select image'.tr
                                   : _file.path.split('/').last,
-                              errorStyle: TextStyle(
+                              errorStyle: TextStyle( fontFamily: sansRegular,
                                   color: Colors.pinkAccent, fontSize: 15.0),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5.0),
@@ -219,7 +221,7 @@ class _EditProfileState extends State<EditProfile> {
                             Expanded(
                               child: TextFormField(
                                 keyboardType: TextInputType.text,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular),
                                 controller: _firstNameCtrl,
                                 validator: (String value) {
                                   if (value.isEmpty) {
@@ -231,8 +233,8 @@ class _EditProfileState extends State<EditProfile> {
                                   hintText: "First Name".tr,
                                   labelText: "First Name".tr,
                                   labelStyle:
-                                      Theme.of(context).textTheme.headline4,
-                                  errorStyle: TextStyle(
+                                      Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
+                                  errorStyle: TextStyle( fontFamily: sansRegular,
                                     color: Colors.pinkAccent,
                                     fontSize: 15.0,
                                   ),
@@ -251,7 +253,7 @@ class _EditProfileState extends State<EditProfile> {
                               },
                               icon: Icon(
                                 Icons.edit,
-                                color: Colors.deepPurpleAccent,
+                                color: Color(0xffff3465),
                               ),
                             ),
                           ],
@@ -265,7 +267,7 @@ class _EditProfileState extends State<EditProfile> {
                             Expanded(
                               child: TextFormField(
                                 keyboardType: TextInputType.text,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular),
                                 controller: _lastNameCtrl,
                                 validator: (String value) {
                                   if (value.isEmpty) {
@@ -277,8 +279,8 @@ class _EditProfileState extends State<EditProfile> {
                                   hintText: "Last Name".tr,
                                   labelText: "Last Name".tr,
                                   labelStyle:
-                                      Theme.of(context).textTheme.headline4,
-                                  errorStyle: TextStyle(
+                                      Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
+                                  errorStyle: TextStyle( fontFamily: sansRegular,
                                     color: Colors.pinkAccent,
                                     fontSize: 15.0,
                                   ),
@@ -297,7 +299,7 @@ class _EditProfileState extends State<EditProfile> {
                               },
                               icon: Icon(
                                 Icons.edit,
-                                color: Colors.deepPurpleAccent,
+                                color: Color(0xffff3465),
                               ),
                             ),
                           ],
@@ -311,7 +313,7 @@ class _EditProfileState extends State<EditProfile> {
                             Expanded(
                               child: TextFormField(
                                 keyboardType: TextInputType.text,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular),
                                 enabled: false,
                                 initialValue:
                                     "${date.day}/${date.month}/${date.year}",
@@ -319,8 +321,8 @@ class _EditProfileState extends State<EditProfile> {
                                   hintText: "Date of birth".tr,
                                   labelText: "Date of birth".tr,
                                   labelStyle:
-                                      Theme.of(context).textTheme.headline4,
-                                  errorStyle: TextStyle(
+                                      Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
+                                  errorStyle: TextStyle( fontFamily: sansRegular,
                                     color: Colors.pinkAccent,
                                     fontSize: 15.0,
                                   ),
@@ -337,9 +339,9 @@ class _EditProfileState extends State<EditProfile> {
                                   context,
                                   pickerTheme: DateTimePickerTheme(
                                     confirm: Text('Done',
-                                        style: TextStyle(color: Colors.red)),
+                                        style: TextStyle( fontFamily: sansRegular,color: Colors.red)),
                                     cancel: Text('Cancel',
-                                        style: TextStyle(color: Colors.cyan)),
+                                        style: TextStyle( fontFamily: sansRegular,color: Colors.cyan)),
                                   ),
                                   minDateTime: DateTime.parse(minDateTime),
                                   maxDateTime: DateTime.parse(maxDateTime),
@@ -362,7 +364,7 @@ class _EditProfileState extends State<EditProfile> {
                               },
                               icon: Icon(
                                 Icons.edit,
-                                color: Colors.deepPurpleAccent,
+                                color: Color(0xffff3465),
                               ),
                             ),
                           ],
@@ -377,7 +379,7 @@ class _EditProfileState extends State<EditProfile> {
                               child: TextFormField(
                                 maxLines: 3,
                                 keyboardType: TextInputType.text,
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular),
                                 controller: _addressCtrl,
                                 validator: (String value) {
                                   if (value.isEmpty) {
@@ -389,8 +391,8 @@ class _EditProfileState extends State<EditProfile> {
                                   hintText: "Current Address".tr,
                                   labelText: "Current Address".tr,
                                   labelStyle:
-                                      Theme.of(context).textTheme.headline4,
-                                  errorStyle: TextStyle(
+                                      Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
+                                  errorStyle: TextStyle( fontFamily: sansRegular,
                                     color: Colors.pinkAccent,
                                     fontSize: 15.0,
                                   ),
@@ -409,7 +411,7 @@ class _EditProfileState extends State<EditProfile> {
                               },
                               icon: Icon(
                                 Icons.edit,
-                                color: Colors.deepPurpleAccent,
+                                color: Color(0xffff3465),
                               ),
                             ),
                           ],

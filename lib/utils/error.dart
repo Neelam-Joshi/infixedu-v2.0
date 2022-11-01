@@ -23,11 +23,15 @@ class _ErrorPageState extends State<ErrorPage> {
               flex: 3,
               child:
               Container(
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.height * 0.40,
                 decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(AppConfig.loginBackground),
-                      fit: BoxFit.fill,
+                  //   image: DecorationImage(
+                  // image: AssetImage(AppConfig.loginBackground),
+                  // fit: BoxFit.fill),
+                    color:Color(0xffFDFFBB),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
                     ),
                     boxShadow: [
                       BoxShadow(
@@ -37,17 +41,68 @@ class _ErrorPageState extends State<ErrorPage> {
                       )
                     ]
                 ),
-                // child: Center(
-                //   child: Container(
-                //     height: 150.0,
-                //     width: 150.0,
-                //     decoration: BoxDecoration(
-                //         image: DecorationImage(
-                //           image: AssetImage(AppConfig.appLogo),
-                //         )),
-                //   ),
-                // ),
+                child: Container(
+                    margin: const EdgeInsets.only(bottom:10),
+                    height: MediaQuery.of(context).size.height * 0.40,
+                    decoration: BoxDecoration(
+                      color:Color(0xffBCF0ff),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+
+                    ),
+                    child:Container(
+                      margin: const EdgeInsets.only(bottom:10),
+                      height: MediaQuery.of(context).size.height * 0.40,
+                      decoration: BoxDecoration(
+                        color:Color(0xffffffff),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                      ),
+                      child:Center(
+                        child: Container(
+                          height: 150.0,
+                          width: 150.0,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(AppConfig.appLogo),
+                              )),
+                        ),
+                      ),
+                    )
+
+                ),
+
               ),
+              // Container(
+              //   height: MediaQuery.of(context).size.height * 0.3,
+              //   decoration: BoxDecoration(
+              //       image: DecorationImage(
+              //         image: AssetImage(AppConfig.loginBackground),
+              //         fit: BoxFit.fill,
+              //       ),
+              //       boxShadow: [
+              //         BoxShadow(
+              //             blurRadius: 5,
+              //             offset:Offset(2,2),
+              //             color: Colors.black12
+              //         )
+              //       ]
+              //   ),
+              //   // child: Center(
+              //   //   child: Container(
+              //   //     height: 150.0,
+              //   //     width: 150.0,
+              //   //     decoration: BoxDecoration(
+              //   //         image: DecorationImage(
+              //   //           image: AssetImage(AppConfig.appLogo),
+              //   //         )),
+              //   //   ),
+              //   // ),
+              // ),
               // Container(
               //   height: MediaQuery.of(context).size.height * 0.3,
               //   decoration: BoxDecoration(

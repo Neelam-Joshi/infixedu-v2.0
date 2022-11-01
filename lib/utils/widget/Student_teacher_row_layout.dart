@@ -6,6 +6,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 // Project imports:
 import 'package:infixedu/utils/model/Teacher.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class StudentTeacherRowLayout extends StatefulWidget {
@@ -37,6 +39,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
             ),
             Text(widget.teacher.teacherName,
                 style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily:sansRegular,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     )),
@@ -60,7 +63,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
                   children: [
                     Icon(
                       Icons.mail_outline,
-                      color: Colors.indigo,
+                      color: Color(0xffff3465),
                       size: 18,
                     ),
                     SizedBox(
@@ -69,6 +72,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
                     Text(
                       widget.teacher.teacherEmail,
                       style: Theme.of(context).textTheme.headline4.copyWith(
+                        fontFamily:sansRegular,
                             fontSize: 14,
                           ),
                     ),
@@ -93,7 +97,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
                         children: [
                           Icon(
                             Icons.phone,
-                            color: Colors.indigo,
+                            color: Color(0xffff3465),
                             size: 18,
                           ),
                           SizedBox(
@@ -103,6 +107,7 @@ class _StudentTeacherRowLayoutState extends State<StudentTeacherRowLayout> {
                             '${widget.teacher.teacherPhone}',
                             style:
                                 Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily:sansRegular,
                                       fontSize: 14,
                                     ),
                           ),

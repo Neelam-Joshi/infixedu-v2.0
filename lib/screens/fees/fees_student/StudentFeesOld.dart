@@ -16,6 +16,7 @@ import 'package:infixedu/utils/model/StudentRecord.dart';
 import 'package:infixedu/utils/server/LogoutService.dart';
 import 'package:infixedu/screens/fees/widgets/Fees_row_layout.dart';
 import 'package:infixedu/utils/widget/ShimmerListWidget.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class StudentFeesOld extends StatefulWidget {
   final String id;
@@ -49,12 +50,20 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
           automaticallyImplyLeading: false,
           flexibleSpace: Container(
             padding: EdgeInsets.only(top: 20.h),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(AppConfig.appToolbarBackground),
-                fit: BoxFit.fill,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight:Radius.circular(20),
               ),
-              color: Colors.deepPurple,
+              color: Color(0xfffff3f3),
+              boxShadow: [
+                BoxShadow(
+                  color:
+                  Color(0x1f000000),
+                  blurRadius: 10.0,
+                  offset: Offset(2, 4),
+                ),
+              ],
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +81,7 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                       style: Theme.of(context)
                           .textTheme
                           .subtitle1
-                          .copyWith(fontSize: 18.sp, color: Colors.white),
+                          .copyWith(fontSize: 18.sp, color: Colors.black),
                     ),
                   ),
                 ),
@@ -85,7 +94,7 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                   },
                   icon: Icon(
                     Icons.exit_to_app,
-                    size: 25.sp,
+                    size: 25.sp,color: Colors.black
                   ),
                 ),
               ],
@@ -152,7 +161,8 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -162,7 +172,7 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(fontFamily: sansRegular),
                                         ),
                                       ],
                                     ),
@@ -179,7 +189,9 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -189,7 +201,9 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -206,7 +220,9 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -216,7 +232,9 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -233,7 +251,9 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -243,7 +263,7 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(fontFamily: sansRegular),
                                         ),
                                       ],
                                     ),
@@ -260,7 +280,9 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -271,7 +293,9 @@ class _StudentFeesOldState extends State<StudentFeesOld> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),

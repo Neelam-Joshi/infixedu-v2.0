@@ -13,6 +13,8 @@ import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/AboutSchool.dart';
 import 'package:infixedu/utils/server/About.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class AboutScreen extends StatefulWidget {
@@ -54,41 +56,45 @@ class _AboutScreenState extends State<AboutScreen> {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 ListTile(
-                  leading: CachedNetworkImage(
-                    height: 50.h,
-                    width: 100.w,
-                    imageUrl: InfixApi.root + snapshot.data.logo,
-                    imageBuilder: (context, imageProvider) => Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: imageProvider,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                    placeholder: (context, url) => CupertinoActivityIndicator(),
-                    errorWidget: (context, url, error) => CachedNetworkImage(
-                      imageUrl:
-                          InfixApi.root + 'public/uploads/staff/demo/staff.jpg',
-                      imageBuilder: (context, imageProvider) => Container(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: imageProvider,
-                            fit: BoxFit.cover,
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                        ),
-                      ),
-                      placeholder: (context, url) =>
-                          CupertinoActivityIndicator(),
-                      errorWidget: (context, url, error) => Icon(Icons.error),
-                    ),
-                  ),
+                  leading: Image.asset("assets/config/app_logo.png"),
+                  // CachedNetworkImage(
+                  //   height: 50.h,
+                  //   width: 100.w,
+                  //   imageUrl: InfixApi.root + snapshot.data.logo,
+                  //   imageBuilder: (context, imageProvider) => Container(
+                  //     decoration: BoxDecoration(
+                  //       image: DecorationImage(
+                  //         image: imageProvider,
+                  //         fit: BoxFit.contain,
+                  //       ),
+                  //     ),
+                  //   ),
+                  //   placeholder: (context, url) => CupertinoActivityIndicator(),
+                  //   errorWidget: (context, url, error) => CachedNetworkImage(
+                  //     imageUrl:
+                  //         InfixApi.root + 'public/uploads/staff/demo/staff.jpg',
+                  //     imageBuilder: (context, imageProvider) => Container(
+                  //       decoration: BoxDecoration(
+                  //         image: DecorationImage(
+                  //           image: imageProvider,
+                  //           fit: BoxFit.cover,
+                  //         ),
+                  //         borderRadius: BorderRadius.all(Radius.circular(50)),
+                  //       ),
+                  //     ),
+                  //     placeholder: (context, url) =>
+                  //         CupertinoActivityIndicator(),
+                  //     errorWidget: (context, url, error) => Icon(Icons.error),
+                  //   ),
+                  // ),
                   title: Text(
-                    '${snapshot.data.schoolName}',
+                    //'${snapshot.data.schoolName}',
+                    "Vidyasthali",
                     style: Theme.of(context).textTheme.headline4.copyWith(
+                        fontFamily: sansRegular,
                         fontSize: ScreenUtil().setSp(15),
                         color: Colors.black),
                   ),
@@ -97,8 +103,9 @@ class _AboutScreenState extends State<AboutScreen> {
                   height: 20.h,
                 ),
                 Text(
-                  '${snapshot.data.mainDescription}',
+                  'Assured Employement',
                   style: Theme.of(context).textTheme.headline4.copyWith(
+                      fontFamily: sansRegular,
                       fontSize: ScreenUtil().setSp(15),
                       color: Colors.black),
                 ),
@@ -116,7 +123,8 @@ class _AboutScreenState extends State<AboutScreen> {
                         Text(
                           "Address".tr,
                           style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color:Colors.black
+                              fontFamily: sansRegular,
+                              color:Colors.black
                           ),
                         ),
                       ],
@@ -125,11 +133,18 @@ class _AboutScreenState extends State<AboutScreen> {
                       width: 15.w,
                     ),
                     Expanded(
-                      child: Text(snapshot.data.address ?? "N/A",
+                      child: Text("Borivali, Mumbai, Maharashtra,400092,India",
                           textAlign: TextAlign.start,
                           style: Theme.of(context).textTheme.subtitle1.copyWith(
+                              fontFamily: sansRegular,
                               color:Colors.black
                           )),
+                      // Text(snapshot.data.address ?? "N/A",
+                      //     textAlign: TextAlign.start,
+                      //     style: Theme.of(context).textTheme.subtitle1.copyWith(
+                      //       fontFamily: sansRegular,
+                      //         color:Colors.black
+                      //     )),
                     ),
                   ],
                 ),
@@ -147,6 +162,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         Text(
                           "Phone".tr,
                           style: Theme.of(context).textTheme.subtitle1.copyWith(
+                              fontFamily: sansRegular,
                               color:Colors.black
                           ),
                         ),
@@ -156,11 +172,18 @@ class _AboutScreenState extends State<AboutScreen> {
                       width: 15.w,
                     ),
                     Expanded(
-                      child: Text(snapshot.data.phone ?? "N/A",
+                      child:  Text("+9199676774",
                           textAlign: TextAlign.start,
                           style: Theme.of(context).textTheme.subtitle1.copyWith(
+                              fontFamily: sansRegular,
                               color:Colors.black
                           )),
+                      // Text(snapshot.data.phone ?? "N/A",
+                      //     textAlign: TextAlign.start,
+                      //     style: Theme.of(context).textTheme.subtitle1.copyWith(
+                      //       fontFamily: sansRegular,
+                      //         color:Colors.black
+                      //     )),
                     ),
                   ],
                 ),
@@ -178,6 +201,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         Text(
                           "Email".tr,
                           style: Theme.of(context).textTheme.subtitle1.copyWith(
+                              fontFamily: sansRegular,
                               color:Colors.black
                           ),
                         ),
@@ -187,11 +211,18 @@ class _AboutScreenState extends State<AboutScreen> {
                       width: 15.w,
                     ),
                     Expanded(
-                      child: Text(snapshot.data.email ?? "N/A",
+                      child:  Text("support@tabschool.in",
                           textAlign: TextAlign.start,
                           style: Theme.of(context).textTheme.subtitle1.copyWith(
+                              fontFamily: sansRegular,
                               color:Colors.black
                           )),
+                      // Text(snapshot.data.email ?? "N/A",
+                      //     textAlign: TextAlign.start,
+                      //     style: Theme.of(context).textTheme.subtitle1.copyWith(
+                      //       fontFamily: sansRegular,
+                      //         color:Colors.black
+                      //     )),
                     ),
                   ],
                 ),
@@ -221,7 +252,8 @@ class _AboutScreenState extends State<AboutScreen> {
     //                 style: Theme.of(context)
     //                     .textTheme
     //                     .headline4
-    //                     .copyWith(fontSize: ScreenUtil().setSp(15), color: Colors.deepPurple),
+    //                     .copyWith(
+    //                     fontFamily: sansRegular,fontSize: ScreenUtil().setSp(15), color: Colors.deepPurple),
     //               ),
     //             ),
     //             Expanded(

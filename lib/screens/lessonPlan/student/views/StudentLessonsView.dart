@@ -14,6 +14,8 @@ import 'package:infixedu/utils/model/StudentRecord.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class StudentLessonsView extends StatefulWidget {
   final String id;
@@ -212,7 +214,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                 ),
                                 Text(
                                   "Week ${snapshot.data.thisWeek}",
-                                  style: Theme.of(context).textTheme.subtitle1,
+                                  style: Theme.of(context).textTheme.subtitle1.copyWith(fontFamily: sansRegular,),
                                 ),
                                 IconButton(
                                   onPressed: () {
@@ -286,7 +288,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                           Text(week.name,
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .headline6),
+                                                  .headline6.copyWith(fontFamily: sansRegular,)),
                                           Text(
                                               DateFormat.yMMMd()
                                                   .format(
@@ -295,7 +297,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .headline6
-                                                  .copyWith(fontSize: 12)),
+                                                  .copyWith(fontFamily: sansRegular,fontSize: 12)),
                                         ],
                                       ),
                                     ),
@@ -331,7 +333,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                       style: Theme.of(context)
                                                           .textTheme
                                                           .headline4
-                                                          .copyWith(
+                                                          .copyWith(fontFamily: sansRegular,
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                           )),
@@ -341,7 +343,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                       style: Theme.of(context)
                                                           .textTheme
                                                           .headline4
-                                                          .copyWith(
+                                                          .copyWith(fontFamily: sansRegular,
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                           )),
@@ -351,7 +353,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                       style: Theme.of(context)
                                                           .textTheme
                                                           .headline4
-                                                          .copyWith(
+                                                          .copyWith(fontFamily: sansRegular,
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                           )),
@@ -361,7 +363,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                       style: Theme.of(context)
                                                           .textTheme
                                                           .headline4
-                                                          .copyWith(
+                                                          .copyWith(fontFamily: sansRegular,
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                           )),
@@ -371,7 +373,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                       style: Theme.of(context)
                                                           .textTheme
                                                           .headline4
-                                                          .copyWith(
+                                                          .copyWith(fontFamily: sansRegular,
                                                             fontWeight:
                                                                 FontWeight.bold,
                                                           )),
@@ -406,7 +408,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                           style:
                                                               Theme.of(context)
                                                                   .textTheme
-                                                                  .headline4),
+                                                                  .headline4.copyWith(fontFamily: sansRegular,)),
                                                     ),
                                                     Expanded(
                                                       child: Text(
@@ -414,7 +416,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                           style:
                                                               Theme.of(context)
                                                                   .textTheme
-                                                                  .headline4),
+                                                                  .headline4.copyWith(fontFamily: sansRegular,)),
                                                     ),
                                                     Expanded(
                                                       child: Text(
@@ -422,7 +424,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                           style:
                                                               Theme.of(context)
                                                                   .textTheme
-                                                                  .headline4),
+                                                                  .headline4.copyWith(fontFamily: sansRegular,)),
                                                     ),
                                                     Expanded(
                                                       child: Text(
@@ -430,7 +432,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                           style:
                                                               Theme.of(context)
                                                                   .textTheme
-                                                                  .headline4),
+                                                                  .headline4.copyWith(fontFamily: sansRegular,)),
                                                     ),
                                                     Expanded(
                                                       child: plan.plan != null
@@ -443,13 +445,13 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                                   style: Theme.of(
                                                                           context)
                                                                       .textTheme
-                                                                      .headline4),
+                                                                      .headline4.copyWith(fontFamily: sansRegular,)),
                                                             )
                                                           : Text('',
                                                               style: Theme.of(
                                                                       context)
                                                                   .textTheme
-                                                                  .headline4),
+                                                                  .headline4.copyWith(fontFamily: sansRegular,)),
                                                     ),
                                                   ],
                                                 ),
@@ -531,7 +533,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.bold),
+                                  .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                             ),
                           ),
                           Text(
@@ -539,7 +541,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 10,
@@ -549,7 +551,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               width: MediaQuery.of(context).size.width * 0.4,
                               child: Text(
                                 "${plan.subject}",
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                               ),
                             ),
                           ),
@@ -567,7 +569,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.bold),
+                                  .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                             ),
                           ),
                           Text(
@@ -575,7 +577,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 10,
@@ -585,7 +587,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               width: MediaQuery.of(context).size.width * 0.4,
                               child: Text(
                                 "${DateFormat('EEE, MMM dd').format(plan.plan.lessonDate)}",
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                               ),
                             ),
                           ),
@@ -603,7 +605,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.bold),
+                                  .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                             ),
                           ),
                           Text(
@@ -611,7 +613,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 10,
@@ -621,7 +623,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               width: MediaQuery.of(context).size.width * 0.4,
                               child: Text(
                                 "${plan.plan.lessonName.lessonTitle}",
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                               ),
                             ),
                           ),
@@ -641,7 +643,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.bold),
+                                  .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                             ),
                           ),
                           Text(
@@ -649,7 +651,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 10,
@@ -665,7 +667,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                 "${topicNames.length == topicNames.length - 1 ? "" : ","}",
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4,
+                                                .headline4.copyWith(fontFamily: sansRegular,),
                                           ))),
                             ),
                           ),
@@ -689,7 +691,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.bold),
+                                        .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                                   ),
                                 ),
                                 Text(
@@ -697,7 +699,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.bold),
+                                      .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -713,7 +715,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                                   "${subTopicNames[index]}",
                                                   style: Theme.of(context)
                                                       .textTheme
-                                                      .headline4,
+                                                      .headline4.copyWith(fontFamily: sansRegular,),
                                                 ))),
                                   ),
                                 ),
@@ -734,7 +736,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.bold),
+                                  .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                             ),
                           ),
                           Text(
@@ -742,7 +744,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 10,
@@ -781,7 +783,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                           style: Theme.of(context)
                                               .textTheme
                                               .headline4
-                                              .copyWith(color: Colors.blue),
+                                              .copyWith(fontFamily: sansRegular,color: Colors.blue),
                                         ),
                                       ),
                                     );
@@ -808,7 +810,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.bold),
+                                        .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                                   ),
                                 ),
                                 Text(
@@ -816,7 +818,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.bold),
+                                      .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -846,7 +848,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline4
-                                            .copyWith(color: Colors.blue),
+                                            .copyWith(fontFamily: sansRegular,color: Colors.blue),
                                       ),
                                     ),
                                   ),
@@ -867,7 +869,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.bold),
+                                  .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                             ),
                           ),
                           Text(
@@ -875,7 +877,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.bold),
                           ),
                           SizedBox(
                             width: 10,
@@ -885,7 +887,7 @@ class _StudentLessonsViewState extends State<StudentLessonsView> {
                               width: MediaQuery.of(context).size.width * 0.4,
                               child: Text(
                                 "${plan.plan.note ?? ""}",
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                               ),
                             ),
                           ),

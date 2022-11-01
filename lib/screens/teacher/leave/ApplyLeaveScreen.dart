@@ -23,6 +23,7 @@ import 'package:infixedu/utils/model/LeaveType.dart';
 import 'package:infixedu/utils/permission_check.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
 import 'LeaveListScreen.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class ApplyLeaveScreen extends StatefulWidget {
   @override
@@ -100,7 +101,7 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
       ),
       bottomNavigationBar: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           leaveAvailable
@@ -136,11 +137,12 @@ class _ApplyLeaveScreenState extends State<ApplyLeaveScreen> {
                 )
               : Container(
                   child: Text(
-                    "No Leave type Available. Please check back later".tr,
+                    "No Leave type Available.Please check back later".tr,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline5,
+                    style: Theme.of(context).textTheme.headline5.copyWith(fontFamily:sansRegular),
                   ),
                 ),
+          SizedBox(height:20),
           isResponse == true
               ? LinearProgressIndicator(
                   backgroundColor: Colors.transparent,

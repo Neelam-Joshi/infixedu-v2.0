@@ -78,8 +78,7 @@ class _MainPageState extends State<MainPage> {
                                     body: Center(
                                       child: Text(
                                         snapshot.error.toString(),
-                                      ),
-                                    ),
+                                      )),
                                   );
                                 }
                                 if (snapshot.connectionState ==

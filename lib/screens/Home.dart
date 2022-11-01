@@ -380,6 +380,7 @@ class _HomeState extends State<Home> {
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3),
                   itemBuilder: (context, index) {
+                    print('_rule${_rule}');
                     return CustomWidget(
                       index: index,
                       isSelected: currentSelectedIndex == index,

@@ -18,6 +18,7 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/StudentRecord.dart';
 import 'package:infixedu/utils/model/Subject.dart';
 import 'package:infixedu/utils/widget/SubjectRowLayout.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class SubjectScreen extends StatefulWidget {
@@ -97,7 +98,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(
+                                    .copyWith( fontFamily:sansRegular,
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold)),
                           ),
@@ -106,7 +107,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(
+                                    .copyWith( fontFamily:sansRegular,
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold)),
                           ),
@@ -116,7 +117,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(
+                                  .copyWith( fontFamily:sansRegular,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                   ),

@@ -17,6 +17,7 @@ import 'package:infixedu/utils/model/StudentRecord.dart';
 import 'package:infixedu/utils/server/LogoutService.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class DBStudentRoutine extends StatefulWidget {
@@ -123,12 +124,20 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
           automaticallyImplyLeading: false,
           flexibleSpace: Container(
             padding: EdgeInsets.only(top: 20.h),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(AppConfig.appToolbarBackground),
-                fit: BoxFit.fill,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight:Radius.circular(20),
               ),
-              color: Colors.deepPurple,
+              color: Color(0xfffff3f3),
+              boxShadow: [
+                BoxShadow(
+                  color:
+                  Color(0x1f000000),
+                  blurRadius: 10.0,
+                  offset: Offset(2, 4),
+                ),
+              ],
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -146,7 +155,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                       style: Theme.of(context)
                           .textTheme
                           .subtitle1
-                          .copyWith(fontSize: 18.sp, color: Colors.white),
+                          .copyWith(fontSize: 18.sp, color: Colors.black),
                     ),
                   ),
                 ),
@@ -159,7 +168,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                   },
                   icon: Icon(
                     Icons.exit_to_app,
-                    size: 25.sp,
+                    size: 25.sp,color:Colors.black
                   ),
                 ),
               ],
@@ -210,8 +219,8 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                     borderRadius: BorderRadius.circular(2.0),
                                     gradient: LinearGradient(
                                       colors: [
-                                        Color(0xff7C32FF),
-                                        Color(0xffC738D8),
+                                        Color(0xffff3465),
+                                        Colors.pinkAccent,
                                       ],
                                     )),
                                 labelColor: Colors.white,
@@ -262,8 +271,8 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                           Alignment.centerRight,
                                                       end: Alignment.centerLeft,
                                                       colors: [
-                                                        Colors.purple,
-                                                        Colors.deepPurple
+                                                        Color(0xffff3465),
+                                                        Colors.pinkAccent,
                                                       ]),
                                                 ),
                                               );
@@ -281,7 +290,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                   context)
                                                               .textTheme
                                                               .headline4
-                                                              .copyWith(
+                                                              .copyWith(fontFamily: sansRegular,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold)),
@@ -308,7 +317,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                     context)
                                                                 .textTheme
                                                                 .headline4
-                                                                .copyWith(
+                                                                .copyWith(fontFamily: sansRegular,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal)),
@@ -328,7 +337,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                   context)
                                                               .textTheme
                                                               .headline4
-                                                              .copyWith(
+                                                              .copyWith(fontFamily: sansRegular,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold)),
@@ -345,7 +354,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                     context)
                                                                 .textTheme
                                                                 .headline4
-                                                                .copyWith(
+                                                                .copyWith(fontFamily: sansRegular,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal)),
@@ -365,7 +374,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                   context)
                                                               .textTheme
                                                               .headline4
-                                                              .copyWith(
+                                                              .copyWith(fontFamily: sansRegular,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold)),
@@ -382,7 +391,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                     context)
                                                                 .textTheme
                                                                 .headline4
-                                                                .copyWith(
+                                                                .copyWith(fontFamily: sansRegular,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal)),
@@ -402,7 +411,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                   context)
                                                               .textTheme
                                                               .headline4
-                                                              .copyWith(
+                                                              .copyWith(fontFamily: sansRegular,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold)),
@@ -419,7 +428,7 @@ class _DBStudentRoutineState extends State<DBStudentRoutine>
                                                                     context)
                                                                 .textTheme
                                                                 .headline4
-                                                                .copyWith(
+                                                                .copyWith(fontFamily: sansRegular,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal)),

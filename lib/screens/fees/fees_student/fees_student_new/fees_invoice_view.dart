@@ -10,6 +10,7 @@ import 'package:http/http.dart' as http;
 import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/screens/fees/model/FeeInvoiceDetailsModel.dart';
 import 'package:intl/intl.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class FeeInvoiceViewStudent extends StatefulWidget {
   final int invoiceId;
@@ -90,7 +91,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                           Text(
                             'Create Date'.tr +
@@ -99,7 +100,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                           Text(
                             'Due Date'.tr +
@@ -108,7 +109,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -135,7 +136,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                           style: Theme.of(context)
                               .textTheme
                               .subtitle1
-                              .copyWith(fontSize: 14),
+                              .copyWith(fontSize: 14,fontFamily: sansRegular),
                         ),
                         subtitle: Column(
                           children: <Widget>[
@@ -155,7 +156,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,fontFamily: sansRegular),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -164,7 +165,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                           feeRecord.amount.toString(),
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(fontFamily: sansRegular),
                                         ),
                                       ],
                                     ),
@@ -181,7 +182,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,fontFamily: sansRegular),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -191,7 +192,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(fontFamily: sansRegular),
                                         ),
                                       ],
                                     ),
@@ -208,7 +209,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,fontFamily: sansRegular),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -218,7 +219,9 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(
+                                              fontFamily: sansRegular
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -235,7 +238,8 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,
+                                              fontFamily: sansRegular),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -245,7 +249,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(fontFamily: sansRegular),
                                         ),
                                       ],
                                     ),
@@ -262,7 +266,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                               .textTheme
                                               .headline4
                                               .copyWith(
-                                                  fontWeight: FontWeight.w500),
+                                                  fontWeight: FontWeight.w500,fontFamily: sansRegular),
                                         ),
                                         SizedBox(
                                           height: 10.0,
@@ -272,7 +276,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                           maxLines: 1,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline4,
+                                              .headline4.copyWith(fontFamily: sansRegular),
                                         ),
                                       ],
                                     ),
@@ -305,7 +309,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                           Text(
                             double.parse(getGrandTotalAmount().toString())
@@ -314,7 +318,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -330,7 +334,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                           Text(
                             double.parse(getTotalWeiver().toString())
@@ -339,7 +343,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -355,7 +359,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                           Text(
                             double.parse(getTotalFine().toString())
@@ -364,7 +368,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -380,7 +384,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                           Text(
                             double.parse(getTotalPaidAmount().toString())
@@ -389,7 +393,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -405,7 +409,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                           Text(
                             double.parse(((getGrandTotalAmount() -
@@ -417,7 +421,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -433,7 +437,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontWeight: FontWeight.bold,fontFamily: sansRegular),
                           ),
                           Text(
                             double.parse(getDueBalance().toString())
@@ -442,7 +446,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontWeight: FontWeight.bold,fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -463,7 +467,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                               style: Theme.of(context)
                                   .textTheme
                                   .subtitle1
-                                  .copyWith(fontSize: 16),
+                                  .copyWith(fontSize: 16,fontFamily: sansRegular),
                             ),
                             ListView.separated(
                               physics: NeverScrollableScrollPhysics(),
@@ -478,7 +482,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .subtitle1
-                                        .copyWith(fontSize: 14),
+                                        .copyWith(fontSize: 14,fontFamily: sansRegular),
                                   ),
                                   subtitle: Column(
                                     children: <Widget>[
@@ -502,7 +506,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                                         .copyWith(
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w500,fontFamily: sansRegular),
                                                   ),
                                                   SizedBox(
                                                     height: 10.0,
@@ -511,7 +515,9 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                                     bank.accountName.toString(),
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .headline4,
+                                                        .headline4.copyWith(
+                                                        fontFamily: sansRegular
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -531,7 +537,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                                         .copyWith(
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w500,fontFamily: sansRegular),
                                                   ),
                                                   SizedBox(
                                                     height: 10.0,
@@ -542,7 +548,9 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                                     maxLines: 1,
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .headline4,
+                                                        .headline4.copyWith(
+                                                        fontFamily: sansRegular
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -562,7 +570,7 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                                         .copyWith(
                                                             fontWeight:
                                                                 FontWeight
-                                                                    .w500),
+                                                                    .w500,fontFamily: sansRegular),
                                                   ),
                                                   SizedBox(
                                                     height: 10.0,
@@ -572,7 +580,9 @@ class _FeeInvoiceViewStudentState extends State<FeeInvoiceViewStudent> {
                                                     maxLines: 1,
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .headline4,
+                                                        .headline4.copyWith(
+                                                        fontFamily: sansRegular
+                                                    ),
                                                   ),
                                                 ],
                                               ),

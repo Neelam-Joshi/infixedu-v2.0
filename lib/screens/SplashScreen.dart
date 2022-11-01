@@ -50,52 +50,17 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
           });
         } else {
           if (mounted) {
-            // route = MaterialPageRoute(builder: (context) => LoginScreen());
-            // Navigator.pushReplacement(context, route);
-            route = MaterialPageRoute(builder: (context) => DashboardScreen(students, studentIcons, 2));
+            route = MaterialPageRoute(builder: (context) => LoginScreen());
             Navigator.pushReplacement(context, route);
+            // route = MaterialPageRoute(builder: (context) => DashboardScreen(students, studentIcons, 2));
+            // Navigator.pushReplacement(context, route);
           }
         }
       });
     });
   }
 
-  static var students = [
-    'Homework',
-    'Study Materials',
-    'Timeline',
-    'Attendance',
-    'Wallet',
-    'Examination',
-    'Online Exam',
-    'Lesson',
-    'Leave',
-    'Notice',
-    'Subjects',
-    'Teacher',
-    'Library',
-    'Transport',
-    'Dormitory',
-    'Settings',
-  ];
-  static var studentIcons = [
-    'assets/images/homeworkstudent.png',
-    'assets/images/downloads.png',
-    'assets/images/timeline.png',
-    'assets/images/attendance.png',
-    'assets/images/fees_icon.png',
-    'assets/images/examination.png',
-    'assets/images/onlineexam.png',
-    'assets/images/lesson.png',
-    'assets/images/leave.png',
-    'assets/images/notice.png',
-    'assets/images/subjects.png',
-    'assets/images/teacher.png',
-    'assets/images/library.png',
-    'assets/images/transport.png',
-    'assets/images/dormitory.png',
-    'assets/images/addhw.png',
-  ];
+
 
   @override
   void dispose() {

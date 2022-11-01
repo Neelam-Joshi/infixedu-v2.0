@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 // Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class ProfileRowList extends StatelessWidget {
@@ -57,7 +59,7 @@ class ProfileRowList extends StatelessWidget {
                                       .textTheme
                                       .subtitle2
                                       .copyWith(
-                                        color: Color(0xff727fc8),
+                                        color: Color(0xff000000),fontFamily: sansRegular,
                                         fontWeight: FontWeight.normal,
                                         fontSize: ScreenUtil().setSp(12),
                                       ),
@@ -89,7 +91,7 @@ class ProfileRowList extends StatelessWidget {
                                       .textTheme
                                       .subtitle2
                                       .copyWith(
-                                        color: Color(0xff727fc8),
+                                    fontFamily: sansRegular,color: Color(0xff000000),
                                         fontWeight: FontWeight.normal,
                                         fontSize: ScreenUtil().setSp(12),
                                       ),
@@ -124,7 +126,8 @@ class ProfileRowList extends StatelessWidget {
                                     .textTheme
                                     .subtitle2
                                     .copyWith(
-                                      color: Color(0xff727fc8),
+                                      //color: Color(0xff727fc8),
+                                  fontFamily: sansRegular,color: Color(0xff000000),
                                       fontWeight: FontWeight.normal,
                                       fontSize: ScreenUtil().setSp(12),
                                     ),
@@ -157,7 +160,8 @@ class ProfileRowList extends StatelessWidget {
                                     .textTheme
                                     .subtitle2
                                     .copyWith(
-                                      color: Color(0xff727fc8),
+                                      //color: Color(0xff727fc8),
+                                  fontFamily: sansRegular,color: Color(0xff000000),
                                       fontWeight: FontWeight.normal,
                                       fontSize: ScreenUtil().setSp(12),
                                     ),

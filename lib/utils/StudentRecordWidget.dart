@@ -2,6 +2,8 @@ import 'package:infixedu/controller/user_controller.dart';
 import 'package:infixedu/utils/model/StudentRecord.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class StudentRecordWidget extends StatelessWidget {
   final ValueChanged<Record> onTap;
@@ -44,8 +46,8 @@ class StudentRecordWidget extends StatelessWidget {
                 gradient: _userController.selectedRecord.value == record
                     ? LinearGradient(
                         colors: [
-                          Color(0xff7C32FF),
-                          Color(0xffC738D8),
+                          Color(0xffff3465),
+                          Colors.pinkAccent,
                         ],
                       )
                     : LinearGradient(
@@ -58,7 +60,7 @@ class StudentRecordWidget extends StatelessWidget {
               child: Text(
                 "${record.className} (${record.sectionName})",
                 style: Get.textTheme.headline4.copyWith(
-                  fontSize: 14,
+                  fontSize: 14,fontFamily: sansRegular,
                   color: _userController.selectedRecord.value == record
                       ? Colors.white
                       : Colors.grey,

@@ -19,6 +19,7 @@ import 'package:infixedu/utils/server/LoginService.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
+
   _LoginScreenState createState() => _LoginScreenState();
 }
 

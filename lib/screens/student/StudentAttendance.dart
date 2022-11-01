@@ -21,6 +21,8 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/StudentAttendance.dart';
 import 'package:infixedu/utils/model/StudentDetailsModel.dart';
 import 'package:infixedu/utils/model/StudentRecord.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class StudentAttendanceScreen extends StatefulWidget {
@@ -196,18 +198,18 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                               int.parse(schoolId));
                         });
                       },
-                      weekendTextStyle: Theme.of(context).textTheme.headline6,
+                      weekendTextStyle: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular,),
                       thisMonthDayBorderColor: Colors.grey,
-                      daysTextStyle: Theme.of(context).textTheme.headline4,
+                      daysTextStyle: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                       showOnlyCurrentMonthDate: false,
                       headerTextStyle: Theme.of(context)
                           .textTheme
                           .headline6
-                          .copyWith(fontSize: ScreenUtil().setSp(15.0)),
+                          .copyWith(fontFamily: sansRegular,fontSize: ScreenUtil().setSp(15.0)),
                       weekdayTextStyle: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(
+                          .copyWith(fontFamily: sansRegular,
                               fontSize: ScreenUtil().setSp(15.0),
                               fontWeight: FontWeight.w500),
                       customDayBuilder: (
@@ -256,7 +258,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .headline4
-                                                  .copyWith(
+                                                  .copyWith(fontFamily: sansRegular,
                                                     color: Color(0xFF5F75EF),
                                                     fontSize: ScreenUtil()
                                                         .setSp(14.0),
@@ -289,7 +291,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .headline4
-                                                .copyWith(
+                                                .copyWith(fontFamily: sansRegular,
                                                   color: Color(0xFF727FC8),
                                                   fontSize:
                                                       ScreenUtil().setSp(14.0),
@@ -323,7 +325,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .headline4
-                                                .copyWith(
+                                                .copyWith(fontFamily: sansRegular,
                                                     fontSize: ScreenUtil()
                                                         .setSp(14.0),
                                                     color: isToday == true
@@ -344,7 +346,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                                           style: Theme.of(context)
                                               .textTheme
                                               .headline4
-                                              .copyWith(
+                                              .copyWith(fontFamily: sansRegular,
                                                   color: Color(0xFF727FC8))),
                                     ],
                                   ),
@@ -363,7 +365,7 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                       todayTextStyle: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(color: Colors.white)),
+                          .copyWith(fontFamily: sansRegular,color: Colors.white)),
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 16.0),
@@ -405,11 +407,11 @@ class _StudentAttendanceScreenState extends State<StudentAttendanceScreen> {
                 Expanded(
                     child: Text(
                   title,
-                  style: Theme.of(context).textTheme.headline5.copyWith(
+                  style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular,
                       color: Colors.black45, fontWeight: FontWeight.w500),
                 )),
                 Text(getStatusCount(titleVal, snapshot.data.attendances),
-                    style: Theme.of(context).textTheme.headline5),
+                    style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular,)),
               ],
             );
           } else {

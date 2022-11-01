@@ -111,7 +111,7 @@ class AppFunction {
     'assets/images/fees_icon.png',
     'assets/images/examination.png',
     'assets/images/onlineexam.png',
-    'assets/images/routine.png',
+    'assets/images/lesson.png',
     'assets/images/leave.png',
     'assets/images/notice.png',
     'assets/images/subjects.png',

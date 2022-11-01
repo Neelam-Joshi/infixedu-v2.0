@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Project imports:
 import 'package:infixedu/utils/model/BookIssued.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class BookListRow extends StatefulWidget {
@@ -62,7 +64,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                 style: Theme.of(context)
                     .textTheme
                     .headline6
-                    .copyWith(fontSize: 15.0,fontWeight: FontWeight.w700),
+                    .copyWith(fontFamily: sansRegular,fontSize: 15.0,fontWeight: FontWeight.w700),
                 maxLines: 1,
               ),
             );
@@ -78,7 +80,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                 style: Theme.of(context)
                     .textTheme
                     .headline4
-                    .copyWith(fontSize: ScreenUtil().setSp(14.0),fontWeight: FontWeight.w500),
+                    .copyWith(fontFamily: sansRegular,fontSize: ScreenUtil().setSp(14.0),fontWeight: FontWeight.w500),
                 maxLines: 1,
               ),
             );
@@ -103,7 +105,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
                             height: 10.0,
@@ -111,7 +113,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                           Text(
                            books.issuedDate,
                             maxLines: 1,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                           ),
                         ],
                       ),
@@ -126,7 +128,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
                             height: 10.0,
@@ -134,7 +136,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                           Text(
                             books.returnDate,
                             maxLines: 1,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                           ),
                         ],
                       ),
@@ -149,7 +151,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
                             height: 10.0,
@@ -157,7 +159,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                           Text(
                            books.bookNo,
                             maxLines: 1,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                           ),
                         ],
                       ),
@@ -172,7 +174,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
                             style: Theme.of(context)
                                 .textTheme
                                 .headline4
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
                             height: 10.0,
@@ -215,7 +217,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily: sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );
@@ -233,7 +235,7 @@ class _BookListRowState extends State<BookListRow> with SingleTickerProviderStat
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily: sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );

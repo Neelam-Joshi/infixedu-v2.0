@@ -17,6 +17,8 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/ExamRoutineReport.dart';
 import 'package:infixedu/utils/model/ExamSchedule.dart';
 import 'package:intl/intl.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class ScheduleScreen extends StatefulWidget {
@@ -113,11 +115,11 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
             value: item.title,
             child: Text(
               item.title,
-              style: Theme.of(context).textTheme.subtitle1.copyWith(),
+              style: Theme.of(context).textTheme.subtitle1.copyWith(fontFamily:sansRegular),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily:sansRegular,fontSize: 15.0),
         onChanged: (value) {
           setState(() {
             _selected = value;
@@ -161,11 +163,11 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                           style: Theme.of(context)
                               .textTheme
                               .subtitle1
-                              .copyWith(fontWeight: FontWeight.w600),
+                              .copyWith(fontFamily:sansRegular,fontWeight: FontWeight.w600),
                         ),
                         Text(
                           DateFormat.yMMMEd().format(value[0].date),
-                          style: Theme.of(context).textTheme.subtitle1,
+                          style: Theme.of(context).textTheme.subtitle1.copyWith(fontFamily:sansRegular ),
                         ),
                       ],
                     ),
@@ -187,7 +189,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .subtitle1
-                                      .copyWith(
+                                      .copyWith(fontFamily:sansRegular,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 16),
                                 ),
@@ -197,7 +199,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .subtitle1
-                                        .copyWith(
+                                        .copyWith(fontFamily:sansRegular,
                                             fontWeight: FontWeight.w600,
                                             fontSize: 16),
                                   ),
@@ -216,7 +218,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .subtitle1
-                                      .copyWith(
+                                      .copyWith(fontFamily:sansRegular,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 14),
                                 ),
@@ -226,7 +228,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .subtitle1
-                                        .copyWith(
+                                        .copyWith(fontFamily:sansRegular,
                                             fontWeight: FontWeight.w600,
                                             fontSize: 14),
                                   ),
@@ -249,7 +251,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline4
-                                            .copyWith(
+                                            .copyWith(fontFamily:sansRegular,
                                                 fontWeight: FontWeight.w500),
                                       ),
                                       SizedBox(
@@ -260,7 +262,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(fontFamily: sansRegular),
                                       ),
                                     ],
                                   ),
@@ -276,7 +278,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline4
-                                            .copyWith(
+                                            .copyWith(fontFamily:sansRegular,
                                                 fontWeight: FontWeight.w500),
                                       ),
                                       SizedBox(
@@ -287,7 +289,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(fontFamily: sansRegular),
                                       ),
                                     ],
                                   ),
@@ -303,7 +305,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline4
-                                            .copyWith(
+                                            .copyWith(fontFamily:sansRegular,
                                                 fontWeight: FontWeight.w500),
                                       ),
                                       SizedBox(
@@ -314,7 +316,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(fontFamily: sansRegular),
                                       ),
                                     ],
                                   ),

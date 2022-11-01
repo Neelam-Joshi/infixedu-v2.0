@@ -18,6 +18,7 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/ONlineExamResult.dart';
 import 'package:infixedu/utils/model/StudentRecord.dart';
 import 'package:infixedu/utils/widget/OnlineExamResultRow.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class OnlineExamResultScreen extends StatefulWidget {
@@ -145,7 +146,7 @@ class _OnlineExamResultScreenState extends State<OnlineExamResultScreen> {
               style: Theme.of(context)
                   .textTheme
                   .headline4
-                  .copyWith(fontWeight: FontWeight.w500),
+                  .copyWith(fontWeight: FontWeight.w500,fontFamily: sansRegular),
             ),
           );
         }).toList(),

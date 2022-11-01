@@ -8,6 +8,7 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 // Project imports:
 import '../../../utils/CustomAppBarWidget.dart';
 import '../../../utils/model/Notice.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class NoticDetailsLayout extends StatefulWidget {
@@ -39,7 +40,7 @@ class _NoticDetailsLayoutState extends State<NoticDetailsLayout> {
                 notice.title,
                 maxLines: 1,
                 style: Theme.of(context).textTheme.subtitle1.copyWith(
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w500,fontFamily: sansRegular,
                       fontSize: ScreenUtil().setSp(20),
                     ),
               ),
@@ -50,6 +51,7 @@ class _NoticDetailsLayoutState extends State<NoticDetailsLayout> {
                 notice.date,
                 maxLines: 1,
                 style: Theme.of(context).textTheme.subtitle1.copyWith(
+                  fontFamily: sansRegular,
                       fontWeight: FontWeight.w300,
                       fontSize: ScreenUtil().setSp(16.0),
                     ),
@@ -62,6 +64,7 @@ class _NoticDetailsLayoutState extends State<NoticDetailsLayout> {
               ${notice.destails ?? ""}
               ''',
                 textStyle: Theme.of(context).textTheme.headline4.copyWith(
+                      fontFamily: sansRegular,
                       fontWeight: FontWeight.w300,
                       fontSize: ScreenUtil().setSp(14.0),
                     ),

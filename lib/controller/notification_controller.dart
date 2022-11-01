@@ -26,6 +26,8 @@ class NotificationController extends GetxController {
   Rx<int> notificationCount = 0.obs;
 
   Future<UserNotificationList> getNotifications() async {
+    print("getNotifications");
+    print('');
     await getIdToken();
     try{
       isLoading(true);
@@ -33,11 +35,13 @@ class NotificationController extends GetxController {
           headers: Utils.setHeader(_token.toString()));
       if (response.statusCode == 200) {
         var jsonData = jsonDecode(response.body);
+        print('jsonData${response.body}');
         userNotificationList.value =
             UserNotificationList.fromJson(jsonData['data']['notifications']);
         notificationCount.value = jsonData['data']['unread_notification'];
         return userNotificationList.value;
-      } else {
+      }
+      else {
         isLoading(false);
         throw Exception('failed to load');
       }
@@ -75,7 +79,6 @@ class NotificationController extends GetxController {
   @override
   void onInit() {
     getNotifications();
-
     super.onInit();
   }
 }

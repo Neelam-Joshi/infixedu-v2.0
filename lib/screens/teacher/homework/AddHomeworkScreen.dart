@@ -153,6 +153,7 @@ class _AddHomeworkScrrenState extends State<AddHomeworkScrren> {
               }
             },
           ),
+          SizedBox(height:10),
           isResponse == true
               ? LinearProgressIndicator(
                   backgroundColor: Colors.transparent,

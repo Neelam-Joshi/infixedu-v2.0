@@ -15,6 +15,8 @@ import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/model/Timeline.dart';
 import 'package:infixedu/utils/permission_check.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class TimeLineView extends StatelessWidget {
@@ -66,7 +68,7 @@ class TimeLineView extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headline6
-                    .copyWith(fontWeight: FontWeight.w500),
+                    .copyWith(fontFamily:sansRegular,fontWeight: FontWeight.w500),
               ),
               SizedBox(
                 height: 10,
@@ -74,7 +76,7 @@ class TimeLineView extends StatelessWidget {
               Text(
                 timeline.date,
                 maxLines: 1,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily:sansRegular),
               ),
               SizedBox(
                 height: 10,
@@ -82,7 +84,7 @@ class TimeLineView extends StatelessWidget {
               Text(
                 timeline.description,
                 maxLines: 5,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily:sansRegular),
               ),
               SizedBox(
                 height: 10,
@@ -111,7 +113,7 @@ class TimeLineView extends StatelessWidget {
                           Text(
                             "Download",
                             textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headline6,
+                            style: Theme.of(context).textTheme.headline6.copyWith(fontFamily:sansRegular),
                           ),
                         ],
                       ),
@@ -146,7 +148,7 @@ class TimeLineView extends StatelessWidget {
     AlertDialog alert = AlertDialog(
       title: Text(
         "Download",
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headline5.copyWith(fontFamily:sansRegular),
       ),
       content: Text("Would you like to download the file?"),
       actions: [
@@ -205,7 +207,7 @@ class TimeLineView extends StatelessWidget {
                     EdgeInsets.only(left: 30, right: 30, top: 15, bottom: 15),
                 child: const Text(
                   "You must grant all permission to use this application",
-                  style: TextStyle(fontSize: 18, color: Colors.black54),
+                  style: TextStyle(fontSize: 18, color: Colors.black54,fontFamily: sansRegular),
                 ),
               )
             ],

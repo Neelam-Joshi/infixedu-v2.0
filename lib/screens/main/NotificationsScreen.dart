@@ -142,140 +142,143 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 child: Obx(() {
                   if (controller.isLoading.value) {
                     return Center(child: CircularProgressIndicator());
-                  } else {
-                    if (controller.userNotificationList.value.userNotifications
-                            .length ==
-                        0) {
-                      return Center(
-                        child: Container(
-                          child: Text(
-                            "No new notifications".tr,
-                            textAlign: TextAlign.end,
-                            style: Theme.of(context).textTheme.headline5.copyWith(
-                              color: Colors.deepPurple
+                  }
+                  else {
+                    if(controller.userNotificationList.value.userNotifications!=null){
+                      if (controller.userNotificationList.value.userNotifications.length == 0) {
+                        return Center(
+                          child: Container(
+                            child: Text(
+                              "No new notifications".tr,
+                              textAlign: TextAlign.end,
+                              style: Theme.of(context).textTheme.headline5.copyWith(
+                                  color: Colors.deepPurple
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    } else {
-                      return ListView.separated(
-                        shrinkWrap: false,
-                        physics: AlwaysScrollableScrollPhysics(),
-                        padding: EdgeInsets.symmetric(horizontal: 15.w),
-                        separatorBuilder: (context, index) {
-                          return SizedBox(
-                            height: 10.h,
-                          );
-                        },
-                        itemCount: controller.userNotificationList.value
-                            .userNotifications.length,
-                        itemBuilder: (context, index) {
-                          final item = controller.userNotificationList.value
-                              .userNotifications[index];
-                          return Slidable(
-                            actionPane: SlidableDrawerActionPane(),
-                            actionExtentRatio: 0.25,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Icon(
-                                    FontAwesomeIcons.solidBell,
-                                    color: Color(0xffff3465),
-                                    size: 15.sp,
+                        );
+                      }
+                      else {
+                        return ListView.separated(
+                          shrinkWrap: false,
+                          physics: AlwaysScrollableScrollPhysics(),
+                          padding: EdgeInsets.symmetric(horizontal: 15.w),
+                          separatorBuilder: (context, index) {
+                            return SizedBox(
+                              height: 10.h,
+                            );
+                          },
+                          itemCount: controller.userNotificationList.value
+                              .userNotifications.length,
+                          itemBuilder: (context, index) {
+                            final item = controller.userNotificationList.value
+                                .userNotifications[index];
+                            return Slidable(
+                              actionPane: SlidableDrawerActionPane(),
+                              actionExtentRatio: 0.25,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(
+                                      FontAwesomeIcons.solidBell,
+                                      color: Color(0xffff3465),
+                                      size: 15.sp,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 5.w,
-                                ),
-                                Expanded(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        item.message,
-                                        textAlign: TextAlign.end,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headline5
-                                            .copyWith(
+                                  SizedBox(
+                                    width: 5.w,
+                                  ),
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          item.message,
+                                          textAlign: TextAlign.end,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headline5
+                                              .copyWith(
                                               fontSize: ScreenUtil().setSp(13),
                                               color: Colors.black
-                                            ),
-                                      ),
-                                      Text(
-                                        timeago.format(item.createdAt),
-                                        textAlign: TextAlign.end,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headline5
-                                            .copyWith(
+                                          ),
+                                        ),
+                                        Text(
+                                          timeago.format(item.createdAt),
+                                          textAlign: TextAlign.end,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .headline5
+                                              .copyWith(
                                               fontSize: ScreenUtil().setSp(12),
                                               color:  Colors.black
-                                            ),
-                                      ),
-                                      SizedBox(
-                                        height: 12,
-                                      ),
-                                    ],
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 12,
+                                        ),
+                                      ],
+                                    ),
                                   ),
+                                ],
+                              ),
+                              actions: <Widget>[
+                                IconSlideAction(
+                                  caption: 'Mark as Read',
+                                  color: Colors.deepPurple,
+                                  iconWidget: Icon(
+                                    Icons.panorama_fish_eye,
+                                    size: 1,
+                                  ),
+                                  onTap: () async {
+                                    await controller
+                                        .readNotification(item.id)
+                                        .then((value) async {
+                                      if (value == true) {
+                                        controller.userNotificationList.value
+                                            .userNotifications
+                                            .removeAt(index);
+                                      }
+                                    }).then((value) async {
+                                      await controller.getNotifications();
+                                    });
+                                  },
                                 ),
                               ],
-                            ),
-                            actions: <Widget>[
-                              IconSlideAction(
-                                caption: 'Mark as Read',
-                                color: Colors.deepPurple,
-                                iconWidget: Icon(
-                                  Icons.panorama_fish_eye,
-                                  size: 1,
+                              secondaryActions: <Widget>[
+                                IconSlideAction(
+                                  caption: 'Mark as Read',
+                                  color: Colors.deepPurple,
+                                  iconWidget: Icon(
+                                    Icons.panorama_fish_eye,
+                                    size: 1,
+                                  ),
+                                  onTap: () async {
+                                    await controller
+                                        .readNotification(item.id)
+                                        .then((value) async {
+                                      if (value == true) {
+                                        controller.userNotificationList.value
+                                            .userNotifications
+                                            .removeAt(index);
+                                      }
+                                    }).then((value) async {
+                                      await controller.getNotifications();
+                                    });
+                                  },
                                 ),
-                                onTap: () async {
-                                  await controller
-                                      .readNotification(item.id)
-                                      .then((value) async {
-                                    if (value == true) {
-                                      controller.userNotificationList.value
-                                          .userNotifications
-                                          .removeAt(index);
-                                    }
-                                  }).then((value) async {
-                                    await controller.getNotifications();
-                                  });
-                                },
-                              ),
-                            ],
-                            secondaryActions: <Widget>[
-                              IconSlideAction(
-                                caption: 'Mark as Read',
-                                color: Colors.deepPurple,
-                                iconWidget: Icon(
-                                  Icons.panorama_fish_eye,
-                                  size: 1,
-                                ),
-                                onTap: () async {
-                                  await controller
-                                      .readNotification(item.id)
-                                      .then((value) async {
-                                    if (value == true) {
-                                      controller.userNotificationList.value
-                                          .userNotifications
-                                          .removeAt(index);
-                                    }
-                                  }).then((value) async {
-                                    await controller.getNotifications();
-                                  });
-                                },
-                              ),
-                            ],
-                          );
-                        },
-                      );
+                              ],
+                            );
+                          },
+                        );
+                      }
                     }
+
                   }
                 }),
               ),

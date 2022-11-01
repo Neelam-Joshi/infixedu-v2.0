@@ -21,6 +21,8 @@ import 'package:infixedu/utils/apis/Apis.dart';
 import 'package:infixedu/utils/exception/DioException.dart';
 import 'package:infixedu/utils/model/LeaveType.dart';
 import 'package:infixedu/utils/permission_check.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class LeaveStudentApply extends StatefulWidget {
@@ -121,11 +123,11 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                           context,
                           pickerTheme: DateTimePickerTheme(
                             confirm: Text('Done',
-                                style: TextStyle(
+                                style: TextStyle(fontFamily: sansRegular,
                                     color: Colors.red,
                                     fontSize: ScreenUtil().setSp(14))),
                             cancel: Text('cancel',
-                                style: TextStyle(
+                                style: TextStyle(fontFamily: sansRegular,
                                     color: Colors.cyan,
                                     fontSize: ScreenUtil().setSp(14))),
                           ),
@@ -153,7 +155,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                         );
                       },
                       child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),
+                        padding: EdgeInsets.only(left:10,top:5,right:10),
                         child: Row(
                           children: <Widget>[
                             Expanded(
@@ -164,7 +166,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                   applyDate == null
                                       ? 'Apply Date'.tr
                                       : applyDate,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                    fontFamily: sansRegular,
+                                  ),
                                 ),
                               ),
                             ),
@@ -195,9 +199,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                           context,
                           pickerTheme: DateTimePickerTheme(
                             confirm: Text('Done',
-                                style: TextStyle(color: Colors.red)),
+                                style: TextStyle(fontFamily: sansRegular,color: Colors.red)),
                             cancel: Text('cancel',
-                                style: TextStyle(color: Colors.cyan)),
+                                style: TextStyle(fontFamily: sansRegular,color: Colors.cyan)),
                           ),
                           minDateTime: DateTime.parse(initDateTime),
                           maxDateTime: DateTime.parse(maxDateTime),
@@ -232,7 +236,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                     const EdgeInsets.only(left: 8.0, top: 8.0),
                                 child: Text(
                                   fromDate == null ? 'From Date'.tr : fromDate,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                    fontFamily: sansRegular,
+                                  ),
                                 ),
                               ),
                             ),
@@ -263,9 +269,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                           context,
                           pickerTheme: DateTimePickerTheme(
                             confirm: Text('Done',
-                                style: TextStyle(color: Colors.red)),
+                                style: TextStyle(fontFamily: sansRegular,color: Colors.red)),
                             cancel: Text('cancel',
-                                style: TextStyle(color: Colors.cyan)),
+                                style: TextStyle(fontFamily: sansRegular,color: Colors.cyan)),
                           ),
                           minDateTime: DateTime.parse(initDateTime),
                           maxDateTime: DateTime.parse(maxDateTime),
@@ -300,7 +306,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                     const EdgeInsets.only(left: 8.0, top: 8.0),
                                 child: Text(
                                   toDate == null ? 'To Date'.tr : toDate,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                    fontFamily: sansRegular,
+                                  ),
                                 ),
                               ),
                             ),
@@ -340,7 +348,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                   _file == null
                                       ? 'Select file'.tr
                                       : _file.path.split('/').last,
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(
+                                    fontFamily: sansRegular,
+                                  ),
                                   maxLines: 2,
                                 ),
                               ),
@@ -349,7 +359,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline4
-                                    .copyWith(
+                                    .copyWith(fontFamily: sansRegular,
                                         decoration: TextDecoration.underline)),
                           ],
                         ),
@@ -368,13 +378,17 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                       padding: const EdgeInsets.all(10.0),
                       child: TextFormField(
                         keyboardType: TextInputType.text,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular,
+                        ),
                         controller: reasonController,
                         decoration: InputDecoration(
                             hintText: "Reason".tr,
                             labelText: "Reason".tr,
-                            labelStyle: Theme.of(context).textTheme.headline4,
-                            errorStyle: TextStyle(
+                            labelStyle: Theme.of(context).textTheme.headline4.copyWith(
+                              fontFamily: sansRegular,
+                            ),
+                            errorStyle: TextStyle(fontFamily: sansRegular,
                                 color: Colors.pinkAccent, fontSize: 15.0),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0),
@@ -402,7 +416,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
                 style: Theme.of(context)
                     .textTheme
                     .headline4
-                    .copyWith(color: Colors.white, fontSize: 16.0),
+                    .copyWith(fontFamily: sansRegular,color: Colors.white, fontSize: 16.0),
               ),
             ),
           ),
@@ -419,6 +433,8 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
             }
           },
         ),
+        SizedBox(height:5),
+
         isResponse == true
             ? LinearProgressIndicator(
                 backgroundColor: Colors.transparent,
@@ -442,7 +458,9 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
               padding: const EdgeInsets.only(left: 8.0),
               child: Text(
                 item.type,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(
+                  fontFamily: sansRegular,
+                ),
               ),
             ),
           );
@@ -450,7 +468,7 @@ class _LeaveStudentApplyState extends State<LeaveStudentApply> {
         style: Theme.of(context)
             .textTheme
             .headline4
-            .copyWith(fontSize: ScreenUtil().setSp(14)),
+            .copyWith(fontFamily: sansRegular,fontSize: ScreenUtil().setSp(14)),
         onChanged: (value) {
           setState(() {
             leaveType = value;

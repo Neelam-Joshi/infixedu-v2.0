@@ -44,8 +44,11 @@ class LogoutService {
         Get.offNamedUntil("/", ModalRoute.withName('/'));
 
         var response = await http.post(Uri.parse(InfixApi.logout()),
+
             headers: Utils.setHeader(_token.toString()));
+        print('response logout${response.body}');
         if (response.statusCode == 200) {
+
         } else {
           Utils.showToast('Unable to logout');
         }

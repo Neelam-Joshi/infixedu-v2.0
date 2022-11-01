@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:infixedu/screens/fees/paymentGateway/FeePaymentMain.dart';
 import 'package:infixedu/screens/fees/model/Fee.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class FeesRow extends StatefulWidget {
@@ -42,7 +44,7 @@ class _FeesRowState extends State<FeesRow> {
                 Expanded(
                   child: Text(
                     widget.fee.feesName,
-                    style: Theme.of(context).textTheme.headline5,
+                    style: Theme.of(context).textTheme.headline5.copyWith(fontFamily:sansRegular),
                     maxLines: 1,
                   ),
                 ),
@@ -55,7 +57,7 @@ class _FeesRowState extends State<FeesRow> {
                     child: Text(
                       'View',
                       textAlign: TextAlign.end,
-                      style: Theme.of(context).textTheme.headline4.copyWith(
+                      style: Theme.of(context).textTheme.headline4.copyWith(fontFamily:sansRegular,
                           decoration: TextDecoration.underline,
                           fontWeight: FontWeight.bold),
                     ),
@@ -77,7 +79,7 @@ class _FeesRowState extends State<FeesRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontFamily:sansRegular,fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -85,12 +87,16 @@ class _FeesRowState extends State<FeesRow> {
                         widget.fee.dueDate == null
                             ? Text(
                                 'N/A',
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                                ),
                               )
                             : Text(
                                 widget.fee.dueDate.toLocal().toString(),
                                 maxLines: 1,
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(
+                                  fontFamily: sansRegular
+                                ),
                               ),
                       ],
                     ),
@@ -105,14 +111,16 @@ class _FeesRowState extends State<FeesRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontFamily:sansRegular,fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
                           height: 10.0,
                         ),
                         Text(
                           widget.fee.amount.toString(),
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                          ),
                         ),
                       ],
                     ),
@@ -127,7 +135,7 @@ class _FeesRowState extends State<FeesRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontFamily:sansRegular,fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -135,7 +143,9 @@ class _FeesRowState extends State<FeesRow> {
                         Text(
                           widget.fee.paid.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                          ),
                         ),
                       ],
                     ),
@@ -150,7 +160,7 @@ class _FeesRowState extends State<FeesRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontFamily:sansRegular,fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -159,7 +169,9 @@ class _FeesRowState extends State<FeesRow> {
                           widget.fee.currencySymbol.toString() +
                               widget.fee.balance.toString(),
                           maxLines: 1,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(
+                            fontFamily: sansRegular
+                          ),
                         ),
                       ],
                     ),
@@ -174,7 +186,7 @@ class _FeesRowState extends State<FeesRow> {
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontWeight: FontWeight.w500),
+                              .copyWith(fontFamily:sansRegular,fontWeight: FontWeight.w500),
                         ),
                         SizedBox(
                           height: 10.0,
@@ -228,7 +240,9 @@ class _FeesRowState extends State<FeesRow> {
                             Expanded(
                               child: Text(
                                 widget.fee.feesName.toString(),
-                                style: Theme.of(context).textTheme.headline5,
+                                style: Theme.of(context).textTheme.headline5.copyWith(
+                                  fontFamily: sansRegular
+                                ),
                                 maxLines: 1,
                               ),
                             ),
@@ -248,7 +262,7 @@ class _FeesRowState extends State<FeesRow> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily:sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -259,7 +273,9 @@ class _FeesRowState extends State<FeesRow> {
                                           widget.fee.amount.toString(),
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                          ),
                                     ),
                                   ],
                                 ),
@@ -274,7 +290,7 @@ class _FeesRowState extends State<FeesRow> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily:sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -288,7 +304,9 @@ class _FeesRowState extends State<FeesRow> {
                                                   .toString(),
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                          ),
                                     ),
                                   ],
                                 ),
@@ -303,7 +321,7 @@ class _FeesRowState extends State<FeesRow> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily:sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -314,7 +332,9 @@ class _FeesRowState extends State<FeesRow> {
                                           widget.fee.fine.toString(),
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                          ),
                                     ),
                                   ],
                                 ),
@@ -329,7 +349,7 @@ class _FeesRowState extends State<FeesRow> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily:sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -340,7 +360,9 @@ class _FeesRowState extends State<FeesRow> {
                                           widget.fee.paid.toString(),
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                          ),
                                     ),
                                   ],
                                 ),
@@ -355,7 +377,7 @@ class _FeesRowState extends State<FeesRow> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily:sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -367,7 +389,9 @@ class _FeesRowState extends State<FeesRow> {
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(
+                                            fontFamily: sansRegular
+                                          ),
                                     ),
                                   ],
                                 ),
@@ -383,7 +407,10 @@ class _FeesRowState extends State<FeesRow> {
                               child: TextFormField(
                                 keyboardType: TextInputType.numberWithOptions(
                                     decimal: false, signed: false),
-                                style: Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.headline6.copyWith(
+
+                                    fontFamily: sansRegular
+                                ),
                                 controller: amountController,
                                 autovalidateMode:
                                     AutovalidateMode.onUserInteraction,
@@ -409,9 +436,11 @@ class _FeesRowState extends State<FeesRow> {
                                   hintText: "Amount",
                                   labelText: "Amount",
                                   labelStyle:
-                                      Theme.of(context).textTheme.headline4,
+                                      Theme.of(context).textTheme.headline4.copyWith(
+                                        fontFamily: sansRegular
+                                      ),
                                   errorStyle: TextStyle(
-                                      color: Colors.pinkAccent, fontSize: 15.0),
+                                      color: Colors.pinkAccent, fontSize: 15.0,fontFamily: sansRegular),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5.0),
                                   ),
@@ -452,7 +481,7 @@ class _FeesRowState extends State<FeesRow> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline6
-                                          .copyWith(
+                                          .copyWith(fontFamily:sansRegular,
                                               color: Colors.white,
                                               fontSize: 16.0),
                                     )),
@@ -486,7 +515,7 @@ class _FeesRowState extends State<FeesRow> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily:sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );
@@ -506,7 +535,7 @@ class _FeesRowState extends State<FeesRow> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily:sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );
@@ -523,7 +552,7 @@ class _FeesRowState extends State<FeesRow> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily:sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );

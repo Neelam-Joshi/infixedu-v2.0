@@ -18,6 +18,8 @@ import 'package:infixedu/utils/model/LeaveAdmin.dart';
 import 'package:infixedu/utils/model/StudentLeave.dart';
 import 'package:infixedu/utils/permission_check.dart';
 import 'package:infixedu/utils/widget/Line.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class LeaveListStudent extends StatefulWidget {
@@ -91,10 +93,11 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
+              SizedBox(height: 5,),
               Container(
                 child: Text(
                   'My Leaves'.tr,
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(fontFamily: sansRegular),
                 ),
               ),
               Container(
@@ -119,7 +122,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(fontFamily: sansRegular),
                                       ),
                                     ),
                                     Expanded(
@@ -131,7 +134,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                         maxLines: 1,
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4,
+                                            .headline4.copyWith(fontFamily: sansRegular),
                                       ),
                                     ),
                                   ],
@@ -145,9 +148,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                   },
                 ),
               ),
-              SizedBox(
-                height: 5,
-              ),
+              SizedBox(height: 5,),
               Container(
                 height: 15.0,
                 decoration: BoxDecoration(
@@ -189,16 +190,16 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                             title: Container(
                               child: Text(
                                 'Leave List'.tr,
-                                style: Theme.of(context).textTheme.subtitle1,
+                                style: Theme.of(context).textTheme.subtitle1.copyWith(fontFamily: sansRegular),
                               ),
                             ),
                             bottom: TabBar(
                               labelColor: Colors.black,
                               labelPadding: EdgeInsets.zero,
-                              indicatorColor: Colors.purple,
+                              indicatorColor: Color(0xffff3465),
                               tabs: tabs,
                               indicatorPadding: EdgeInsets.zero,
-                              labelStyle: Theme.of(context).textTheme.headline4,
+                              labelStyle: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                             ),
                           ),
                           body: Padding(
@@ -251,7 +252,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                       ? 'N/A'
                                       : data[index].type,
                                   maxLines: 1,
-                                  style: Theme.of(context).textTheme.headline6,
+                                  style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular),
                                 ),
                               ),
                               Container(
@@ -262,7 +263,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(
+                                      .copyWith(fontFamily: sansRegular,
                                           color: Colors.deepPurpleAccent,
                                           decoration: TextDecoration.underline,
                                           fontWeight: FontWeight.bold),
@@ -285,7 +286,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily: sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -297,7 +298,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                           : data[index].applyDate,
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                     ),
                                   ],
                                 ),
@@ -312,7 +313,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily: sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -324,7 +325,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                           : data[index].leaveFrom,
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                     ),
                                   ],
                                 ),
@@ -339,7 +340,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily: sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -351,7 +352,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                           : data[index].leaveTo,
                                       maxLines: 1,
                                       style:
-                                          Theme.of(context).textTheme.headline4,
+                                          Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                     ),
                                   ],
                                 ),
@@ -366,7 +367,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith(fontFamily: sansRegular,
                                               fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -417,7 +418,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily: sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );
@@ -434,7 +435,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily: sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );
@@ -451,7 +452,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
             style: Theme.of(context)
                 .textTheme
                 .headline4
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                .copyWith(fontFamily: sansRegular,color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
       );
@@ -484,7 +485,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                           Expanded(
                             child: Text(
                               'Reason'.tr + ': ' + data.reason,
-                              style: Theme.of(context).textTheme.headline5,
+                              style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular),
                             ),
                           ),
                         ],
@@ -503,7 +504,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.w500),
+                                        .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                                   ),
                                   SizedBox(
                                     height: 10.0,
@@ -512,7 +513,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     data.leaveTo,
                                     maxLines: 1,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                   ),
                                 ],
                               ),
@@ -527,7 +528,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.w500),
+                                        .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                                   ),
                                   SizedBox(
                                     height: 10.0,
@@ -536,7 +537,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     data.applyDate,
                                     maxLines: 1,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                   ),
                                 ],
                               ),
@@ -558,7 +559,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.w500),
+                                        .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                                   ),
                                   SizedBox(
                                     height: 10.0,
@@ -567,7 +568,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     data.type,
                                     maxLines: 1,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                   ),
                                 ],
                               ),
@@ -582,7 +583,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.w500),
+                                        .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                                   ),
                                   SizedBox(
                                     height: 10.0,
@@ -591,7 +592,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     data.leaveFrom,
                                     maxLines: 1,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                   ),
                                 ],
                               ),
@@ -623,7 +624,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontSize: 16),
+                                        .copyWith(fontFamily: sansRegular,fontSize: 16),
                                   ),
                                   SizedBox(
                                     width: 5,
@@ -633,7 +634,7 @@ class _LeaveListStudentState extends State<LeaveListStudent> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(
+                                        .copyWith(fontFamily: sansRegular,
                                             decoration:
                                                 TextDecoration.underline,
                                             fontSize: 16),

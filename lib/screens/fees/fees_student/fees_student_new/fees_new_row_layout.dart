@@ -6,6 +6,7 @@ import 'package:infixedu/screens/fees/fees_student/fees_student_new/fees_invoice
 
 // Project imports:
 import 'package:infixedu/screens/fees/model/FeesRecord.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 // ignore: must_be_immutable
 class FeesRowNew extends StatefulWidget {
@@ -20,14 +21,12 @@ class FeesRowNew extends StatefulWidget {
 
 class _FeesRowNewState extends State<FeesRowNew> {
   final TextEditingController amountController = TextEditingController();
-
   final _formKey = GlobalKey<FormState>();
   @override
   void initState() {
     amountController.text = widget.fee.balance.toString();
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +36,7 @@ class _FeesRowNewState extends State<FeesRowNew> {
             Expanded(
               child: Text(
                 widget.fee.date,
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular),
                 maxLines: 1,
               ),
             ),
@@ -46,7 +45,7 @@ class _FeesRowNewState extends State<FeesRowNew> {
                 children: [
                   Text(
                     "Action".tr,
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                   ),
                   Icon(
                     Icons.arrow_downward,
@@ -100,7 +99,9 @@ class _FeesRowNewState extends State<FeesRowNew> {
                       style: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(fontWeight: FontWeight.w500),
+                          .copyWith(fontWeight: FontWeight.w500,
+                              fontFamily: sansRegular
+                      ),
                     ),
                     SizedBox(
                       height: 10.0,
@@ -108,7 +109,9 @@ class _FeesRowNewState extends State<FeesRowNew> {
                     Text(
                       double.parse(widget.fee.amount.toString())
                           .toStringAsFixed(2),
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                   ],
                 ),
@@ -123,7 +126,10 @@ class _FeesRowNewState extends State<FeesRowNew> {
                       style: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(fontWeight: FontWeight.w500),
+                          .copyWith(fontWeight: FontWeight.w500,
+                          fontFamily: sansRegular
+
+                      ),
                     ),
                     SizedBox(
                       height: 10.0,
@@ -132,7 +138,9 @@ class _FeesRowNewState extends State<FeesRowNew> {
                       double.parse(widget.fee.paidAmount.toString())
                           .toStringAsFixed(2),
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                   ],
                 ),
@@ -147,7 +155,9 @@ class _FeesRowNewState extends State<FeesRowNew> {
                       style: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(fontWeight: FontWeight.w500),
+                          .copyWith(fontWeight: FontWeight.w500,
+                          fontFamily: sansRegular
+                      ),
                     ),
                     SizedBox(
                       height: 10.0,
@@ -156,7 +166,9 @@ class _FeesRowNewState extends State<FeesRowNew> {
                       double.parse(widget.fee.balance.toString())
                           .toStringAsFixed(2),
                       maxLines: 1,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(
+                          fontFamily: sansRegular
+                      ),
                     ),
                   ],
                 ),
@@ -171,7 +183,9 @@ class _FeesRowNewState extends State<FeesRowNew> {
                       style: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(fontWeight: FontWeight.w500),
+                          .copyWith(fontWeight: FontWeight.w500,
+                          fontFamily: sansRegular
+                      ),
                     ),
                     SizedBox(
                       height: 10.0,

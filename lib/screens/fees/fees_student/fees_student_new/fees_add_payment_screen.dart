@@ -12,6 +12,7 @@ import 'package:infixedu/utils/CustomSnackBars.dart';
 import 'package:infixedu/utils/Utils.dart';
 import 'package:infixedu/screens/fees/model/StudentAddPaymentModel.dart';
 import 'package:intl/intl.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
 
 class FeesAddPaymentScreen extends StatefulWidget {
   final int invoiceId;
@@ -94,7 +95,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.w500),
                             ),
                             Text(
                               'Due Date'.tr +
@@ -103,7 +104,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.w500),
+                                  .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.w500),
                             ),
                             Text(
                               'Wallet Balance'.tr +
@@ -112,7 +113,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(fontWeight: FontWeight.bold),
+                                  .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.bold),
                             ),
                             Obx(() {
                               if (_controller.addWalletList.length > 0) {
@@ -123,7 +124,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.bold),
+                                      .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.bold),
                                 );
                               } else {
                                 return Text(
@@ -132,7 +133,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline4
-                                      .copyWith(fontWeight: FontWeight.bold),
+                                      .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.bold),
                                 );
                               }
                             }),
@@ -149,7 +150,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                       style: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(fontWeight: FontWeight.bold, fontSize: 16),
+                          .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                     ListView.separated(
                       physics: NeverScrollableScrollPhysics(),
@@ -176,7 +177,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                         isExpanded: true,
                         hint: Text(
                           "Select Payment Method.".tr,
-                          style: Theme.of(context).textTheme.headline4,
+                          style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                         ),
                         items: _controller.addPaymentModel.value.paymentMethods
                             .map((item) {
@@ -184,14 +185,14 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                             value: item.paymentMethod,
                             child: Text(
                               item.paymentMethod,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                             ),
                           );
                         }).toList(),
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontSize: 13.0),
+                            .copyWith( fontFamily: sansRegular,fontSize: 13.0),
                         onChanged: (value) {
                           _controller.selectedPaymentMethod.value = value;
 
@@ -210,7 +211,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                           isExpanded: true,
                           hint: Text(
                             "Select Bank".tr,
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                           ),
                           items: _controller.addPaymentModel.value.bankAccounts
                               .map((item) {
@@ -218,14 +219,14 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                               value: item,
                               child: Text(
                                 "${item.bankName} (${item.accountNumber})",
-                                style: Theme.of(context).textTheme.headline4,
+                                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                               ),
                             );
                           }).toList(),
                           style: Theme.of(context)
                               .textTheme
                               .headline4
-                              .copyWith(fontSize: 13.0),
+                              .copyWith( fontFamily: sansRegular,fontSize: 13.0),
                           onChanged: (value) {
                             _controller.selectedBank.value = value;
                           },
@@ -241,13 +242,13 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                         return Column(
                           children: [
                             TextField(
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                               controller: _controller.paymentNoteController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.zero,
                                 hintText: "Note".tr,
                                 hintStyle:
-                                    Theme.of(context).textTheme.headline4,
+                                    Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                               ),
                             ),
                             SizedBox(
@@ -282,7 +283,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                                           style: Theme.of(context)
                                               .textTheme
                                               .headline4
-                                              .copyWith(),
+                                              .copyWith( fontFamily: sansRegular,),
                                           maxLines: 2,
                                         ),
                                       ),
@@ -292,7 +293,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                                       style: Theme.of(context)
                                           .textTheme
                                           .headline4
-                                          .copyWith(
+                                          .copyWith( fontFamily: sansRegular,
                                             decoration:
                                                 TextDecoration.underline,
                                           ),
@@ -345,7 +346,7 @@ class _FeesAddPaymentScreenState extends State<FeesAddPaymentScreen> {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline5
-                                .copyWith(color: Colors.white),
+                                .copyWith( fontFamily: sansRegular,color: Colors.white),
                           ),
                         ),
                       ),
@@ -392,7 +393,7 @@ class _FeesListRowState extends State<FeesListRow> {
       contentPadding: EdgeInsets.zero,
       title: Text(
         widget.invoiceDetails.feesTypeName ?? 'NA',
-        style: Theme.of(context).textTheme.subtitle1.copyWith(fontSize: 14),
+        style: Theme.of(context).textTheme.subtitle1.copyWith( fontFamily: sansRegular,fontSize: 14),
       ),
       subtitle: Column(
         children: <Widget>[
@@ -410,14 +411,14 @@ class _FeesListRowState extends State<FeesListRow> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.w500),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
                       Text(
                         widget.invoiceDetails.amount.toStringAsFixed(2),
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                       ),
                     ],
                   ),
@@ -432,7 +433,7 @@ class _FeesListRowState extends State<FeesListRow> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.w500),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -440,7 +441,7 @@ class _FeesListRowState extends State<FeesListRow> {
                       Text(
                         double.parse(currentDue.toString()).toStringAsFixed(2),
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                       ),
                     ],
                   ),
@@ -455,7 +456,7 @@ class _FeesListRowState extends State<FeesListRow> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.w500),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -463,7 +464,7 @@ class _FeesListRowState extends State<FeesListRow> {
                       Text(
                         widget.invoiceDetails.weaver.toStringAsFixed(2),
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                       ),
                     ],
                   ),
@@ -478,7 +479,7 @@ class _FeesListRowState extends State<FeesListRow> {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .copyWith( fontFamily: sansRegular,fontWeight: FontWeight.w500),
                       ),
                       SizedBox(
                         height: 10.0,
@@ -486,7 +487,7 @@ class _FeesListRowState extends State<FeesListRow> {
                       Text(
                         widget.invoiceDetails.fine.toStringAsFixed(2),
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                       ),
                     ],
                   ),
@@ -538,7 +539,7 @@ class _FeesListRowState extends State<FeesListRow> {
                             }
                           });
                         },
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                         keyboardType: TextInputType.number,
                         inputFormatters: [
                           FilteringTextInputFormatter.allow(
@@ -547,7 +548,7 @@ class _FeesListRowState extends State<FeesListRow> {
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.zero,
                           hintText: "Paid Amount".tr,
-                          hintStyle: Theme.of(context).textTheme.headline4,
+                          hintStyle: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                         ),
                       ),
                     ),
@@ -563,7 +564,7 @@ class _FeesListRowState extends State<FeesListRow> {
                       child: TextField(
                         maxLines: 1,
                         enabled: true,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                         onChanged: (text) {
                           if (text.length > 0) {
                             _controller.noteList[widget.index] = text;
@@ -572,7 +573,7 @@ class _FeesListRowState extends State<FeesListRow> {
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.zero,
                           hintText: "Note".tr,
-                          hintStyle: Theme.of(context).textTheme.headline4,
+                          hintStyle: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                         ),
                       ),
                     ),

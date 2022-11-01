@@ -21,6 +21,8 @@ import 'package:infixedu/utils/model/UploadedContent.dart';
 import 'package:infixedu/utils/widget/ScaleRoute.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../permission_check.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class StudyMaterialListRow extends StatelessWidget {
@@ -53,7 +55,7 @@ class StudyMaterialListRow extends StatelessWidget {
                 Expanded(
                   child: Text(
                     uploadedContent.contentTitle,
-                    style: Theme.of(context).textTheme.headline6.copyWith(
+                    style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular,
                           fontSize: 16,
                         ),
                   ),
@@ -67,7 +69,7 @@ class StudyMaterialListRow extends StatelessWidget {
                     : Container(
                         child: Text(
                           'Download',
-                          style: Theme.of(context).textTheme.headline6.copyWith(
+                          style: Theme.of(context).textTheme.headline6.copyWith(fontFamily: sansRegular,
                               fontSize: 15,
                               color: Colors.deepPurpleAccent,
                               decoration: TextDecoration.underline),
@@ -89,7 +91,7 @@ class StudyMaterialListRow extends StatelessWidget {
                       Text(
                         'Added  ${uploadedContent.uploadDate.toString() == null ? 'N/A' : uploadedContent.uploadDate.toString()}',
                         maxLines: 1,
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                       ),
                       SizedBox(
                         height: 5.0,
@@ -99,7 +101,7 @@ class StudyMaterialListRow extends StatelessWidget {
                           ? SizedBox.shrink()
                           : Text(
                               uploadedContent.description.toString(),
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                             ),
                       uploadedContent.sourceUrl == null
                           ? SizedBox.shrink()
@@ -107,7 +109,7 @@ class StudyMaterialListRow extends StatelessWidget {
                               children: [
                                 Text(
                                   "Source Url:",
-                                  style: Theme.of(context).textTheme.headline4,
+                                  style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                                 ),
                                 SizedBox(
                                   width: 10,
@@ -128,7 +130,7 @@ class StudyMaterialListRow extends StatelessWidget {
                                       style: Theme.of(context)
                                           .textTheme
                                           .subtitle1
-                                          .copyWith(
+                                          .copyWith(fontFamily: sansRegular,
                                               color: Colors.white,
                                               fontSize: 12),
                                     ),
@@ -180,7 +182,7 @@ class StudyMaterialListRow extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         uploadedContent.contentTitle,
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular,),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 10.0),
@@ -196,7 +198,7 @@ class StudyMaterialListRow extends StatelessWidget {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(fontWeight: FontWeight.w500),
+                                        .copyWith(fontFamily: sansRegular,fontWeight: FontWeight.w500),
                                   ),
                                   SizedBox(
                                     height: 5.0,
@@ -205,7 +207,7 @@ class StudyMaterialListRow extends StatelessWidget {
                                     uploadedContent.uploadDate.toString(),
                                     maxLines: 1,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                                   ),
                                 ],
                               ),
@@ -226,7 +228,7 @@ class StudyMaterialListRow extends StatelessWidget {
                                   ? ''
                                   : uploadedContent.description,
                               textAlign: TextAlign.left,
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
                             ),
                           ],
                         ),
@@ -247,14 +249,14 @@ class StudyMaterialListRow extends StatelessWidget {
     Widget cancelButton = TextButton(
       child: Text(
         "No",
-        style: Theme.of(context).textTheme.headline4,
+        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,),
       ),
       onPressed: () {
         Navigator.of(context, rootNavigator: true).pop('dialog');
       },
     );
     Widget yesButton = TextButton(
-      child: Text("Download", style: Theme.of(context).textTheme.headline4),
+      child: Text("Download", style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,)),
       onPressed: () {
         uploadedContent.uploadFile != null
             ? downloadFile(uploadedContent.uploadFile, context, title)
@@ -267,7 +269,7 @@ class StudyMaterialListRow extends StatelessWidget {
     AlertDialog alert = AlertDialog(
       title: Text(
         "Download",
-        style: Theme.of(context).textTheme.headline5,
+        style: Theme.of(context).textTheme.headline5.copyWith(fontFamily: sansRegular,),
       ),
       content: Text("Would you like to download the file?"),
       actions: [

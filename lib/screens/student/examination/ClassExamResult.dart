@@ -20,6 +20,8 @@ import 'package:infixedu/utils/model/ExamRoutineReport.dart';
 import 'package:infixedu/utils/model/ExamSchedule.dart';
 import 'package:infixedu/utils/model/StudentRecord.dart';
 import 'package:infixedu/utils/widget/ClassExamResultRow.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 // ignore: must_be_immutable
 class ClassExamResultScreen extends StatefulWidget {
@@ -121,11 +123,11 @@ class _ClassExamResultScreenState extends State<ClassExamResultScreen> {
             value: item.title,
             child: Text(
               item.title,
-              style: Theme.of(context).textTheme.subtitle1.copyWith(),
+              style: Theme.of(context).textTheme.subtitle1.copyWith(fontFamily:sansRegular,),
             ),
           );
         }).toList(),
-        style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 15.0),
+        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily:sansRegular,fontSize: 15.0),
         onChanged: (value) {
           setState(() {
             _userController.selectedRecord.value =

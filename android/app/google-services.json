@@ -1,62 +1,33 @@
 {
   "project_info": {
-    "project_number": "621533032630",
-    "project_id": "tabschool-70e30",
-    "storage_bucket": "tabschool-70e30.appspot.com"
+    "project_number": "954590153526",
+    "project_id": "vidhyasthali-3bc72",
+    "storage_bucket": "vidhyasthali-3bc72.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:621533032630:android:19b71c94e9cf0c2878f617",
+        "mobilesdk_app_id": "1:954590153526:android:02cd82b0e70297f3cc0197",
         "android_client_info": {
-          "package_name": "com.aistabschool.com"
+          "package_name": "com.aisvidhyasthali.com"
         }
       },
       "oauth_client": [
         {
-          "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
+          "client_id": "954590153526-eenlvcqjrqghiv2j5id607ijkmmqpt52.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA3Tcb_AeVP4qMoBu6c0cfLWVA_-GNQKhE"
+          "current_key": "AIzaSyAPUPSID8fz2LvLms1J1sKLUDgWR3WL_tM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:621533032630:android:b40e11712e71935478f617",
-        "android_client_info": {
-          "package_name": "com.aistabschool.in"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA3Tcb_AeVP4qMoBu6c0cfLWVA_-GNQKhE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "621533032630-h3a54fh8d4kif8rbcqqfobstvfbeemdo.apps.googleusercontent.com",
+              "client_id": "954590153526-eenlvcqjrqghiv2j5id607ijkmmqpt52.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

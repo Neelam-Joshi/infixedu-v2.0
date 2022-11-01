@@ -11,6 +11,8 @@ import 'package:infixedu/utils/CustomBottomSheet.dart';
 import 'package:infixedu/utils/CustomSnackBars.dart';
 import 'package:infixedu/utils/Utils.dart';
 import 'package:intl/intl.dart';
+import 'package:infixedu/utils/fontconstant/constant.dart';
+
 
 class StudentWalletTransactions extends StatefulWidget {
   const StudentWalletTransactions({Key key}) : super(key: key);
@@ -22,8 +24,7 @@ class StudentWalletTransactions extends StatefulWidget {
 
 class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
   final StudentWalletController _controller =
-      Get.put(StudentWalletController());
-
+  Get.put(StudentWalletController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,13 +51,14 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                             borderRadius: BorderRadius.circular(20.0),
                             gradient: LinearGradient(
                               colors: [
-                                Color(0xff7C32FF),
-                                Color(0xffC738D8),
+                                Color(0xffff3465),
+                                Colors.pinkAccent,
                               ],
                             )),
-                        child: Text(
-                          "Balance: ${_controller.wallet.value.currencySymbol}${_controller.wallet.value.myBalance}",
-                          style: Theme.of(context).textTheme.subtitle2.copyWith(
+                        child:
+                        Text(
+                          "Balance: ${_controller.wallet.value.currencySymbol==null?"0":_controller.wallet.value.currencySymbol}${_controller.wallet.value.myBalance==null?"":_controller.wallet.value.myBalance}",
+                          style: Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
                                 color: Colors.white,
                                 fontSize: 12,
                               ),
@@ -77,22 +79,21 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                               borderRadius: BorderRadius.circular(5.0),
                               gradient: LinearGradient(
                                 colors: [
-                                  Color(0xff7C32FF),
-                                  Color(0xffC738D8),
+                                  Color(0xffff3465),
+                                  Colors.pinkAccent,
                                 ],
                               )),
                           child: Text(
                             "Add Balance",
                             style:
-                                Theme.of(context).textTheme.subtitle2.copyWith(
+                                Theme.of(context).textTheme.subtitle2.copyWith(fontFamily: sansRegular,
                                       color: Colors.white,
                                       fontSize: 12,
                                     ),
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ]),
                   Expanded(
                     child: Column(
                       children: [
@@ -109,7 +110,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(
+                                        .copyWith(fontFamily: sansRegular,
                                           fontWeight: FontWeight.bold,
                                         )),
                               ),
@@ -118,7 +119,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(
+                                        .copyWith(fontFamily: sansRegular,
                                           fontWeight: FontWeight.bold,
                                         )),
                               ),
@@ -127,7 +128,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(
+                                        .copyWith(fontFamily: sansRegular,
                                           fontWeight: FontWeight.bold,
                                         )),
                               ),
@@ -136,7 +137,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline4
-                                        .copyWith(
+                                        .copyWith(fontFamily: sansRegular,
                                           fontWeight: FontWeight.bold,
                                         )),
                               ),
@@ -150,7 +151,9 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                           onRefresh: () async {
                             await _controller.getMyWallet();
                           },
-                          child: ListView.builder(
+                          child: _controller
+                              .wallet.value.walletTransactions!=null?
+                          ListView.builder(
                             itemCount: _controller
                                 .wallet.value.walletTransactions.length,
                             shrinkWrap: true,
@@ -169,21 +172,21 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                             '${DateFormat.yMMMd().format(DateTime.parse(walletTransaction.createdAt.toString())).toString()}',
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4),
+                                                .headline4.copyWith(fontFamily: sansRegular)),
                                       ),
                                       Expanded(
                                         child: Text(
                                             '${walletTransaction.paymentMethod}',
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4),
+                                                .headline4.copyWith(fontFamily: sansRegular)),
                                       ),
                                       Expanded(
                                         child: Text(
                                             '${walletTransaction.amount.toStringAsFixed(2)}',
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline4),
+                                                .headline4.copyWith(fontFamily: sansRegular)),
                                       ),
                                       Expanded(
                                         child: GestureDetector(
@@ -202,7 +205,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                 ),
                               );
                             }),
-                          ),
+                          ):Container(),
                         ),
                       ],
                     ),
@@ -215,7 +218,6 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
       ),
     );
   }
-
   getStatus(String status) {
     return Container(
       alignment: Alignment.center,
@@ -228,7 +230,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
           borderRadius: BorderRadius.circular(5)),
       child: Text(
         '${status.capitalizeFirst}',
-        style: Theme.of(context).textTheme.headline4.copyWith(
+        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular,
               color: status == "approve"
                   ? Colors.white
                   : status == "reject"
@@ -238,7 +240,6 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
       ),
     );
   }
-
   getDialog() {
     Get.bottomSheet(
       CustomBottomSheet(
@@ -246,7 +247,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
         initialChildSize: 0.7,
         children: <Widget>[
           TextField(
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
             controller: _controller.amountController,
             keyboardType: TextInputType.number,
             inputFormatters: [
@@ -257,33 +258,34 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
               contentPadding: EdgeInsets.zero,
               hintText: "Amount".tr,
               labelText: "Amount".tr,
-              hintStyle: Theme.of(context).textTheme.headline4,
+              hintStyle: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
             ),
           ),
           SizedBox(
             height: 20,
           ),
+          _controller.wallet.value.paymentMethods!=null?
           Obx(() {
             return DropdownButton(
               elevation: 0,
               isExpanded: true,
               hint: Text(
                 "Select Payment Method".tr,
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
               ),
               items: _controller.wallet.value.paymentMethods.map((item) {
                 return DropdownMenuItem<String>(
                   value: item.method,
                   child: Text(
                     item.method,
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                   ),
                 );
               }).toList(),
               style: Theme.of(context)
                   .textTheme
                   .headline4
-                  .copyWith(fontSize: 13.0),
+                  .copyWith(fontFamily: sansRegular,fontSize: 13.0),
               onChanged: (value) {
                 _controller.selectedPaymentMethod.value = value;
 
@@ -291,7 +293,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
               },
               value: _controller.selectedPaymentMethod.value,
             );
-          }),
+          }):Container(),
           SizedBox(
             height: 20,
           ),
@@ -306,21 +308,21 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                   isExpanded: true,
                   hint: Text(
                     "Select Bank".tr,
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                   ),
                   items: _controller.wallet.value.bankAccounts.map((item) {
                     return DropdownMenuItem<BankAccount>(
                       value: item,
                       child: Text(
                         "${item.bankName} (${item.accountNumber})",
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                       ),
                     );
                   }).toList(),
                   style: Theme.of(context)
                       .textTheme
                       .headline4
-                      .copyWith(fontSize: 13.0),
+                      .copyWith(fontFamily: sansRegular,fontSize: 13.0),
                   onChanged: (value) {
                     _controller.selectedBank.value = value;
                   },
@@ -340,12 +342,12 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                 return Column(
                   children: [
                     TextField(
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                       controller: _controller.paymentNoteController,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.zero,
                         hintText: "Note".tr,
-                        hintStyle: Theme.of(context).textTheme.headline4,
+                        hintStyle: Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                       ),
                     ),
                     SizedBox(
@@ -379,7 +381,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                             .split('/')
                                             .last,
                                     style:
-                                        Theme.of(context).textTheme.headline4,
+                                        Theme.of(context).textTheme.headline4.copyWith(fontFamily: sansRegular),
                                     maxLines: 2,
                                   ),
                                 );
@@ -390,7 +392,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline4
-                                  .copyWith(
+                                  .copyWith(fontFamily: sansRegular,
                                     decoration: TextDecoration.underline,
                                   ),
                             ),
@@ -451,7 +453,7 @@ class _StudentWalletTransactionsState extends State<StudentWalletTransactions> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline5
-                                    .copyWith(color: Colors.white),
+                                    .copyWith(fontFamily: sansRegular,color: Colors.white),
                               )
                             : CircularProgressIndicator(
                                 color: Colors.white,

@@ -331,7 +331,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             "assets/icons/routine_one.png",
                             width: 30.w,
                             height: 30.h,
-                            color: Colors.deepPurple.withOpacity(0.9),
+                            color: Color(0xffff3465),
                           ),
                     title: widget.role == "4" ? "Academic".tr : "Routine".tr,
                     activeColorPrimary: Color(0xffff3465),
